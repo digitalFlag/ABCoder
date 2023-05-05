@@ -1,4 +1,5 @@
 ﻿using ABCoder.Models.ComboBox;
+using System;
 using System.Collections.ObjectModel;
 
 namespace ABCoder.ViewModels
@@ -88,17 +89,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-        #region Combo Box Mode Selected Item
-
-        private Mode _ComboBoxModeSelectedItem;
-        ///// <summary>Combo Box Mode Selected Item</summary>
-        public Mode ComboBoxModeSelectedItem
-        {
-            get => _ComboBoxModeSelectedItem;
-            set => Set(ref _ComboBoxModeSelectedItem, value);
-        }
-
-        #endregion
         #region Combo Box Mode Selected Index
 
         private int _ComboBoxModeSelectedIndex;
@@ -146,14 +136,14 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-        #region Combo Box Code Type Selected Item
+        #region Combo Box Code Type Selected Index
 
-        private Mode _ComboBoxCodeTypeSelectedItem;
-        ///// <summary>Combo Box Code Type Selected Item</summary>
-        public Mode ComboBoxCodeTypeSelectedItem
+        private int _ComboBoxCodeTypeSelectedIndex;
+        ///// <summary>Combo Box Code Type Selected Index</summary>
+        public int ComboBoxCodeTypeSelectedIndex
         {
-            get => _ComboBoxCodeTypeSelectedItem;
-            set => Set(ref _ComboBoxCodeTypeSelectedItem, value);
+            get => _ComboBoxCodeTypeSelectedIndex;
+            set => Set(ref _ComboBoxCodeTypeSelectedIndex, value);
         }
 
         #endregion

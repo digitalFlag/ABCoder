@@ -1,4 +1,5 @@
 ﻿using ABCoder.ViewModels.Base;
+using System;
 using System.Windows;
 using System.Windows.Input;
 
@@ -27,7 +28,12 @@ namespace ABCoder.ViewModels
 
         private void OnChangeSelectionOfComboBoxModeCommandExecuted(object p)
         {
-            ButtonActionContent = ComboBoxModeSelectedItem.CoderMode;
+            ButtonActionContent = ComboBoxModeSelectedIndex switch
+            {
+                0 => ComboBoxModeCodeContent,
+                1 => ComboBoxModeDecodeContent,
+                _=> throw new Exception("You enterd the wrong index."),
+            };
             OnPropertyChanged();
         }
 
@@ -41,6 +47,10 @@ namespace ABCoder.ViewModels
 
         private void OnExecuteButtonCommandExecuted(object p)
         {
+
+
+
+
 
 
             OnPropertyChanged();

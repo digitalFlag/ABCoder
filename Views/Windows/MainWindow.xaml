@@ -55,10 +55,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <ComboBox Grid.Row="0" Grid.Column="0"
-                      ItemsSource="{Binding ComboBoxModeSource}"
-                      SelectedItem="{Binding ComboBoxModeSelectedItem}"
-                      DisplayMemberPath="CoderMode"
-                      SelectedIndex="0">
+                      ItemsSource="{Binding ComboBoxModeSource}" DisplayMemberPath="CoderMode"
+                      SelectedIndex="{Binding ComboBoxModeSelectedIndex}">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
                         <i:InvokeCommandAction
@@ -68,10 +66,8 @@
                 </i:Interaction.Triggers>
             </ComboBox>
             <ComboBox Grid.Row="0" Grid.Column="1"
-                      ItemsSource="{Binding ComboBoxCodeTypeSource}"
-                      SelectedItem="{Binding ComboBoxCodeTypeSelectedItem}"
-                      DisplayMemberPath="CoderMode"
-                      SelectedIndex="0">
+                      ItemsSource="{Binding ComboBoxCodeTypeSource}" DisplayMemberPath="CoderMode"
+                      SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}">
             </ComboBox>
             <Button Grid.Row="0" Grid.Column="2"
                     Content="{Binding ButtonActionContent}"
