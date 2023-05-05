@@ -1,0 +1,113 @@
+﻿<Window x:Class="ABCoder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:vm="clr-namespace:ABCoder.ViewModels"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        xmlns:local="clr-namespace:ABCoder"
+        mc:Ignorable="d"
+        
+        
+        Height="450" Width="800"
+        Title="{Binding MainWindowTitle}" >
+
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+
+    <Window.InputBindings>
+        <KeyBinding Modifiers="Ctrl" Key="Q" Command="{Binding CloseApplicationCommand}"/>
+    </Window.InputBindings>
+
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top"> <!--Menu-->
+            <MenuItem Header="File">
+                <MenuItem Header="Exit"
+                          Command="{Binding CloseApplicationCommand}"
+                          InputGestureText="Ctrl + Q">
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="About">
+            </MenuItem>
+        </Menu> <!--Menu-->
+        <Grid DockPanel.Dock="Top"> <!--Combo Boxes Lables-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0"
+                   Content="{Binding LableValueMode}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top">
+            </Label>
+            <Label Grid.Row="0" Grid.Column="1"
+                   Content="{Binding LableValueCodeType}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top">
+            </Label>
+            <Label Grid.Row="0" Grid.Column="2"
+                   Content="{Binding LableValueAction}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top">
+            </Label>
+        </Grid> <!--Combo Boxes Lables-->
+        <Grid DockPanel.Dock="Top"> <!--Combo Boxes-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <ComboBox Grid.Row="0" Grid.Column="0"
+                      ItemsSource="{Binding ComboBoxModeSource}"
+                      SelectedItem="{Binding ComboBoxModeSelectedItem}"
+                      DisplayMemberPath="CoderMode"
+                      SelectedIndex="0">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction
+                            Command="{Binding ChangeSelectionOfComboBoxModeCommand}">
+                        </i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ComboBox>
+            <ComboBox Grid.Row="0" Grid.Column="1"
+                      ItemsSource="{Binding ComboBoxCodeTypeSource}"
+                      SelectedItem="{Binding ComboBoxCodeTypeSelectedItem}"
+                      DisplayMemberPath="CoderMode"
+                      SelectedIndex="0">
+            </ComboBox>
+            <Button Grid.Row="0" Grid.Column="2"
+                    Content="{Binding ButtonActionContent}"
+                    Command="{Binding ExecuteButtonCommand}">
+            </Button>
+        </Grid> <!--Combo Boxes-->
+        <Grid DockPanel.Dock="Top"> <!--Information Bits-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="143*"/>
+                <ColumnDefinition Width="57*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" 
+                   Content="{Binding LableValueInformation}">
+            </Label>
+            <RichTextBox Grid.Row="0" Grid.Column="1"
+                         BorderBrush="{Binding RichTextBoxInformationBitsBorderBrush}"
+                         Name="rtbInformationBitsValue" Grid.ColumnSpan="2">
+            </RichTextBox>
+        </Grid> <!--Information Bits-->
+        <Grid DockPanel.Dock="Top"> <!--Code Combination-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" 
+                   Content="{Binding LableValueCodeCombination}">
+            </Label>
+            <RichTextBox Grid.Row="0" Grid.Column="1"
+                         BorderBrush="{Binding RichTextBoxInformationBitsBorderBrush}"
+                         Name="rtbCodeCombinationValue">
+            </RichTextBox>
+        </Grid> <!--Code Combination-->
+
+        <DockPanel></DockPanel>
+
+    </DockPanel>
+
+</Window>
