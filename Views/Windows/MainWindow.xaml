@@ -22,7 +22,8 @@
 
 
     <DockPanel>
-        <Menu DockPanel.Dock="Top"> <!--Menu-->
+        <Menu DockPanel.Dock="Top">
+            <!--Menu-->
             <MenuItem Header="File">
                 <MenuItem Header="Exit"
                           Command="{Binding CloseApplicationCommand}"
@@ -31,8 +32,10 @@
             </MenuItem>
             <MenuItem Header="About">
             </MenuItem>
-        </Menu> <!--Menu-->
-        <Grid DockPanel.Dock="Top"> <!--Combo Boxes Lables-->
+        </Menu>
+        <!--Menu-->
+        <Grid DockPanel.Dock="Top">
+            <!--Combo Boxes Lables-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -47,8 +50,10 @@
             <Label Grid.Row="0" Grid.Column="2"
                    Content="{Binding LableValueAction}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top">
             </Label>
-        </Grid> <!--Combo Boxes Lables-->
-        <Grid DockPanel.Dock="Top"> <!--Combo Boxes-->
+        </Grid>
+        <!--Combo Boxes Lables-->
+        <Grid DockPanel.Dock="Top">
+            <!--Combo Boxes-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -73,22 +78,25 @@
                     Content="{Binding ButtonActionContent}"
                     Command="{Binding ExecuteButtonCommand}">
             </Button>
-        </Grid> <!--Combo Boxes-->
-        <Grid DockPanel.Dock="Top"> <!--Information Bits-->
+        </Grid>
+        <!--Combo Boxes-->
+        <Grid DockPanel.Dock="Top">
+            <!--Information Bits-->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200*"/>
-                <ColumnDefinition Width="143*"/>
-                <ColumnDefinition Width="57*"/>
+                <ColumnDefinition Width="233*"/>
+                <ColumnDefinition Width="121*"/>
+                <ColumnDefinition Width="46*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" 
                    Content="{Binding LableValueInformation}">
             </Label>
-            <RichTextBox Grid.Row="0" Grid.Column="1"
-                         BorderBrush="{Binding RichTextBoxInformationBitsBorderBrush}"
-                         Name="rtbInformationBitsValue" Grid.ColumnSpan="2">
-            </RichTextBox>
-        </Grid> <!--Information Bits-->
-        <Grid DockPanel.Dock="Top"> <!--Code Combination-->
+            <TextBox Grid.Row="0"
+                     Text="{Binding TextBoxInformationBitsText}"
+                     BorderBrush="{Binding TextBoxInformationBitsBorderBrush}" Grid.ColumnSpan="3" Margin="466,0,0,0"/>
+        </Grid>
+        <!--Information Bits-->
+        <Grid DockPanel.Dock="Top">
+            <!--Code Combination-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -100,7 +108,8 @@
                          BorderBrush="{Binding RichTextBoxInformationBitsBorderBrush}"
                          Name="rtbCodeCombinationValue">
             </RichTextBox>
-        </Grid> <!--Code Combination-->
+        </Grid>
+        <!--Code Combination-->
 
         <DockPanel></DockPanel>
 

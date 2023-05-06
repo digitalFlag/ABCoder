@@ -159,17 +159,29 @@ namespace ABCoder.ViewModels
 
         #endregion
 
-        #region Rich Text Box Information Bits Border Brush
+        #region Text Box Information Bits Border Brush
 
-        private string _RichTextBoxInformationBitsBorderBrush = "Gray";
-        /// <summary>Rich Text Box Information Bits Border Brush</summary>
-        public string RichTextBoxInformationBitsBorderBrush
+        private string _TextBoxInformationBitsBorderBrush = "Gray";
+        /// <summary>Text Box Information Bits Border Brush</summary>
+        public string TextBoxInformationBitsBorderBrush
         {
-            get => _RichTextBoxInformationBitsBorderBrush;
-            set => Set(ref _RichTextBoxInformationBitsBorderBrush, value);
+            get => _TextBoxInformationBitsBorderBrush;
+            set => Set(ref _TextBoxInformationBitsBorderBrush, value);
         }
 
         #endregion
+        #region Text Box Information Bits Text
+
+        private string _TextBoxInformationBitsText = string.Empty;
+        /// <summary>Text Box Information Bits Text</summary>
+        public string TextBoxInformationBitsText
+        {
+            get => _TextBoxInformationBitsText;
+            set => Set(ref _TextBoxInformationBitsText, value);
+        }
+
+        #endregion
+
 
         #region Button Action Content
 

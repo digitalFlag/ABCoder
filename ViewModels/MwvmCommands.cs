@@ -2,6 +2,8 @@
 using System;
 using System.Windows;
 using System.Windows.Input;
+using Goley_2312_C75;
+using System.Drawing;
 
 namespace ABCoder.ViewModels
 {
@@ -47,12 +49,19 @@ namespace ABCoder.ViewModels
 
         private void OnExecuteButtonCommandExecuted(object p)
         {
+            if (ComboBoxModeSelectedIndex == 0 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
+            {
 
+                if(CheckEntedData.CkeckInfornationBits(ref _TextBoxInformationBitsText))
+                {
+                    TextBoxInformationBitsBorderBrush = "Green";
+                }
+                else
+                {
+                    TextBoxInformationBitsBorderBrush = "Red";
+                }
 
-
-
-
-
+            }
             OnPropertyChanged();
         }
 
