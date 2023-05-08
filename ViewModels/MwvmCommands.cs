@@ -2,8 +2,6 @@
 using System;
 using System.Windows;
 using System.Windows.Input;
-using Goley_2312_C75;
-using System.Drawing;
 
 namespace ABCoder.ViewModels
 {
@@ -52,9 +50,13 @@ namespace ABCoder.ViewModels
             if (ComboBoxModeSelectedIndex == 0 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
             {
 
-                if(CheckEntedData.CkeckInfornationBits(ref _TextBoxInformationBitsText))
+                if(Goley_2312_C75.CheckEntedData.CkeckInfornationBits(ref _TextBoxInformationBitsText))
                 {
                     TextBoxInformationBitsBorderBrush = "Green";
+                    bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref  _TextBoxInformationBitsText);
+                    bool[] codeCombination = Goley_2312_C75.Code.Encode(ref informationBits);
+                    TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
+
                 }
                 else
                 {

@@ -182,6 +182,18 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Text Box Code Combination Text
+
+        private string _TextBoxCodeCombinationText = string.Empty;
+        /// <summary>Text Box Code Combination Text</summary>
+        public string TextBoxCodeCombinationText
+        {
+            get => _TextBoxCodeCombinationText;
+            set => Set(ref _TextBoxCodeCombinationText, value);
+        }
+
+        #endregion
+
 
         #region Button Action Content
 

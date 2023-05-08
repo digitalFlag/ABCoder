@@ -83,16 +83,17 @@
         <Grid DockPanel.Dock="Top">
             <!--Information Bits-->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="233*"/>
-                <ColumnDefinition Width="121*"/>
-                <ColumnDefinition Width="46*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" 
                    Content="{Binding LableValueInformation}">
             </Label>
-            <TextBox Grid.Row="0"
+            <TextBox Grid.Row="0" Grid.Column="1" 
                      Text="{Binding TextBoxInformationBitsText}"
-                     BorderBrush="{Binding TextBoxInformationBitsBorderBrush}" Grid.ColumnSpan="3" Margin="466,0,0,0"/>
+                     BorderBrush="{Binding TextBoxInformationBitsBorderBrush}">
+            </TextBox>
         </Grid>
         <!--Information Bits-->
         <Grid DockPanel.Dock="Top">
@@ -100,14 +101,14 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" 
                    Content="{Binding LableValueCodeCombination}">
             </Label>
-            <RichTextBox Grid.Row="0" Grid.Column="1"
-                         BorderBrush="{Binding RichTextBoxInformationBitsBorderBrush}"
-                         Name="rtbCodeCombinationValue">
-            </RichTextBox>
+            <TextBox Grid.Row="0" Grid.Column="1" 
+                     Text="{Binding TextBoxCodeCombinationText}">
+            </TextBox>
         </Grid>
         <!--Code Combination-->
 
