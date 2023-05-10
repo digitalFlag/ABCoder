@@ -66,7 +66,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Code Combination
 
-        private string _LableValueCodeCombination = "Code Combination:";
+        private string _LableValueCodeCombination = "Code word:";
         /// <summary>Lable Value Code Combination</summary>
         public string LableValueCodeCombination
         {
@@ -75,6 +75,30 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Lable Value Errors Bits
+
+        private string _LableValueErrorsBits = "Error bits:";
+        /// <summary>Lable Value Errors Bits</summary>
+        public string LableValueErrorsBits
+        {
+            get => _LableValueErrorsBits;
+            set => Set(ref _LableValueErrorsBits, value);
+        }
+
+        #endregion
+        #region Lable Value Code Parameters
+
+        private string _LableValueCodeParameters = "Code parameters:";
+        /// <summary>Lable Value Code Parameters</summary>
+        public string LableValueCodeParameters
+        {
+            get => _LableValueCodeParameters;
+            set => Set(ref _LableValueCodeParameters, value);
+        }
+
+        #endregion
+
+
 
 
 
@@ -103,7 +127,7 @@ namespace ABCoder.ViewModels
 
         #region Combo Box Mode Code Content
 
-        private string _ComboBoxModeCodeContent = "Code";
+        private string _ComboBoxModeCodeContent = "Encode";
         /// <summary>Combo Box Mode Code Content</summary>
         public string ComboBoxModeCodeContent
         {
@@ -197,7 +221,7 @@ namespace ABCoder.ViewModels
 
         #region Button Action Content
 
-        private string _ButtonActionContent = "Code";
+        private string _ButtonActionContent = "Encode";
         /// <summary>Button Action Content</summary>
         public string ButtonActionContent
         {

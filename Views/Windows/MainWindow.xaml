@@ -110,10 +110,42 @@
                      Text="{Binding TextBoxCodeCombinationText}">
             </TextBox>
         </Grid>
-        <!--Code Combination-->
+        <!--Code Word-->
+        <Grid DockPanel.Dock="Top">
+            <!--Error Bits-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" 
+                   Content="{Binding LableValueErrorsBits}">
+            </Label>
+            <RichTextBox Grid.Row="0" Grid.Column="1" 
+                         IsEnabled="False">
 
-        <DockPanel></DockPanel>
-
+            </RichTextBox>
+        </Grid>
+        <!--Error Bits-->
+        <Grid DockPanel.Dock="Top">
+            <!--Code Parameters-->
+            <Label Content="{Binding LableValueCodeParameters}" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
+            </Label>
+        </Grid>
+        <!--Code Parameters-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+        
     </DockPanel>
-
 </Window>
