@@ -24,13 +24,17 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <!--Menu-->
-            <MenuItem Header="File">
-                <MenuItem Header="Exit"
+            <MenuItem Header="{Binding MainMenuFileItem}">
+                <MenuItem Header="{Binding MainMenuFileExitItem}"
                           Command="{Binding CloseApplicationCommand}"
                           InputGestureText="Ctrl + Q">
                 </MenuItem>
             </MenuItem>
-            <MenuItem Header="About">
+            <MenuItem Header="{Binding MainMenuHelpItem}">
+                <MenuItem Header="{Binding MainMenuHelpAboutABCoderItem}"
+                          Command="{Binding SelectMainMenuHelpAboutCommand}"
+                          InputGestureText="Ctrl + H">
+                </MenuItem>
             </MenuItem>
         </Menu>
         <!--Menu-->

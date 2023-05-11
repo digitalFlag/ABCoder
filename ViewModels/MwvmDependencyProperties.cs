@@ -1,5 +1,4 @@
 ﻿using ABCoder.Models.ComboBox;
-using System;
 using System.Collections.ObjectModel;
 
 namespace ABCoder.ViewModels
@@ -18,6 +17,59 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+
+        #region Main Menu File Item
+
+        private string _MainMenuFileItem = "File";
+        /// <summary>Main Menu File Item</summary>
+
+        public string MainMenuFileItem
+        {
+            get => _MainMenuFileItem;
+            set => Set(ref _MainMenuFileItem, value);
+        }
+
+        #endregion
+        #region Main Menu File Exit Item
+
+        private string _MainMenuFileExitItem = "Exit";
+        /// <summary>Main Menu File Exit Item</summary>
+
+        public string MainMenuFileExitItem
+        {
+            get => _MainMenuFileExitItem;
+            set => Set(ref _MainMenuFileExitItem, value);
+        }
+
+        #endregion
+        #region Main Menu Help Item
+
+        private string _MainMenuHelpItem = "Help";
+        /// <summary>Main Menu Help Item</summary>
+
+        public string MainMenuHelpItem
+        {
+            get => _MainMenuHelpItem;
+            set => Set(ref _MainMenuHelpItem, value);
+        }
+
+        #endregion
+        #region Main Menu Help About ABCoder Item
+
+        private string _MainMenuHelpAboutABCoderItem = "About ABCoder";
+        /// <summary>Main Menu Help About ABCoder Item</summary>
+
+        public string MainMenuHelpAboutABCoderItem
+        {
+            get => _MainMenuHelpAboutABCoderItem;
+            set => Set(ref _MainMenuHelpAboutABCoderItem, value);
+        }
+
+        #endregion
+
+
+
+
 
         #region Lable Value Mode
 
@@ -97,10 +149,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
-
-
-
 
         #region Combo Box Mode Source
 

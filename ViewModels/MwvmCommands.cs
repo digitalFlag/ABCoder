@@ -1,5 +1,6 @@
 ﻿using ABCoder.ViewModels.Base;
 using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Input;
 
@@ -68,6 +69,21 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+
+        #region Select Main Menu Help About Command
+
+        public ICommand SelectMainMenuHelpAboutCommand { get; }
+
+        private bool CanSelectMainMenuHelpAboutCommandExecute(object p) => true;
+
+        private void OnSelectMainMenuHelpAboutCommandExecuted(object p)
+        {
+            MessageBox.Show(File.ReadAllText("README.md"), MainMenuHelpAboutABCoderItem, MessageBoxButton.OK, MessageBoxImage.Information);
+            OnPropertyChanged();
+        }
+
+        #endregion
+
 
     }
 }

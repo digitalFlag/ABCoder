@@ -15,6 +15,5 @@
         public int ErrorCorrectionCapability { get; set; }
 
         public string? Polynomial { get; set; }
-
     }
 }
