@@ -1,4 +1,5 @@
-﻿using ABCoder.Models.ComboBox;
+﻿using ABCoder.Models.Code;
+using ABCoder.Models.ComboBox;
 using System.Collections.ObjectModel;
 
 namespace ABCoder.ViewModels
@@ -66,10 +67,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
-
-
-
 
         #region Lable Value Mode
 
@@ -150,6 +147,89 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Lable Value Code Instance Name
+
+        private string _LableValueCodeInstanceName = "Code type:";
+        /// <summary>Lable Value Code Instance Name</summary>
+        public string LableValueCodeInstanceName
+        {
+            get => _LableValueCodeInstanceName;
+            set => Set(ref _LableValueCodeInstanceName, value);
+        }
+
+        #endregion
+        #region Lable Value Code Instance Polynomial
+
+        private string _LableValueCodeInstancePolynomial = "Polynomial:";
+        /// <summary>Lable Value Code Instance Polynomial</summary>
+        public string LableValueCodeInstancePolynomial
+        {
+            get => _LableValueCodeInstancePolynomial;
+            set => Set(ref _LableValueCodeInstancePolynomial, value);
+        }
+
+        #endregion
+
+        #region Lable Value Code Word Length
+
+        private string _LableValueCodeWordLength = "Code word length:";
+        /// <summary>Lable Value Code Word Length</summary>
+        public string LableValueCodeWordLength
+        {
+            get => _LableValueCodeWordLength;
+            set => Set(ref _LableValueCodeWordLength, value);
+        }
+
+        #endregion
+        #region Lable Value Information Part Length
+
+        private string _LableValueInformationPartLength = "Information Part Length:";
+        /// <summary>Lable Value Information Part Length</summary>
+        public string LableValueInformationPartLength
+        {
+            get => _LableValueInformationPartLength;
+            set => Set(ref _LableValueInformationPartLength, value);
+        }
+
+        #endregion
+        #region Lable Value Verification Part Length
+
+        private string _LableValueVerificationPartLength = "Verification Part Length:";
+        /// <summary>Lable Value Verification Part Length</summary>
+        public string LableValueVerificationPartLength
+        {
+            get => _LableValueVerificationPartLength;
+            set => Set(ref _LableValueVerificationPartLength, value);
+        }
+
+        #endregion
+        #region Lable Value Error Detection Capability
+
+        private string _LableValueErrorDetectionCapability = "Error Detection Capability:";
+        /// <summary>Lable Value Error Detection Capability</summary>
+        public string LableValueErrorDetectionCapability
+        {
+            get => _LableValueErrorDetectionCapability;
+            set => Set(ref _LableValueErrorDetectionCapability, value);
+        }
+
+        #endregion
+        #region Lable Value Error Correction Capability
+
+        private string _LableValueErrorCorrectionCapability = "Error Correction Capability:";
+        /// <summary>Lable Value Error Correction Capability</summary>
+        public string LableValueErrorCorrectionCapability
+        {
+            get => _LableValueErrorCorrectionCapability;
+            set => Set(ref _LableValueErrorCorrectionCapability, value);
+        }
+
+        #endregion
+
+
+
+
+
         #region Combo Box Mode Source
 
         private ObservableCollection<Mode> _ComboBoxModeSource;
@@ -196,6 +276,17 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Code Instance Goley (23, 12) C75
+
+        private CodeInstance _CodeInstanceGoley2312C75;
+        /// <summary>Code Instance Goley (23, 12) C75</summary>
+        public CodeInstance CodeInstanceGoley2312C75
+        {
+            get => _CodeInstanceGoley2312C75;
+            set => Set(ref _CodeInstanceGoley2312C75, value);
+        }
+
+        #endregion
 
         #region Combo Box Code Type Source
 
@@ -265,7 +356,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
 
         #region Button Action Content
 
