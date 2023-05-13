@@ -28,6 +28,7 @@ namespace ABCoder.ViewModels
                 new Mode() {CoderMode = ComboBoxCodeTypeGoley2312C75Content},
             };
             CodeInstanceGoley2312C75 = new CodeInstance();
+            CodeInstanceGoley2312C75.Name = ComboBoxCodeTypeGoley2312C75Content;
             CodeInstanceGoley2312C75.CodeWordLength = 23;
             CodeInstanceGoley2312C75.InformationPartLength = 12;
             CodeInstanceGoley2312C75.VerificationPartLength = 11;

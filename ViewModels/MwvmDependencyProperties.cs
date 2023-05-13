@@ -147,9 +147,87 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Lable Code Instance Name
+
+        private string _LableCodeInstanceName = "Code type:";
+        /// <summary>Lable Code Instance Name</summary>
+        public string LableCodeInstanceName
+        {
+            get => _LableCodeInstanceName;
+            set => Set(ref _LableCodeInstanceName, value);
+        }
+
+        #endregion
+        #region Lable Code Instance Polynomial
+
+        private string _LableCodeInstancePolynomial = "Polynomial:";
+        /// <summary>Lable Code Instance Polynomial</summary>
+        public string LableCodeInstancePolynomial
+        {
+            get => _LableCodeInstancePolynomial;
+            set => Set(ref _LableCodeInstancePolynomial, value);
+        }
+
+        #endregion
+        #region Lable Code Word Length
+
+        private string _LableCodeWordLength = "Code word length:";
+        /// <summary>Lable Code Word Length</summary>
+        public string LableCodeWordLength
+        {
+            get => _LableCodeWordLength;
+            set => Set(ref _LableCodeWordLength, value);
+        }
+
+        #endregion
+        #region Lable Information Part Length
+
+        private string _LableInformationPartLength = "Information Part Length:";
+        /// <summary>Lable Information Part Length</summary>
+        public string LableInformationPartLength
+        {
+            get => _LableInformationPartLength;
+            set => Set(ref _LableInformationPartLength, value);
+        }
+
+        #endregion
+        #region Lable Verification Part Length
+
+        private string _LableVerificationPartLength = "Verification Part Length:";
+        /// <summary>Lable Verification Part Length</summary>
+        public string LableVerificationPartLength
+        {
+            get => _LableVerificationPartLength;
+            set => Set(ref _LableVerificationPartLength, value);
+        }
+
+        #endregion
+        #region Lable Error Detection Capability
+
+        private string _LableDetectionCapability = "Error Detection Capability:";
+        /// <summary>Lable Value Detection Capability</summary>
+        public string LableDetectionCapability
+        {
+            get => _LableDetectionCapability;
+            set => Set(ref _LableDetectionCapability, value);
+        }
+
+        #endregion
+        #region Lable Error Correction Capability
+
+        private string _LableErrorCorrectionCapability = "Error Correction Capability:";
+        /// <summary>Lable Error Correction Capability</summary>
+        public string LableErrorCorrectionCapability
+        {
+            get => _LableErrorCorrectionCapability;
+            set => Set(ref _LableErrorCorrectionCapability, value);
+        }
+
+        #endregion
+
         #region Lable Value Code Instance Name
 
-        private string _LableValueCodeInstanceName = "Code type:";
+        private string _LableValueCodeInstanceName = string.Empty;
         /// <summary>Lable Value Code Instance Name</summary>
         public string LableValueCodeInstanceName
         {
@@ -160,7 +238,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Code Instance Polynomial
 
-        private string _LableValueCodeInstancePolynomial = "Polynomial:";
+        private string _LableValueCodeInstancePolynomial = string.Empty;
         /// <summary>Lable Value Code Instance Polynomial</summary>
         public string LableValueCodeInstancePolynomial
         {
@@ -169,12 +247,11 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
         #region Lable Value Code Word Length
 
-        private string _LableValueCodeWordLength = "Code word length:";
+        private int _LableValueCodeWordLength;
         /// <summary>Lable Value Code Word Length</summary>
-        public string LableValueCodeWordLength
+        public int LableValueCodeWordLength
         {
             get => _LableValueCodeWordLength;
             set => Set(ref _LableValueCodeWordLength, value);
@@ -183,9 +260,9 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Information Part Length
 
-        private string _LableValueInformationPartLength = "Information Part Length:";
+        private int _LableValueInformationPartLength;
         /// <summary>Lable Value Information Part Length</summary>
-        public string LableValueInformationPartLength
+        public int LableValueInformationPartLength
         {
             get => _LableValueInformationPartLength;
             set => Set(ref _LableValueInformationPartLength, value);
@@ -194,9 +271,9 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Verification Part Length
 
-        private string _LableValueVerificationPartLength = "Verification Part Length:";
+        private int _LableValueVerificationPartLength;
         /// <summary>Lable Value Verification Part Length</summary>
-        public string LableValueVerificationPartLength
+        public int LableValueVerificationPartLength
         {
             get => _LableValueVerificationPartLength;
             set => Set(ref _LableValueVerificationPartLength, value);
@@ -205,9 +282,9 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Error Detection Capability
 
-        private string _LableValueErrorDetectionCapability = "Error Detection Capability:";
+        private int _LableValueErrorDetectionCapability;
         /// <summary>Lable Value Error Detection Capability</summary>
-        public string LableValueErrorDetectionCapability
+        public int LableValueErrorDetectionCapability
         {
             get => _LableValueErrorDetectionCapability;
             set => Set(ref _LableValueErrorDetectionCapability, value);
@@ -216,19 +293,15 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Error Correction Capability
 
-        private string _LableValueErrorCorrectionCapability = "Error Correction Capability:";
+        private int _LableValueErrorCorrectionCapability;
         /// <summary>Lable Value Error Correction Capability</summary>
-        public string LableValueErrorCorrectionCapability
+        public int LableValueErrorCorrectionCapability
         {
             get => _LableValueErrorCorrectionCapability;
             set => Set(ref _LableValueErrorCorrectionCapability, value);
         }
 
         #endregion
-
-
-
-
 
         #region Combo Box Mode Source
 
