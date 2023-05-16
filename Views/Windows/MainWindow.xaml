@@ -166,7 +166,7 @@
                    Content="{Binding LableVerificationPartLength}">
             </Label>
             <Label Grid.Row="5" Grid.Column="0"
-                   Content="{Binding LableErrorDetectionCapability}">
+                   Content="{Binding LableDetectionCapability}">
             </Label>
             <Label Grid.Row="6" Grid.Column="0"
                    Content="{Binding LableErrorCorrectionCapability}">

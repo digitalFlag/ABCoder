@@ -1,6 +1,8 @@
 ﻿using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
 using System.Collections.ObjectModel;
+using System.Data.Common;
+using System.Windows.Media.Animation;
 
 namespace ABCoder.ViewModels
 {
@@ -227,7 +229,7 @@ namespace ABCoder.ViewModels
 
         #region Lable Value Code Instance Name
 
-        private string _LableValueCodeInstanceName = string.Empty;
+        private string _LableValueCodeInstanceName = "Goley (23, 12) C75";
         /// <summary>Lable Value Code Instance Name</summary>
         public string LableValueCodeInstanceName
         {
@@ -238,7 +240,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Code Instance Polynomial
 
-        private string _LableValueCodeInstancePolynomial = string.Empty;
+        private string _LableValueCodeInstancePolynomial = "x\u00b9\u00b9+x\u00b9\u2070+x\u2076+x\u2075+x\u2074+x\u00B2+1";
         /// <summary>Lable Value Code Instance Polynomial</summary>
         public string LableValueCodeInstancePolynomial
         {
@@ -249,7 +251,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Code Word Length
 
-        private int _LableValueCodeWordLength;
+        private int _LableValueCodeWordLength = 23;
         /// <summary>Lable Value Code Word Length</summary>
         public int LableValueCodeWordLength
         {
@@ -260,7 +262,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Information Part Length
 
-        private int _LableValueInformationPartLength;
+        private int _LableValueInformationPartLength = 12;
         /// <summary>Lable Value Information Part Length</summary>
         public int LableValueInformationPartLength
         {
@@ -271,7 +273,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Verification Part Length
 
-        private int _LableValueVerificationPartLength;
+        private int _LableValueVerificationPartLength = 11;
         /// <summary>Lable Value Verification Part Length</summary>
         public int LableValueVerificationPartLength
         {
@@ -282,7 +284,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Error Detection Capability
 
-        private int _LableValueErrorDetectionCapability;
+        private int _LableValueErrorDetectionCapability = 7;
         /// <summary>Lable Value Error Detection Capability</summary>
         public int LableValueErrorDetectionCapability
         {
@@ -293,7 +295,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Error Correction Capability
 
-        private int _LableValueErrorCorrectionCapability;
+        private int _LableValueErrorCorrectionCapability = 3;
         /// <summary>Lable Value Error Correction Capability</summary>
         public int LableValueErrorCorrectionCapability
         {

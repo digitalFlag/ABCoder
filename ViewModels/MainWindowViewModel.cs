@@ -34,7 +34,7 @@ namespace ABCoder.ViewModels
             CodeInstanceGoley2312C75.VerificationPartLength = 11;
             CodeInstanceGoley2312C75.ErrorDetectionCapability = 7;
             CodeInstanceGoley2312C75.ErrorDetectionCapability = 3;
-            CodeInstanceGoley2312C75.Polynomial = "!!!";
+            CodeInstanceGoley2312C75.Polynomial = "x\u00b9\u00b9+x\u00b9\u2070+x\u2076+x\u2075+x\u2074+x\u00B2+1";
         }
     }
 }
