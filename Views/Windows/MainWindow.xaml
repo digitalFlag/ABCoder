@@ -78,10 +78,7 @@
                       ItemsSource="{Binding ComboBoxCodeTypeSource}" DisplayMemberPath="CoderMode"
                       SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}">
             </ComboBox>
-            <Button Grid.Row="0" Grid.Column="2"
-                    Content="{Binding ButtonActionContent}"
-                    Command="{Binding ExecuteButtonCommand}">
-            </Button>
+
         </Grid>
         <!--Combo Boxes-->
         <Grid DockPanel.Dock="Top">
@@ -131,69 +128,83 @@
             </RichTextBox>
         </Grid>
         <!--Error Bits-->
+
         <Grid DockPanel.Dock="Top">
-            <!--Code Parameters-->
-            <Label Content="{Binding LableValueCodeParameters}" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">
-            </Label>
-        </Grid> <!--Code Parameters-->
-        <Grid DockPanel.Dock="Top"> <!--Code Instans-->
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0"
-                   Content="{Binding LableCodeInstanceName}">
-            </Label>
-            <Label Grid.Row="1" Grid.Column="0"
-                   Content="{Binding LableCodeInstancePolynomial}">
-            </Label>
-            <Label Grid.Row="2" Grid.Column="0"
-                   Content="{Binding LableCodeWordLength}">
-            </Label>
-            <Label Grid.Row="3" Grid.Column="0"
-                   Content="{Binding LableInformationPartLength}">
-            </Label>
-            <Label Grid.Row="4" Grid.Column="0"
-                   Content="{Binding LableVerificationPartLength}">
-            </Label>
-            <Label Grid.Row="5" Grid.Column="0"
-                   Content="{Binding LableDetectionCapability}">
-            </Label>
-            <Label Grid.Row="6" Grid.Column="0"
-                   Content="{Binding LableErrorCorrectionCapability}">
-            </Label>
-            <Label Grid.Row="0" Grid.Column="1"
-                   Content="{Binding LableValueCodeInstanceName}">
-            </Label>
-            <Label Grid.Row="1" Grid.Column="1"
-                   Content="{Binding LableValueCodeInstancePolynomial}">
-            </Label>
-            <Label Grid.Row="2" Grid.Column="1"
-                   Content="{Binding LableValueCodeWordLength}">
-            </Label>
-            <Label Grid.Row="3" Grid.Column="1"
-                   Content="{Binding LableValueInformationPartLength}">
-            </Label>
-            <Label Grid.Row="4" Grid.Column="1"
-                   Content="{Binding LableValueVerificationPartLength}">
-            </Label>
-            <Label Grid.Row="5" Grid.Column="1"
-                   Content="{Binding LableValueErrorDetectionCapability}">
-            </Label>
-            <Label Grid.Row="6" Grid.Column="1"
-                   Content="{Binding LableValueErrorCorrectionCapability}">
-            </Label>
-        </Grid> <!--Code Instans-->
 
+            <Button Grid.Row="0" Grid.Column="1"
+                    Content="{Binding ButtonActionContent}"
+                    Command="{Binding ExecuteButtonCommand}">
+            </Button>
+        </Grid>
+        
+        
+        <GroupBox DockPanel.Dock="Top"
+                  Header="{Binding LableValueCodeParameters}">
+            <Grid DockPanel.Dock="Top">
+                <!--Code Instans-->
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0"
+                   Content="{Binding LableCodeInstanceName}">
+                </Label>
+                <Label Grid.Row="1" Grid.Column="0"
+                   Content="{Binding LableCodeInstancePolynomial}">
+                </Label>
+                <Label Grid.Row="2" Grid.Column="0"
+                   Content="{Binding LableCodeWordLength}">
+                </Label>
+                <Label Grid.Row="3" Grid.Column="0"
+                   Content="{Binding LableInformationPartLength}">
+                </Label>
+                <Label Grid.Row="4" Grid.Column="0"
+                   Content="{Binding LableVerificationPartLength}">
+                </Label>
+                <Label Grid.Row="5" Grid.Column="0"
+                   Content="{Binding LableDetectionCapability}">
+                </Label>
+                <Label Grid.Row="6" Grid.Column="0"
+                   Content="{Binding LableErrorCorrectionCapability}">
+                </Label>
+                <Label Grid.Row="0" Grid.Column="1"
+                   Content="{Binding LableValueCodeInstanceName}">
+                </Label>
+                <Label Grid.Row="1" Grid.Column="1"
+                   Content="{Binding LableValueCodeInstancePolynomial}">
+                </Label>
+                <Label Grid.Row="2" Grid.Column="1"
+                   Content="{Binding LableValueCodeWordLength}">
+                </Label>
+                <Label Grid.Row="3" Grid.Column="1"
+                   Content="{Binding LableValueInformationPartLength}">
+                </Label>
+                <Label Grid.Row="4" Grid.Column="1"
+                   Content="{Binding LableValueVerificationPartLength}">
+                </Label>
+                <Label Grid.Row="5" Grid.Column="1"
+                   Content="{Binding LableValueErrorDetectionCapability}">
+                </Label>
+                <Label Grid.Row="6" Grid.Column="1"
+                   Content="{Binding LableValueErrorCorrectionCapability}">
+                </Label>
+            </Grid> <!--Code Instans-->
+
+        </GroupBox> <!--Code Instans-->
 
         <Grid></Grid>
 
