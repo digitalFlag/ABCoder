@@ -3,6 +3,7 @@ using ABCoder.Models.ComboBox;
 using System.Collections.ObjectModel;
 using System.Data.Common;
 using System.Windows.Media.Animation;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ABCoder.ViewModels
 {
@@ -137,6 +138,18 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Lable Errors Bits Is Enable
+
+        private bool _LableErrorsBitsIsEnable = false;
+        /// <summary>Lable Value Errors Bits</summary>
+        public bool LableErrorsBitsIsEnable
+        {
+            get => _LableErrorsBitsIsEnable;
+            set => Set(ref _LableErrorsBitsIsEnable, value);
+        }
+
+        #endregion
+
         #region Lable Value Code Parameters
 
         private string _LableValueCodeParameters = "Code parameters:";
@@ -419,6 +432,18 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Text Box Information Bits Is Enable
+
+        private bool _TextBoxInformationBitsIsEnable = true;
+        /// <summary>Text Box Information Bits Is Enable</summary>
+        public bool TextBoxInformationBitsIsEnable
+        {
+            get => _TextBoxInformationBitsIsEnable;
+            set => Set(ref _TextBoxInformationBitsIsEnable, value);
+        }
+
+        #endregion
+
 
         #region Text Box Code Combination Text
 

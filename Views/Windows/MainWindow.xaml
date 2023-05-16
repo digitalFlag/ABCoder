@@ -100,15 +100,17 @@
         <Grid DockPanel.Dock="Top">
             <!--Code Combination-->
             <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
                 <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" 
-                   Content="{Binding LableValueCodeCombination}">
+                   Content="{Binding LableValueCodeCombination}"
+                   IsEnabled="{Binding TextBoxInformationBitsIsEnable}">
             </Label>
             <TextBox Grid.Row="0" Grid.Column="1" 
-                     Text="{Binding TextBoxCodeCombinationText}">
+                     Text="{Binding TextBoxCodeCombinationText}" Grid.ColumnSpan="2">
             </TextBox>
         </Grid>
         <!--Code Word-->
@@ -120,7 +122,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" 
-                   Content="{Binding LableValueErrorsBits}">
+                   Content="{Binding LableValueErrorsBits}"
+                   IsEnabled="{Binding LableErrorsBitsIsEnable}">
             </Label>
             <RichTextBox Grid.Row="0" Grid.Column="1" 
                          IsEnabled="False">
@@ -141,8 +144,8 @@
                     Command="{Binding ExecuteButtonCommand}">
             </Button>
         </Grid>
-        
-        
+
+
         <GroupBox DockPanel.Dock="Top"
                   Header="{Binding LableValueCodeParameters}">
             <Grid DockPanel.Dock="Top">
@@ -202,9 +205,11 @@
                 <Label Grid.Row="6" Grid.Column="1"
                    Content="{Binding LableValueErrorCorrectionCapability}">
                 </Label>
-            </Grid> <!--Code Instans-->
+            </Grid>
+            <!--Code Instans-->
 
-        </GroupBox> <!--Code Instans-->
+        </GroupBox>
+        <!--Code Instans-->
 
         <Grid></Grid>
 

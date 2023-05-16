@@ -29,13 +29,20 @@ namespace ABCoder.ViewModels
 
         private void OnChangeSelectionOfComboBoxModeCommandExecuted(object p)
         {
-            ButtonActionContent = ComboBoxModeSelectedIndex switch
+            if (ComboBoxModeSelectedIndex == 0)
             {
-                0 => ComboBoxModeCodeContent,
-                1 => ComboBoxModeDecodeContent,
-                _=> throw new Exception("You enterd the wrong index."),
-            };
+                ButtonActionContent = ComboBoxModeCodeContent;
+                LableErrorsBitsIsEnable = false;
+            }
+            else
+            {
+                ButtonActionContent = ComboBoxModeDecodeContent;
+                LableErrorsBitsIsEnable = true;
+
+            }
             OnPropertyChanged();
+
+
         }
 
         #endregion
