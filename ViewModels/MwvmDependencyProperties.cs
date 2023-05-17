@@ -491,7 +491,40 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Button Information Information Bits Is Enable
 
+        private bool _ButtonInformationInformationBitsIsEnable = true;
+        /// <summary>Button Information Information Bits Is Enable</summary>
+        public bool ButtonInformationInformationBitsIsEnable
+        {
+            get => _ButtonInformationInformationBitsIsEnable;
+            set => Set(ref _ButtonInformationInformationBitsIsEnable, value);
+        }
+
+        #endregion
+
+        #region Button Information Code Word Text Color
+
+        private string _ButtonInformationCodeWordTextColor = "Red";
+        /// <summary>Button Information Code Word Text Color</summary>
+        public string ButtonInformationCodeWordTextColor
+        {
+            get => _ButtonInformationCodeWordTextColor;
+            set => Set(ref _ButtonInformationCodeWordTextColor, value);
+        }
+
+        #endregion
+        #region Button Information Code Word Tool Tip Text
+
+        private string _ButtonInformationCodeWordToolTipText = "The \"Code Word\" field is empty.";
+        /// <summary>Button Information Code Word Tool Tip Text</summary>
+        public string ButtonInformationCodeWordToolTipText
+        {
+            get => _ButtonInformationCodeWordToolTipText;
+            set => Set(ref _ButtonInformationCodeWordToolTipText, value);
+        }
+
+        #endregion
 
 
 

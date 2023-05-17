@@ -102,7 +102,8 @@
                         Orientation="Horizontal">
                 <Button  Content="  i  " 
                          Foreground="{Binding ButtonInformationInformationBitsTextColor}"
-                         ToolTip="{Binding ButtonInformationInformationBitsToolTipText}">
+                         ToolTip="{Binding ButtonInformationInformationBitsToolTipText}"
+                         IsEnabled="{Binding ButtonInformationInformationBitsIsEnable}">
                 </Button>
 
             </StackPanel>
@@ -111,18 +112,25 @@
         <Grid DockPanel.Dock="Top">
             <!--Code Combination-->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
                 <ColumnDefinition/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0" 
-                   Content="{Binding LableValueCodeCombination}"
-                   IsEnabled="{Binding TextBoxInformationBitsIsEnable}">
+                   Content="{Binding LableValueCodeCombination}">
             </Label>
             <TextBox Grid.Row="0" Grid.Column="1" 
                      Text="{Binding TextBoxCodeCombinationText}" Grid.ColumnSpan="2">
             </TextBox>
+            <StackPanel Grid.Row="0" Grid.Column="2"
+                        Orientation="Horizontal">
+                <Button  Content="  i  " 
+                         Foreground="{Binding ButtonInformationCodeWordTextColor}"
+                         ToolTip="{Binding ButtonInformationCodeWordToolTipText}"
+                         IsEnabled="{Binding }">
+                </Button>
+
+            </StackPanel>
         </Grid>
         <!--Code Word-->
         <Grid DockPanel.Dock="Top">
