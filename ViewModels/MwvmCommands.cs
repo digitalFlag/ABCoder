@@ -33,11 +33,13 @@ namespace ABCoder.ViewModels
             {
                 ButtonActionContent = ComboBoxModeCodeContent;
                 LableErrorsBitsIsEnable = false;
+                TextBoxInformationBitsIsEnable = true;
             }
             else
             {
                 ButtonActionContent = ComboBoxModeDecodeContent;
                 LableErrorsBitsIsEnable = true;
+                TextBoxInformationBitsIsEnable = false;
 
             }
             OnPropertyChanged();

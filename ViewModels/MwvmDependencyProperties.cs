@@ -1,5 +1,6 @@
 ﻿using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
+using Microsoft.VisualBasic;
 using System.Collections.ObjectModel;
 using System.Data.Common;
 using System.Windows.Media.Animation;
@@ -468,5 +469,34 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Button Information Information Bits Text Color
+
+        private string _ButtonInformationInformationBitsTextColor = "Red";
+        /// <summary>Button Information Information Bits Text Color</summary>
+        public string ButtonInformationInformationBitsTextColor
+        {
+            get => _ButtonInformationInformationBitsTextColor;
+            set => Set(ref _ButtonInformationInformationBitsTextColor, value);
+        }
+
+        #endregion
+        #region Button Information Information Bits Tool Tip Text
+
+        private string _ButtonInformationInformationBitsToolTipText = "The \"Information Bits\" field is empty.";
+        /// <summary>Button Information Information Bits Tool Tip Text</summary>
+        public string ButtonInformationInformationBitsToolTipText
+        {
+            get => _ButtonInformationInformationBitsToolTipText;
+            set => Set(ref _ButtonInformationInformationBitsToolTipText, value);
+        }
+
+        #endregion
+
+
+
+
+
+
+
     }
 }

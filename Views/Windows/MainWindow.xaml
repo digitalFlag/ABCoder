@@ -79,6 +79,8 @@
                       SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}">
             </ComboBox>
 
+            
+
         </Grid>
         <!--Combo Boxes-->
         <Grid DockPanel.Dock="Top">
@@ -93,8 +95,17 @@
             </Label>
             <TextBox Grid.Row="0" Grid.Column="1" 
                      Text="{Binding TextBoxInformationBitsText}"
-                     BorderBrush="{Binding TextBoxInformationBitsBorderBrush}">
+                     BorderBrush="{Binding TextBoxInformationBitsBorderBrush}"
+                     IsEnabled="{Binding TextBoxInformationBitsIsEnable}">
             </TextBox>
+            <StackPanel Grid.Row="0" Grid.Column="2"
+                        Orientation="Horizontal">
+                <Button  Content="  i  " 
+                         Foreground="{Binding ButtonInformationInformationBitsTextColor}"
+                         ToolTip="{Binding ButtonInformationInformationBitsToolTipText}">
+                </Button>
+
+            </StackPanel>
         </Grid>
         <!--Information Bits-->
         <Grid DockPanel.Dock="Top">
@@ -141,7 +152,8 @@
 
             <Button Grid.Row="0" Grid.Column="1"
                     Content="{Binding ButtonActionContent}"
-                    Command="{Binding ExecuteButtonCommand}">
+                    Command="{Binding ExecuteButtonCommand}"
+                    Margin="0, 10">
             </Button>
         </Grid>
 
