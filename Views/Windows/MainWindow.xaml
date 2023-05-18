@@ -78,9 +78,6 @@
                       ItemsSource="{Binding ComboBoxCodeTypeSource}" DisplayMemberPath="CoderMode"
                       SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}">
             </ComboBox>
-
-            
-
         </Grid>
         <!--Combo Boxes-->
         <Grid DockPanel.Dock="Top">
@@ -97,6 +94,13 @@
                      Text="{Binding TextBoxInformationBitsText}"
                      BorderBrush="{Binding TextBoxInformationBitsBorderBrush}"
                      IsEnabled="{Binding TextBoxInformationBitsIsEnable}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="TextChanged">
+                        <i:InvokeCommandAction
+                            Command="{Binding ChangeBoxInformationBitsTextCommand}">
+                        </i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>  
             </TextBox>
             <StackPanel Grid.Row="0" Grid.Column="2"
                         Orientation="Horizontal">
@@ -105,7 +109,6 @@
                          ToolTip="{Binding ButtonInformationInformationBitsToolTipText}"
                          IsEnabled="{Binding ButtonInformationInformationBitsIsEnable}">
                 </Button>
-
             </StackPanel>
         </Grid>
         <!--Information Bits-->
@@ -127,7 +130,7 @@
                 <Button  Content="  i  " 
                          Foreground="{Binding ButtonInformationCodeWordTextColor}"
                          ToolTip="{Binding ButtonInformationCodeWordToolTipText}"
-                         IsEnabled="{Binding }">
+                         IsEnabled="{Binding ButtonInformationCodeWordIsEnable}">
                 </Button>
 
             </StackPanel>

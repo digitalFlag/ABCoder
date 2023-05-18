@@ -525,6 +525,17 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Button Information Code Word Is Enable
+
+        private bool _ButtonInformationCodeWordIsEnable = false;
+        /// <summary>Button Information Code Word Is Enable</summary>
+        public bool ButtonInformationCodeWordIsEnable
+        {
+            get => _ButtonInformationCodeWordIsEnable;
+            set => Set(ref _ButtonInformationCodeWordIsEnable, value);
+        }
+
+        #endregion
 
 
 

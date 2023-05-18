@@ -1,5 +1,4 @@
 ﻿using ABCoder.ViewModels.Base;
-using System;
 using System.IO;
 using System.Windows;
 using System.Windows.Input;
@@ -35,6 +34,7 @@ namespace ABCoder.ViewModels
                 LableErrorsBitsIsEnable = false;
                 TextBoxInformationBitsIsEnable = true;
                 ButtonInformationInformationBitsIsEnable = true;
+                ButtonInformationCodeWordIsEnable = false;
             }
             else
             {
@@ -42,6 +42,7 @@ namespace ABCoder.ViewModels
                 LableErrorsBitsIsEnable = true;
                 TextBoxInformationBitsIsEnable = false;
                 ButtonInformationInformationBitsIsEnable = false;
+                ButtonInformationCodeWordIsEnable = true;
             }
             OnPropertyChanged();
 
@@ -93,6 +94,25 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+
+        #region Change Text Box Information Bits Text Command
+
+        public ICommand ChangeBoxInformationBitsTextCommand { get; }
+
+        private bool CanChangeBoxInformationBitsTextCommandExecute(object p) => true;
+
+        private void OnChangeBoxInformationBitsTextCommandExecuted(object p)
+        {
+
+            TextBoxInformationBitsText += "*";
+
+
+            OnPropertyChanged();
+        }
+
+        #endregion
+
+
 
 
     }

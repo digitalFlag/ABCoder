@@ -16,6 +16,7 @@ namespace ABCoder.ViewModels
             ChangeSelectionOfComboBoxModeCommand = new LambdaCommand(OnChangeSelectionOfComboBoxModeCommandExecuted, CanChangeSelectionOfComboBoxModeCommandExecute);
             ExecuteButtonCommand = new LambdaCommand(OnExecuteButtonCommandExecuted, CanExecuteButtonCommandExecute);
             SelectMainMenuHelpAboutCommand = new LambdaCommand(OnSelectMainMenuHelpAboutCommandExecuted, CanSelectMainMenuHelpAboutCommandExecute);
+            ChangeBoxInformationBitsTextCommand = new LambdaCommand(OnChangeBoxInformationBitsTextCommandExecuted, CanChangeBoxInformationBitsTextCommandExecute);
 
             //--------------------------------------INTERFACE--------------------------------------
             ComboBoxModeSource = new ObservableCollection<Mode>()
