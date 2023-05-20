@@ -1,5 +1,6 @@
 ﻿using ABCoder.ViewModels.Base;
 using System.IO;
+using System.Threading.Channels;
 using System.Windows;
 using System.Windows.Input;
 
@@ -95,18 +96,15 @@ namespace ABCoder.ViewModels
 
         #endregion
 
-        #region Change Text Box Information Bits Text Command
+        #region Text Box Information Bits Text Changed Command
 
-        public ICommand ChangeBoxInformationBitsTextCommand { get; }
+        public ICommand TextBoxInformationBitsTextChangedCommand { get; }
 
-        private bool CanChangeBoxInformationBitsTextCommandExecute(object p) => true;
+        private bool CanTextBoxInformationBitsTextChangedCommandExecute(object p) => true;
 
-        private void OnChangeBoxInformationBitsTextCommandExecuted(object p)
+        private void OnTextBoxInformationBitsTextChangedCommandExecuted(object p)
         {
-
-            TextBoxInformationBitsText += "*";
-
-
+            MessageBox.Show(File.ReadAllText("README.md"), MainMenuHelpAboutABCoderItem, MessageBoxButton.OK, MessageBoxImage.Information);
             OnPropertyChanged();
         }
 
