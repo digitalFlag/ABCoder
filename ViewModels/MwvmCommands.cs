@@ -119,13 +119,21 @@ namespace ABCoder.ViewModels
             }
             else
             {
-
-                if (!Golay2312C75Checks.InformationPartLength(ref _TextBoxInformationBitsText))
+                if (!Golay2312C75Checks.InformationPartLength(ref _TextBoxInformationBitsText))//Lengtg Check
                 {
                     TextBoxInformationBitsBorderBrush = "Red";
                     ButtonInformationInformationBitsTextColor = "Red";
-                    ButtonInformationInformationBitsToolTipText = "The \"" + LableValueInformation + "\" field length must be 12.\n";
+                    ButtonInformationInformationBitsToolTipText += "The \"" + LableValueInformation + "\" field length must be 12.\n";
                 }
+
+                if (!Golay2312C75Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
+                {
+                    TextBoxInformationBitsBorderBrush = "Red";
+                    ButtonInformationInformationBitsTextColor = "Red";
+                    ButtonInformationInformationBitsToolTipText += "The \"" + LableValueInformation + "\" field contains a non-binary symbol.\n";
+                }
+
+
             }
 
             if (string.IsNullOrEmpty(ButtonInformationInformationBitsToolTipText))

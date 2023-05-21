@@ -7,9 +7,16 @@
             return s.Length == 12;
         }
 
-        public static bool InformationPartLengt(ref string s)
+        public static bool BinaryFormat(ref string s)
         {
-            return s.Length == 12;
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (s[i] != '0' && s[i] != '1')
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
     }
