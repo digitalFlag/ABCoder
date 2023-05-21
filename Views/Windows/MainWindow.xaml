@@ -91,7 +91,7 @@
                    Content="{Binding LableValueInformation}">
             </Label>
             <TextBox Grid.Row="0" Grid.Column="1" 
-                     Text="{Binding TextBoxInformationBitsText}"
+                     Text="{Binding TextBoxInformationBitsText, UpdateSourceTrigger=PropertyChanged}"
                      BorderBrush="{Binding TextBoxInformationBitsBorderBrush}"
                      IsEnabled="{Binding TextBoxInformationBitsIsEnable}">
                 <i:Interaction.Triggers>
@@ -123,7 +123,7 @@
                    Content="{Binding LableValueCodeCombination}">
             </Label>
             <TextBox Grid.Row="0" Grid.Column="1" 
-                     Text="{Binding TextBoxCodeCombinationText}" Grid.ColumnSpan="2">
+                     Text="{Binding TextBoxCodeCombinationText, UpdateSourceTrigger=PropertyChanged}">
             </TextBox>
             <StackPanel Grid.Row="0" Grid.Column="2"
                         Orientation="Horizontal">

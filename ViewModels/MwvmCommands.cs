@@ -3,6 +3,8 @@ using System.IO;
 using System.Threading.Channels;
 using System.Windows;
 using System.Windows.Input;
+using ABCoder.BusinessLogic.CodesChecks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ABCoder.ViewModels
 {
@@ -104,7 +106,36 @@ namespace ABCoder.ViewModels
 
         private void OnTextBoxInformationBitsTextChangedCommandExecuted(object p)
         {
-            MessageBox.Show(File.ReadAllText("README.md"), MainMenuHelpAboutABCoderItem, MessageBoxButton.OK, MessageBoxImage.Information);
+            ButtonInformationInformationBitsToolTipText = string.Empty;
+            TextBoxInformationBitsBorderBrush = "Gray";
+            ButtonInformationInformationBitsTextColor = "Gray";
+            ButtonInformationInformationBitsToolTipText = string.Empty;
+
+            if (TextBoxInformationBitsText == string.Empty)
+            {
+                TextBoxInformationBitsBorderBrush = "Gray";
+                ButtonInformationInformationBitsTextColor = "Red";
+                ButtonInformationInformationBitsToolTipText += "The \"" + LableValueInformation + "\" field is empty.";
+            }
+            else
+            {
+
+                if (!Golay2312C75Checks.InformationPartLength(ref _TextBoxInformationBitsText))
+                {
+                    TextBoxInformationBitsBorderBrush = "Red";
+                    ButtonInformationInformationBitsTextColor = "Red";
+                    ButtonInformationInformationBitsToolTipText = "The \"" + LableValueInformation + "\" field length must be 12.\n";
+                }
+            }
+
+            if (string.IsNullOrEmpty(ButtonInformationInformationBitsToolTipText))
+            {
+                ButtonInformationInformationBitsToolTipText = "The \"" + LableValueInformation + "\" combination is valid.";
+            }
+
+
+
+
             OnPropertyChanged();
         }
 
