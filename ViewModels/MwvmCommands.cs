@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Input;
 using ABCoder.BusinessLogic.CodesChecks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Text;
 
 namespace ABCoder.ViewModels
 {
@@ -106,16 +107,15 @@ namespace ABCoder.ViewModels
 
         private void OnTextBoxInformationBitsTextChangedCommandExecuted(object p)
         {
-            ButtonInformationInformationBitsToolTipText = string.Empty;
+            StringBuilder informationInformationBitsToolTip = new StringBuilder();
             TextBoxInformationBitsBorderBrush = "Gray";
             ButtonInformationInformationBitsTextColor = "Gray";
-            ButtonInformationInformationBitsToolTipText = string.Empty;
 
             if (TextBoxInformationBitsText == string.Empty)
             {
                 TextBoxInformationBitsBorderBrush = "Gray";
                 ButtonInformationInformationBitsTextColor = "Red";
-                ButtonInformationInformationBitsToolTipText += "The \"" + LableValueInformation + "\" field is empty.";
+                informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field is empty.");
             }
             else
             {
@@ -123,25 +123,28 @@ namespace ABCoder.ViewModels
                 {
                     TextBoxInformationBitsBorderBrush = "Red";
                     ButtonInformationInformationBitsTextColor = "Red";
-                    ButtonInformationInformationBitsToolTipText += "The \"" + LableValueInformation + "\" field length must be 12.\n";
+                    informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field length must be 12.");
                 }
 
                 if (!Golay2312C75Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
                 {
                     TextBoxInformationBitsBorderBrush = "Red";
                     ButtonInformationInformationBitsTextColor = "Red";
-                    ButtonInformationInformationBitsToolTipText += "The \"" + LableValueInformation + "\" field contains a non-binary symbol.\n";
+                    informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field contains a non-binary symbol.");
                 }
 
 
             }
 
-            if (string.IsNullOrEmpty(ButtonInformationInformationBitsToolTipText))
+            if (string.IsNullOrEmpty(informationInformationBitsToolTip.ToString()))
             {
-                ButtonInformationInformationBitsToolTipText = "The \"" + LableValueInformation + "\" combination is valid.";
+                informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" combination is valid.");
             }
 
 
+            informationInformationBitsToolTip.Remove(informationInformationBitsToolTip.Length - 2, 2);
+
+            ButtonInformationInformationBitsToolTipText = informationInformationBitsToolTip.ToString();
 
 
             OnPropertyChanged();
