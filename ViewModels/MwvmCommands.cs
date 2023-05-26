@@ -107,7 +107,7 @@ namespace ABCoder.ViewModels
 
         private void OnTextBoxInformationBitsTextChangedCommandExecuted(object p)
         {
-            StringBuilder informationInformationBitsToolTip = new StringBuilder();
+            StringBuilder informationInformationBitsToolTip = new();
             TextBoxInformationBitsBorderBrush = "Gray";
             ButtonInformationInformationBitsTextColor = "Gray";
 
@@ -132,15 +132,12 @@ namespace ABCoder.ViewModels
                     ButtonInformationInformationBitsTextColor = "Red";
                     informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field contains a non-binary symbol.");
                 }
-
-
             }
 
             if (string.IsNullOrEmpty(informationInformationBitsToolTip.ToString()))
             {
                 informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" combination is valid.");
             }
-
 
             informationInformationBitsToolTip.Remove(informationInformationBitsToolTip.Length - 2, 2);
 
