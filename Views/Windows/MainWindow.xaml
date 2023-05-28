@@ -112,13 +112,13 @@
             <StackPanel Grid.Row="0" Grid.Column="2"
                         Orientation="Horizontal">
                 <Button  ToolTip="{Binding ButtonInformationInformationBitsToolTipText}"
-                         IsEnabled="{Binding ButtonInformationInformationBitsIsEnable}">
+                         IsEnabled="{Binding ButtonInformationInformationBitsIsEnable}"
+                         Style="{StaticResource InformationButtons}">
                     <Button.Content>
                         <fa:ImageAwesome Icon="Solid_Info"
                                          Height="24"
                                          Margin="10,5"
-                                         Foreground="{Binding Path=ButtonInformationInformationBitsTextColor}">
-                            
+                                         Foreground="{Binding ButtonInformationInformationBitsTextColor}">
                         </fa:ImageAwesome>
                     </Button.Content>
                     

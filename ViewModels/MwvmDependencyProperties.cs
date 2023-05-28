@@ -471,7 +471,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Button Information Information Bits Text Color
 
-        private string _ButtonInformationInformationBitsTextColor = "Red";
+        private string _ButtonInformationInformationBitsTextColor = "BlueViolet";
         /// <summary>Button Information Information Bits Text Color</summary>
         public string ButtonInformationInformationBitsTextColor
         {
