@@ -14,6 +14,7 @@
         Title="{Binding MainWindowTitle}"
         Icon="/Views/Windows/Icon_calculator-solid.ico">
 
+
             
     
     
@@ -110,10 +111,17 @@
             </TextBox>
             <StackPanel Grid.Row="0" Grid.Column="2"
                         Orientation="Horizontal">
-                <Button  Content="  i  " 
-                         Foreground="{Binding ButtonInformationInformationBitsTextColor}"
-                         ToolTip="{Binding ButtonInformationInformationBitsToolTipText}"
+                <Button  ToolTip="{Binding ButtonInformationInformationBitsToolTipText}"
                          IsEnabled="{Binding ButtonInformationInformationBitsIsEnable}">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="Solid_Info"
+                                         Height="24"
+                                         Margin="10,5"
+                                         Foreground="{Binding Path=ButtonInformationInformationBitsTextColor}">
+                            
+                        </fa:ImageAwesome>
+                    </Button.Content>
+                    
                 </Button>
             </StackPanel>
         </Grid>
