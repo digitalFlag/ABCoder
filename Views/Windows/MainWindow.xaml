@@ -12,11 +12,11 @@
         
         Height="450" Width="800"
         Title="{Binding MainWindowTitle}"
-        Icon="/Views/Windows/calculator-solid.ico">
+        Icon="/Views/Windows/Icon_calculator-solid.ico">
 
-
-
-
+            
+    
+    
 
     <Window.DataContext>
         <vm:MainWindowViewModel/>

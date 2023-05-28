@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\Windows\Icon_calculator-solid.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,10 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Interface\Icons\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\Icons\" />
+    <Resource Include="Views\Windows\Icon_calculator-solid.ico" />
   </ItemGroup>
 
 </Project>
