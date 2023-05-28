@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:vm="clr-namespace:ABCoder.ViewModels"
+        xmlns:fa="http://schemas.fontawesome.com/icons/"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:local="clr-namespace:ABCoder"
@@ -11,7 +12,11 @@
         
         Height="450" Width="800"
         Title="{Binding MainWindowTitle}"
-        >
+        Icon="/Views/Windows/calculator-solid.ico">
+
+
+
+
 
     <Window.DataContext>
         <vm:MainWindowViewModel/>
