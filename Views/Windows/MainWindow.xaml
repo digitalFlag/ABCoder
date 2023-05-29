@@ -9,15 +9,9 @@
         xmlns:local="clr-namespace:ABCoder"
         mc:Ignorable="d"
         
-        
-        Height="450" Width="800"
+        Style="{StaticResource MainWindow}"
         Title="{Binding MainWindowTitle}"
         Icon="/Views/Windows/Icon_calculator-solid.ico">
-
-
-            
-    
-    
 
     <Window.DataContext>
         <vm:MainWindowViewModel/>
@@ -26,7 +20,6 @@
     <Window.InputBindings>
         <KeyBinding Modifiers="Ctrl" Key="Q" Command="{Binding CloseApplicationCommand}"/>
     </Window.InputBindings>
-
 
     <DockPanel>
         <Menu DockPanel.Dock="Top">
@@ -167,7 +160,6 @@
             </RichTextBox>
         </Grid>
         <!--Error Bits-->
-
         <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
@@ -181,8 +173,6 @@
                     Margin="0, 10">
             </Button>
         </Grid>
-
-
         <GroupBox DockPanel.Dock="Top"
                   Header="{Binding LableValueCodeParameters}">
             <Grid DockPanel.Dock="Top">
@@ -247,8 +237,6 @@
 
         </GroupBox>
         <!--Code Instans-->
-
         <Grid></Grid>
-
     </DockPanel>
 </Window>
