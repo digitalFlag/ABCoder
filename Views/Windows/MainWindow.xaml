@@ -22,7 +22,8 @@
     </Window.InputBindings>
 
     <DockPanel>
-        <Menu DockPanel.Dock="Top">
+        <Menu DockPanel.Dock="Top"
+              Style="{StaticResource MainMenu}">
             <!--Menu-->
             <MenuItem Header="{Binding MainMenuFileItem}">
                 <MenuItem Header="{Binding MainMenuFileExitItem}"
@@ -46,7 +47,8 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <Label Grid.Row="0" Grid.Column="0"
-                   Content="{Binding LableValueMode}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top">
+                   Content="{Binding LableValueMode}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Style="{StaticResource TittleLabel}">
             </Label>
             <Label Grid.Row="0" Grid.Column="1"
                    Content="{Binding LableValueCodeType}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top">
