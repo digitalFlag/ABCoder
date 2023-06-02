@@ -4,7 +4,7 @@
     <Style x:Key="MainWindow" TargetType="Window">
         <Setter Property="Height"  Value="450"/>
         <Setter Property="Width"  Value="800"/>
-
+        <Setter Property="Background"  Value="#FFF0F8FF"/>
     </Style>
     
 </ResourceDictionary>

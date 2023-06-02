@@ -46,15 +46,47 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0"
-                   Content="{Binding LableValueMode}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top"
-                   Style="{StaticResource TittleLabel}">
-            </Label>
+            <GroupBox Grid.Row="0" Grid.Column="0"
+                      Header="{Binding LableValueMode}" 
+                      Style="{StaticResource OptionsGroupBox}">
+                <StackPanel Orientation="Vertical">
+                    <ComboBox 
+                      ItemsSource="{Binding ComboBoxModeSource}" DisplayMemberPath="CoderMode"
+                      SelectedIndex="{Binding ComboBoxModeSelectedIndex}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction
+                            Command="{Binding ChangeSelectionOfComboBoxModeCommand}">
+                                </i:InvokeCommandAction>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ComboBox>
+                </StackPanel>
+                
+                
+            </GroupBox>
+                      
+                      
+                      
+                      
+                      
+                       <!--BorderBrush="#FFF50FF7" Foreground="#FFF51212"/>-->
+
+
+
+
+
+
+
             <Label Grid.Row="0" Grid.Column="1"
-                   Content="{Binding LableValueCodeType}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top">
+                   Content="{Binding LableValueCodeType}"                    
+                   Style="{StaticResource TittleLabel}">
+
             </Label>
             <Label Grid.Row="0" Grid.Column="2"
-                   Content="{Binding LableValueAction}" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top">
+                   Content="{Binding LableValueAction}"                   
+                   Style="{StaticResource TittleLabel}">
+
             </Label>
         </Grid>
         <!--Combo Boxes Lables-->
@@ -65,17 +97,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <ComboBox Grid.Row="0" Grid.Column="0"
-                      ItemsSource="{Binding ComboBoxModeSource}" DisplayMemberPath="CoderMode"
-                      SelectedIndex="{Binding ComboBoxModeSelectedIndex}">
-                <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="SelectionChanged">
-                        <i:InvokeCommandAction
-                            Command="{Binding ChangeSelectionOfComboBoxModeCommand}">
-                        </i:InvokeCommandAction>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
-            </ComboBox>
+            
             <ComboBox Grid.Row="0" Grid.Column="1"
                       ItemsSource="{Binding ComboBoxCodeTypeSource}" DisplayMemberPath="CoderMode"
                       SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}">

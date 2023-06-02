@@ -8,6 +8,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Interface/Styles/Buttons.xaml"/>
+                <ResourceDictionary Source="Interface/Styles/GroupBoxes.xaml"/>
                 <ResourceDictionary Source="Interface/Styles/Labels.xaml"/>
                 <ResourceDictionary Source="Interface/Styles/Menues.xaml"/>
                 <ResourceDictionary Source="Interface/Styles/Windows.xaml"/>
