@@ -5,7 +5,7 @@
         <Setter Property="Margin"  Value="2"/>
         <Setter Property="FontWeight"  Value="Bold"/>
         <Setter Property="Foreground" Value="#FF000000"/>
-        <Setter Property="BorderBrush"  Value="#FF87CeFA"/>
+        <Setter Property="BorderBrush"  Value="LightSkyBlue"/>
     </Style>
     
 </ResourceDictionary>

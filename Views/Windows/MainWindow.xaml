@@ -52,7 +52,9 @@
                 <StackPanel Orientation="Vertical">
                     <ComboBox 
                       ItemsSource="{Binding ComboBoxModeSource}" DisplayMemberPath="CoderMode"
-                      SelectedIndex="{Binding ComboBoxModeSelectedIndex}">
+                      SelectedIndex="{Binding ComboBoxModeSelectedIndex}" 
+                      Style="{StaticResource ComboBoxMainStyle}">
+                        <!--Template="{StaticResource ComboBoxesMainTemplate}">-->
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="SelectionChanged">
                                 <i:InvokeCommandAction
@@ -62,15 +64,15 @@
                         </i:Interaction.Triggers>
                     </ComboBox>
                 </StackPanel>
-                
-                
+
+
             </GroupBox>
-                      
-                      
-                      
-                      
-                      
-                       <!--BorderBrush="#FFF50FF7" Foreground="#FFF51212"/>-->
+
+
+
+
+
+            <!--BorderBrush="#FFF50FF7" Foreground="#FFF51212"/>-->
 
 
 
@@ -97,7 +99,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            
+
             <ComboBox Grid.Row="0" Grid.Column="1"
                       ItemsSource="{Binding ComboBoxCodeTypeSource}" DisplayMemberPath="CoderMode"
                       SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}">
@@ -138,7 +140,7 @@
                                          Foreground="{Binding ButtonInformationInformationBitsTextColor}">
                         </fa:ImageAwesome>
                     </Button.Content>
-                    
+
                 </Button>
             </StackPanel>
         </Grid>
