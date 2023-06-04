@@ -3,6 +3,7 @@ using ABCoder.Models.ComboBox;
 using Microsoft.VisualBasic;
 using System.Collections.ObjectModel;
 using System.Data.Common;
+using System.Windows.Controls;
 using System.Windows.Media.Animation;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -10,6 +11,31 @@ namespace ABCoder.ViewModels
 {
     internal partial class MainWindowViewModel
     {
+        #region GroupBox Panel Mode Header
+
+        private string _GroupBoxPanelModeHeader = "Mode";
+        /// <summary>GroupBox Panel Mode Header</summary>
+        public string GroupBoxPanelModeHeader
+        {
+            get => _GroupBoxPanelModeHeader;
+            set => Set(ref _GroupBoxPanelModeHeader, value);
+        }
+
+        #endregion
+        #region GroupBox Panel Values Header
+
+        private string _GroupBoxPanelValuesHeader = "Values";
+        /// <summary>GroupBox Panel Values Header</summary>
+        public string GroupBoxPanelValuesHeader
+        {
+            get => _GroupBoxPanelValuesHeader;
+            set => Set(ref _GroupBoxPanelValuesHeader, value);
+        }
+
+        #endregion
+
+
+
         #region Main Window Title
 
         private string _MainWindowTitle = "ABCoder";
@@ -68,40 +94,6 @@ namespace ABCoder.ViewModels
         {
             get => _MainMenuHelpAboutABCoderItem;
             set => Set(ref _MainMenuHelpAboutABCoderItem, value);
-        }
-
-        #endregion
-
-        #region Lable Value Mode
-
-        private string _LableValueMode = "Mode:";
-        /// <summary>Lable Value Mode</summary>
-        public string LableValueMode
-        {
-            get => _LableValueMode;
-            set => Set(ref _LableValueMode, value);
-        }
-
-        #endregion
-        #region Lable Value Code Type
-
-        private string _LableValueCodeType = "Code Type:";
-        /// <summary>Lable Value Code Type</summary>
-        public string LableValueCodeType
-        {
-            get => _LableValueCodeType;
-            set => Set(ref _LableValueCodeType, value);
-        }
-
-        #endregion
-        #region Lable Value Action
-
-        private string _LableValueAction = "Action:";
-        /// <summary>Lable Value Action</summary>
-        public string LableValueAction
-        {
-            get => _LableValueAction;
-            set => Set(ref _LableValueAction, value);
         }
 
         #endregion

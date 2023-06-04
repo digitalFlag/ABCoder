@@ -42,19 +42,18 @@
         <Grid DockPanel.Dock="Top">
             <!--Combo Boxes Lables-->
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="200"/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
             <GroupBox Grid.Row="0" Grid.Column="0"
-                      Header="{Binding LableValueMode}" 
+                      Header="{Binding GroupBoxPanelModeHeader}" 
                       Style="{StaticResource OptionsGroupBox}">
                 <StackPanel Orientation="Vertical">
                     <ComboBox 
                       ItemsSource="{Binding ComboBoxModeSource}" DisplayMemberPath="CoderMode"
                       SelectedIndex="{Binding ComboBoxModeSelectedIndex}" 
                       Style="{StaticResource ComboBoxMainStyle}">
-                        <!--Template="{StaticResource ComboBoxesMainTemplate}">-->
                         <i:Interaction.Triggers>
                             <i:EventTrigger EventName="SelectionChanged">
                                 <i:InvokeCommandAction
@@ -63,10 +62,33 @@
                             </i:EventTrigger>
                         </i:Interaction.Triggers>
                     </ComboBox>
+                    <Label Content="{Binding LableValueInformation}"
+                           Style="{StaticResource MainleLabel}">
+                    </Label>
+                    <Label Content="{Binding LableValueCodeCombination}"
+                           Style="{StaticResource MainleLabel}">
+                    </Label>
+                    <Label Content="{Binding LableValueErrorsBits}"
+                           IsEnabled="{Binding LableErrorsBitsIsEnable}"
+                           Style="{StaticResource MainleLabel}">
+                    </Label>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Grid.Row="0" Grid.Column="1"
+                      Header="{Binding GroupBoxPanelValuesHeader}" 
+                      Style="{StaticResource OptionsGroupBox}">
+                <StackPanel Orientation="Vertical">
+                    <ComboBox Grid.Row="0" Grid.Column="1"
+                      ItemsSource="{Binding ComboBoxCodeTypeSource}" DisplayMemberPath="CoderMode"
+                      SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}"
+                      Style="{StaticResource ComboBoxMainStyle}">
+                    </ComboBox>
+
                 </StackPanel>
 
 
             </GroupBox>
+
 
 
 
@@ -100,10 +122,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <ComboBox Grid.Row="0" Grid.Column="1"
-                      ItemsSource="{Binding ComboBoxCodeTypeSource}" DisplayMemberPath="CoderMode"
-                      SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}">
-            </ComboBox>
+
         </Grid>
         <!--Combo Boxes-->
         <Grid DockPanel.Dock="Top">
@@ -113,9 +132,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" 
-                   Content="{Binding LableValueInformation}">
-            </Label>
+
             <TextBox Grid.Row="0" Grid.Column="1" 
                      Text="{Binding TextBoxInformationBitsText, UpdateSourceTrigger=PropertyChanged}"
                      BorderBrush="{Binding TextBoxInformationBitsBorderBrush}"
@@ -152,9 +169,7 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" 
-                   Content="{Binding LableValueCodeCombination}">
-            </Label>
+
             <TextBox Grid.Row="0" Grid.Column="1" 
                      Text="{Binding TextBoxCodeCombinationText, UpdateSourceTrigger=PropertyChanged}">
             </TextBox>
@@ -176,10 +191,6 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" 
-                   Content="{Binding LableValueErrorsBits}"
-                   IsEnabled="{Binding LableErrorsBitsIsEnable}">
-            </Label>
             <RichTextBox Grid.Row="0" Grid.Column="1" 
                          IsEnabled="False">
 
