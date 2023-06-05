@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Interface/Styles/GroupBoxes.xaml"/>
                 <ResourceDictionary Source="Interface/Styles/Labels.xaml"/>
                 <ResourceDictionary Source="Interface/Styles/Menues.xaml"/>
+                <ResourceDictionary Source="Interface/Styles/TextBoxes.xaml"/>
                 <ResourceDictionary Source="Interface/Styles/Windows.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

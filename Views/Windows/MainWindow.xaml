@@ -83,10 +83,19 @@
                       SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}"
                       Style="{StaticResource ComboBoxMainStyle}">
                     </ComboBox>
-
+                    <TextBox Text="{Binding TextBoxInformationBitsText, UpdateSourceTrigger=PropertyChanged}"
+                             Style="{StaticResource TextBoxMainStyle}"
+                             BorderBrush="{Binding TextBoxInformationBitsBorderBrush}"
+                             IsEnabled="{Binding TextBoxInformationBitsIsEnable}">
+                        <!--<i:Interaction.Triggers>
+                            <i:EventTrigger EventName="TextChanged">
+                                <i:InvokeCommandAction
+                            Command="{Binding TextBoxInformationBitsTextChangedCommand}">
+                                </i:InvokeCommandAction>
+                            </i:EventTrigger>-->
+                        <!--</i:Interaction.Triggers>-->
+                    </TextBox>
                 </StackPanel>
-
-
             </GroupBox>
 
 
@@ -133,18 +142,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <TextBox Grid.Row="0" Grid.Column="1" 
-                     Text="{Binding TextBoxInformationBitsText, UpdateSourceTrigger=PropertyChanged}"
-                     BorderBrush="{Binding TextBoxInformationBitsBorderBrush}"
-                     IsEnabled="{Binding TextBoxInformationBitsIsEnable}">
-                <i:Interaction.Triggers>
-                    <i:EventTrigger EventName="TextChanged">
-                        <i:InvokeCommandAction
-                            Command="{Binding TextBoxInformationBitsTextChangedCommand}">
-                        </i:InvokeCommandAction>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>
-            </TextBox>
+
             <StackPanel Grid.Row="0" Grid.Column="2"
                         Orientation="Horizontal">
                 <Button  ToolTip="{Binding ButtonInformationInformationBitsToolTipText}"
