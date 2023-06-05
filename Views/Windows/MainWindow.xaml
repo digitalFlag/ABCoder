@@ -84,7 +84,7 @@
                       Style="{StaticResource ComboBoxMainStyle}">
                     </ComboBox>
                     <TextBox Text="{Binding TextBoxInformationBitsText, UpdateSourceTrigger=PropertyChanged}"
-                             Style="{StaticResource TextBoxMainStyle}"
+                             Style="{StaticResource MyTextBox}"
                              BorderBrush="{Binding TextBoxInformationBitsBorderBrush}"
                              IsEnabled="{Binding TextBoxInformationBitsIsEnable}">
                         <!--<i:Interaction.Triggers>
@@ -94,6 +94,10 @@
                                 </i:InvokeCommandAction>
                             </i:EventTrigger>-->
                         <!--</i:Interaction.Triggers>-->
+                    </TextBox>
+
+                    <TextBox Text="{Binding TextBoxCodeCombinationText, UpdateSourceTrigger=PropertyChanged}"
+                             Style="{StaticResource MyTextBox}">
                     </TextBox>
                 </StackPanel>
             </GroupBox>
@@ -111,16 +115,7 @@
 
 
 
-            <Label Grid.Row="0" Grid.Column="1"
-                   Content="{Binding LableValueCodeType}"                    
-                   Style="{StaticResource TittleLabel}">
 
-            </Label>
-            <Label Grid.Row="0" Grid.Column="2"
-                   Content="{Binding LableValueAction}"                   
-                   Style="{StaticResource TittleLabel}">
-
-            </Label>
         </Grid>
         <!--Combo Boxes Lables-->
         <Grid DockPanel.Dock="Top">
@@ -168,9 +163,7 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <TextBox Grid.Row="0" Grid.Column="1" 
-                     Text="{Binding TextBoxCodeCombinationText, UpdateSourceTrigger=PropertyChanged}">
-            </TextBox>
+
             <StackPanel Grid.Row="0" Grid.Column="2"
                         Orientation="Horizontal">
                 <Button  Content="  i  " 

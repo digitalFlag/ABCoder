@@ -68,7 +68,7 @@ namespace ABCoder.ViewModels
 
                 if(Goley_2312_C75.CheckEntedData.CkeckInfornationBits(ref _TextBoxInformationBitsText))
                 {
-                    TextBoxInformationBitsBorderBrush = "Green";
+                    TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
                     bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref  _TextBoxInformationBitsText);
                     bool[] codeCombination = Goley_2312_C75.Code.Encode(ref informationBits);
                     TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
@@ -76,7 +76,7 @@ namespace ABCoder.ViewModels
                 }
                 else
                 {
-                    TextBoxInformationBitsBorderBrush = "Red";
+                    TextBoxInformationBitsBorderBrush = "#FFB22222";
                 }
 
             }

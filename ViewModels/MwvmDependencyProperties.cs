@@ -405,7 +405,7 @@ namespace ABCoder.ViewModels
 
         #region Text Box Information Bits Border Brush
 
-        private string _TextBoxInformationBitsBorderBrush = "Gray";
+        private string _TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
         /// <summary>Text Box Information Bits Border Brush</summary>
         public string TextBoxInformationBitsBorderBrush
         {
