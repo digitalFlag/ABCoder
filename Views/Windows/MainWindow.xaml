@@ -87,6 +87,41 @@
             </Label>
             <!--Mode Panel-->
 
+            <!--Values Panel-->
+            <GroupBox Grid.Column="1" Grid.Row="0" Grid.RowSpan="6"
+                      Header="{Binding GroupBoxPanelValuesHeader}" 
+                      Style="{StaticResource OptionsGroupBox}">
+            </GroupBox>
+            <ComboBox Grid.Column="1" Grid.Row="1"
+                      ItemsSource="{Binding ComboBoxCodeTypeSource}" DisplayMemberPath="CoderMode"
+                      SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}"
+                      Style="{StaticResource ComboBoxMainStyle}">
+            </ComboBox>
+            <TextBox Grid.Column="1" Grid.Row="2"
+                     Text="{Binding TextBoxInformationBitsText, UpdateSourceTrigger=PropertyChanged}"
+                     Style="{StaticResource TextBoxMainStyle}"
+                     BorderBrush="{Binding TextBoxInformationBitsBorderBrush}"
+                     IsEnabled="{Binding TextBoxInformationBitsIsEnable}">
+                <!--<i:Interaction.Triggers>
+                            <i:EventTrigger EventName="TextChanged">
+                                <i:InvokeCommandAction
+                            Command="{Binding TextBoxInformationBitsTextChangedCommand}">
+                                </i:InvokeCommandAction>
+                            </i:EventTrigger>-->
+                <!--</i:Interaction.Triggers>-->
+            </TextBox>
+            <TextBox Grid.Column="1" Grid.Row="3"
+                     Text="{Binding TextBoxCodeCombinationText, UpdateSourceTrigger=PropertyChanged}"
+                     BorderBrush="DeepSkyBlue"
+                     Style="{StaticResource TextBoxMainStyle}">
+            </TextBox>
+            <RichTextBox Grid.Column="1" Grid.Row="4"
+                         IsEnabled="False"
+                         Style="{StaticResource RichTextBoxMainStyle}">
+            </RichTextBox>
+            <!--Values Panel-->
+
+
         </Grid>
 
 
@@ -100,37 +135,7 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <GroupBox Grid.Row="0" Grid.Column="1"
-                      Header="{Binding GroupBoxPanelValuesHeader}" 
-                      Style="{StaticResource OptionsGroupBox}">
-                <StackPanel Orientation="Vertical">
-                    <ComboBox Grid.Row="0" Grid.Column="1"
-                      ItemsSource="{Binding ComboBoxCodeTypeSource}" DisplayMemberPath="CoderMode"
-                      SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}"
-                      Style="{StaticResource ComboBoxMainStyle}">
-                    </ComboBox>
-                    <TextBox Text="{Binding TextBoxInformationBitsText, UpdateSourceTrigger=PropertyChanged}"
-                             Style="{StaticResource MyTextBox}"
-                             BorderBrush="{Binding TextBoxInformationBitsBorderBrush}"
-                             IsEnabled="{Binding TextBoxInformationBitsIsEnable}">
-                        <!--<i:Interaction.Triggers>
-                            <i:EventTrigger EventName="TextChanged">
-                                <i:InvokeCommandAction
-                            Command="{Binding TextBoxInformationBitsTextChangedCommand}">
-                                </i:InvokeCommandAction>
-                            </i:EventTrigger>-->
-                        <!--</i:Interaction.Triggers>-->
-                    </TextBox>
 
-                    <TextBox Text="{Binding TextBoxCodeCombinationText, UpdateSourceTrigger=PropertyChanged}"
-                             BorderBrush="DeepSkyBlue"
-                             Style="{StaticResource MyTextBox}">
-                    </TextBox>
-                    <RichTextBox IsEnabled="False"
-                                 Margin="0,7,0,0">
-                    </RichTextBox>
-                </StackPanel>
-            </GroupBox>
             <GroupBox Grid.Row="0" Grid.Column="2"
                       Header="{Binding GroupBoxPanelOptionsHeader}" 
                       Style="{StaticResource OptionsGroupBox}">
