@@ -40,7 +40,6 @@
         </Menu>
         <!--Menu-->
         
-        <!--Mode Panel-->
         <Grid DockPanel.Dock="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
@@ -48,18 +47,47 @@
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="10"/>
             </Grid.RowDefinitions>
-            
-            
-            
-            
+
+            <!--Mode Panel-->
+            <GroupBox Grid.Column="0" Grid.Row="0" Grid.RowSpan="6"
+                      Header="{Binding GroupBoxPanelModeHeader}" 
+                      Style="{StaticResource OptionsGroupBox}">
+            </GroupBox>
+            <ComboBox Grid.Column="0" Grid.Row="1"
+                      ItemsSource="{Binding ComboBoxModeSource}" DisplayMemberPath="CoderMode"
+                      SelectedIndex="{Binding ComboBoxModeSelectedIndex}" 
+                      Style="{StaticResource ComboBoxMainStyle}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction
+                            Command="{Binding ChangeSelectionOfComboBoxModeCommand}">
+                        </i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ComboBox>
+            <Label Grid.Column="0" Grid.Row="2" 
+                   Content="{Binding LableValueInformation}"
+                   Style="{StaticResource MainleLabel}" FontSize="14">
+            </Label>
+            <Label Grid.Column="0" Grid.Row="3"
+                   Content="{Binding LableValueCodeCombination}"
+                   Style="{StaticResource MainleLabel}">
+            </Label>
+            <Label Grid.Column="0" Grid.Row="4"
+                   Content="{Binding LableValueErrorsBits}"
+                   IsEnabled="{Binding LableErrorsBitsIsEnable}"
+                   Style="{StaticResource MainleLabel}">
+            </Label>
+            <!--Mode Panel-->
+
         </Grid>
-        <!--Mode Panel-->
 
 
 
@@ -72,34 +100,6 @@
                 <ColumnDefinition Width="2*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-            <GroupBox Grid.Row="0" Grid.Column="0"
-                      Header="{Binding GroupBoxPanelModeHeader}" 
-                      Style="{StaticResource OptionsGroupBox}">
-                <StackPanel Orientation="Vertical">
-                    <ComboBox 
-                      ItemsSource="{Binding ComboBoxModeSource}" DisplayMemberPath="CoderMode"
-                      SelectedIndex="{Binding ComboBoxModeSelectedIndex}" 
-                      Style="{StaticResource ComboBoxMainStyle}">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="SelectionChanged">
-                                <i:InvokeCommandAction
-                            Command="{Binding ChangeSelectionOfComboBoxModeCommand}">
-                                </i:InvokeCommandAction>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </ComboBox>
-                    <Label Content="{Binding LableValueInformation}"
-                           Style="{StaticResource MainleLabel}">
-                    </Label>
-                    <Label Content="{Binding LableValueCodeCombination}"
-                           Style="{StaticResource MainleLabel}">
-                    </Label>
-                    <Label Content="{Binding LableValueErrorsBits}"
-                           IsEnabled="{Binding LableErrorsBitsIsEnable}"
-                           Style="{StaticResource MainleLabel}">
-                    </Label>
-                </StackPanel>
-            </GroupBox>
             <GroupBox Grid.Row="0" Grid.Column="1"
                       Header="{Binding GroupBoxPanelValuesHeader}" 
                       Style="{StaticResource OptionsGroupBox}">
