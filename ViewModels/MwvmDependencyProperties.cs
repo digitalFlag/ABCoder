@@ -33,6 +33,18 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region GroupBox Panel Options Header
+
+        private string _GroupBoxPanelOptionsHeader = "Options";
+        /// <summary>GroupBox Panel Options Header</summary>
+        public string GroupBoxPanelOptionsHeader
+        {
+            get => _GroupBoxPanelOptionsHeader;
+            set => Set(ref _GroupBoxPanelOptionsHeader, value);
+        }
+
+        #endregion
+
 
 
 

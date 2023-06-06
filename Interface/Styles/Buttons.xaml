@@ -6,5 +6,9 @@
         <Setter Property="Background" Value="DimGray"/>
         <Setter Property="BorderBrush" Value="Black"/>
     </Style>
+
+    <Style x:Key="InfButtonStyle" TargetType="Button">
+        
+    </Style>
     
 </ResourceDictionary>
