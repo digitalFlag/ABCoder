@@ -45,9 +45,6 @@ namespace ABCoder.ViewModels
 
         #endregion
 
-
-
-
         #region Main Window Title
 
         private string _MainWindowTitle = "ABCoder";
@@ -448,7 +445,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
 
         #region Text Box Code Combination Text
 

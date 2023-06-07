@@ -102,13 +102,13 @@
                      Style="{StaticResource TextBoxMainStyle}"
                      BorderBrush="{Binding TextBoxInformationBitsBorderBrush}"
                      IsEnabled="{Binding TextBoxInformationBitsIsEnable}">
-                <!--<i:Interaction.Triggers>
+                <i:Interaction.Triggers>
                             <i:EventTrigger EventName="TextChanged">
                                 <i:InvokeCommandAction
-                            Command="{Binding TextBoxInformationBitsTextChangedCommand}">
+                                    Command="{Binding TextBoxInformationBitsTextChangedCommand}">
                                 </i:InvokeCommandAction>
-                            </i:EventTrigger>-->
-                <!--</i:Interaction.Triggers>-->
+                            </i:EventTrigger>
+                </i:Interaction.Triggers>
             </TextBox>
             <TextBox Grid.Column="1" Grid.Row="3"
                      Text="{Binding TextBoxCodeCombinationText, UpdateSourceTrigger=PropertyChanged}"
@@ -137,6 +137,7 @@
             <StackPanel Grid.Column="2" Grid.Row="2"
                         Style="{StaticResource StackPanelMainStyle}">
                 <Button Style="{StaticResource ButtonInformationStyle}"
+                        ToolTip="{Binding ButtonInformationInformationBitsToolTipText}"
                         Width="24">
                     <Button.Content>
                         <fa:ImageAwesome Icon="Solid_Info"

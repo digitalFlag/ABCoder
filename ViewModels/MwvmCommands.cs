@@ -63,23 +63,7 @@ namespace ABCoder.ViewModels
 
         private void OnExecuteButtonCommandExecuted(object p)
         {
-            if (ComboBoxModeSelectedIndex == 0 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
-            {
-
-                if(Goley_2312_C75.CheckEntedData.CkeckInfornationBits(ref _TextBoxInformationBitsText))
-                {
-                    TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
-                    bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref  _TextBoxInformationBitsText);
-                    bool[] codeCombination = Goley_2312_C75.Code.Encode(ref informationBits);
-                    TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
-
-                }
-                else
-                {
-                    TextBoxInformationBitsBorderBrush = "#FFB22222";
-                }
-
-            }
+            Encode();
             OnPropertyChanged();
         }
 
@@ -108,12 +92,12 @@ namespace ABCoder.ViewModels
         private void OnTextBoxInformationBitsTextChangedCommandExecuted(object p)
         {
             StringBuilder informationInformationBitsToolTip = new();
-            TextBoxInformationBitsBorderBrush = "Gray";
-            ButtonInformationInformationBitsTextColor = "Navy";
+            TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
+            ButtonInformationInformationBitsTextColor = "DarkBlue";
 
             if (TextBoxInformationBitsText == string.Empty)
             {
-                TextBoxInformationBitsBorderBrush = "Gray";
+                TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
                 ButtonInformationInformationBitsTextColor = "Firebrick";
                 informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field is empty.");
             }
@@ -121,14 +105,15 @@ namespace ABCoder.ViewModels
             {
                 if (!Golay2312C75Checks.InformationPartLength(ref _TextBoxInformationBitsText))//Lengtg Check
                 {
-                    TextBoxInformationBitsBorderBrush = "Red";
+                    TextBoxInformationBitsBorderBrush = "Firebrick";
                     ButtonInformationInformationBitsTextColor = "Firebrick";
                     informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field length must be 12.");
+                    TextBoxCodeCombinationText = string.Empty;
                 }
 
                 if (!Golay2312C75Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
                 {
-                    TextBoxInformationBitsBorderBrush = "Red";
+                    TextBoxInformationBitsBorderBrush = "Firebrick";
                     ButtonInformationInformationBitsTextColor = "Firebrick";
                     informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field contains a non-binary symbol.");
                 }
@@ -137,6 +122,7 @@ namespace ABCoder.ViewModels
             if (string.IsNullOrEmpty(informationInformationBitsToolTip.ToString()))
             {
                 informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" combination is valid.");
+                Encode();
             }
 
             informationInformationBitsToolTip.Remove(informationInformationBitsToolTip.Length - 2, 2);
@@ -149,7 +135,27 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        private void Encode()
+        {
+            if (ComboBoxModeSelectedIndex == 0 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
+            {
 
+                if (Goley_2312_C75.CheckEntedData.CkeckInfornationBits(ref _TextBoxInformationBitsText))
+                {
+                    TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
+                    bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
+                    bool[] codeCombination = Goley_2312_C75.Code.Encode(ref informationBits);
+                    TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
+
+                }
+                else
+                {
+                    TextBoxInformationBitsBorderBrush = "Firebrick";
+                }
+
+            }
+            OnPropertyChanged();
+        }
 
 
     }
