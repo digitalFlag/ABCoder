@@ -26,10 +26,10 @@
     </LinearGradientBrush>
     <SolidColorBrush x:Key="Button.Pressed.Border" Color="DeepSkyBlue"/>
     <LinearGradientBrush x:Key="Button.Disabled.Background" EndPoint="0,1" StartPoint="0,0">
-        <GradientStop Color="LightGray" Offset="0.0"/>
+        <GradientStop Color="Gray" Offset="0.0"/>
         <GradientStop Color="White" Offset="1.0"/>
     </LinearGradientBrush>
-    <SolidColorBrush x:Key="Button.Disabled.Border" Color="Gray"/>
+    <SolidColorBrush x:Key="Button.Disabled.Border" Color="LightSkyBlue"/>
     <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="Gray"/>
 
     <Style x:Key="ButtonInformationStyle" TargetType="{x:Type Button}">

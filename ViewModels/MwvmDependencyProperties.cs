@@ -11,6 +11,86 @@ namespace ABCoder.ViewModels
 {
     internal partial class MainWindowViewModel
     {
+        #region Button Action Content
+
+        private string _ButtonActionContent = "Encode";
+        /// <summary>Button Action Content</summary>
+        public string ButtonActionContent
+        {
+            get => _ButtonActionContent;
+            set => Set(ref _ButtonActionContent, value);
+        }
+
+        #endregion
+
+        #region Button Information Information Bits Text Color
+
+        private string _ButtonInformationInformationBitsTextColor = "Firebrick";
+        /// <summary>Button Information Information Bits Text Color</summary>
+        public string ButtonInformationInformationBitsTextColor
+        {
+            get => _ButtonInformationInformationBitsTextColor;
+            set => Set(ref _ButtonInformationInformationBitsTextColor, value);
+        }
+
+        #endregion
+        #region Button Information Information Bits Tool Tip Text
+
+        private string _ButtonInformationInformationBitsToolTipText = "The \"Information Bits\" field is empty.";
+        /// <summary>Button Information Information Bits Tool Tip Text</summary>
+        public string ButtonInformationInformationBitsToolTipText
+        {
+            get => _ButtonInformationInformationBitsToolTipText;
+            set => Set(ref _ButtonInformationInformationBitsToolTipText, value);
+        }
+
+        #endregion
+        #region Button Information Information Bits Is Enable
+
+        private bool _ButtonInformationInformationBitsIsEnable = true;
+        /// <summary>Button Information Information Bits Is Enable</summary>
+        public bool ButtonInformationInformationBitsIsEnable
+        {
+            get => _ButtonInformationInformationBitsIsEnable;
+            set => Set(ref _ButtonInformationInformationBitsIsEnable, value);
+        }
+
+        #endregion
+
+        #region Button Information Code Word Text Color
+
+        private string _ButtonInformationCodeWordTextColor = "Red";
+        /// <summary>Button Information Code Word Text Color</summary>
+        public string ButtonInformationCodeWordTextColor
+        {
+            get => _ButtonInformationCodeWordTextColor;
+            set => Set(ref _ButtonInformationCodeWordTextColor, value);
+        }
+
+        #endregion
+        #region Button Information Code Word Tool Tip Text
+
+        private string _ButtonInformationCodeWordToolTipText = "The \"Code Word\" field is empty.";
+        /// <summary>Button Information Code Word Tool Tip Text</summary>
+        public string ButtonInformationCodeWordToolTipText
+        {
+            get => _ButtonInformationCodeWordToolTipText;
+            set => Set(ref _ButtonInformationCodeWordToolTipText, value);
+        }
+
+        #endregion
+        #region Button Information Code Word Is Enable
+
+        private bool _ButtonInformationCodeWordIsEnable = false;
+        /// <summary>Button Information Code Word Is Enable</summary>
+        public bool ButtonInformationCodeWordIsEnable
+        {
+            get => _ButtonInformationCodeWordIsEnable;
+            set => Set(ref _ButtonInformationCodeWordIsEnable, value);
+        }
+
+        #endregion
+
         #region GroupBox Panel Mode Header
 
         private string _GroupBoxPanelModeHeader = "Mode";
@@ -457,90 +537,5 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
-        #region Button Action Content
-
-        private string _ButtonActionContent = "Encode";
-        /// <summary>Button Action Content</summary>
-        public string ButtonActionContent
-        {
-            get => _ButtonActionContent;
-            set => Set(ref _ButtonActionContent, value);
-        }
-
-        #endregion
-        #region Button Information Information Bits Text Color
-
-        private string _ButtonInformationInformationBitsTextColor = "DarkBlue";
-        /// <summary>Button Information Information Bits Text Color</summary>
-        public string ButtonInformationInformationBitsTextColor
-        {
-            get => _ButtonInformationInformationBitsTextColor;
-            set => Set(ref _ButtonInformationInformationBitsTextColor, value);
-        }
-
-        #endregion
-        #region Button Information Information Bits Tool Tip Text
-
-        private string _ButtonInformationInformationBitsToolTipText = "The \"Information Bits\" field is empty.";
-        /// <summary>Button Information Information Bits Tool Tip Text</summary>
-        public string ButtonInformationInformationBitsToolTipText
-        {
-            get => _ButtonInformationInformationBitsToolTipText;
-            set => Set(ref _ButtonInformationInformationBitsToolTipText, value);
-        }
-
-        #endregion
-        #region Button Information Information Bits Is Enable
-
-        private bool _ButtonInformationInformationBitsIsEnable = true;
-        /// <summary>Button Information Information Bits Is Enable</summary>
-        public bool ButtonInformationInformationBitsIsEnable
-        {
-            get => _ButtonInformationInformationBitsIsEnable;
-            set => Set(ref _ButtonInformationInformationBitsIsEnable, value);
-        }
-
-        #endregion
-
-        #region Button Information Code Word Text Color
-
-        private string _ButtonInformationCodeWordTextColor = "Red";
-        /// <summary>Button Information Code Word Text Color</summary>
-        public string ButtonInformationCodeWordTextColor
-        {
-            get => _ButtonInformationCodeWordTextColor;
-            set => Set(ref _ButtonInformationCodeWordTextColor, value);
-        }
-
-        #endregion
-        #region Button Information Code Word Tool Tip Text
-
-        private string _ButtonInformationCodeWordToolTipText = "The \"Code Word\" field is empty.";
-        /// <summary>Button Information Code Word Tool Tip Text</summary>
-        public string ButtonInformationCodeWordToolTipText
-        {
-            get => _ButtonInformationCodeWordToolTipText;
-            set => Set(ref _ButtonInformationCodeWordToolTipText, value);
-        }
-
-        #endregion
-        #region Button Information Code Word Is Enable
-
-        private bool _ButtonInformationCodeWordIsEnable = false;
-        /// <summary>Button Information Code Word Is Enable</summary>
-        public bool ButtonInformationCodeWordIsEnable
-        {
-            get => _ButtonInformationCodeWordIsEnable;
-            set => Set(ref _ButtonInformationCodeWordIsEnable, value);
-        }
-
-        #endregion
-
-
-
-
-
-
     }
 }

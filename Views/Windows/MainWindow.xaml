@@ -82,7 +82,6 @@
             </Label>
             <Label Grid.Column="0" Grid.Row="4"
                    Content="{Binding LableValueErrorsBits}"
-                   IsEnabled="{Binding LableErrorsBitsIsEnable}"
                    Style="{StaticResource LabelMainStyle}">
             </Label>
             <!--Mode Panel-->
@@ -114,6 +113,13 @@
                      Text="{Binding TextBoxCodeCombinationText, UpdateSourceTrigger=PropertyChanged}"
                      BorderBrush="DeepSkyBlue"
                      Style="{StaticResource TextBoxMainStyle}">
+                <!--<i:Interaction.Triggers>
+                    <i:EventTrigger EventName="TextChanged">
+                        <i:InvokeCommandAction
+                                    Command="{Binding TextBoxCodeWordTextChangedCommand}">
+                        </i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>-->
             </TextBox>
             <RichTextBox Grid.Column="1" Grid.Row="4"
                          IsEnabled="False"
@@ -138,6 +144,7 @@
                         Style="{StaticResource StackPanelMainStyle}">
                 <Button Style="{StaticResource ButtonInformationStyle}"
                         ToolTip="{Binding ButtonInformationInformationBitsToolTipText}"
+                        IsEnabled="{Binding ButtonInformationInformationBitsIsEnable}"
                         Width="24">
                     <Button.Content>
                         <fa:ImageAwesome Icon="Solid_Info"

@@ -35,18 +35,19 @@ namespace ABCoder.ViewModels
             if (ComboBoxModeSelectedIndex == 0)
             {
                 ButtonActionContent = ComboBoxModeCodeContent;
-                LableErrorsBitsIsEnable = false;
                 TextBoxInformationBitsIsEnable = true;
                 ButtonInformationInformationBitsIsEnable = true;
-                ButtonInformationCodeWordIsEnable = false;
+                ButtonInformationInformationBitsTextColor = "Firebrick";
+                ButtonInformationInformationBitsToolTipText = "The \"Information Bits\" field is empty.";
             }
             else
             {
                 ButtonActionContent = ComboBoxModeDecodeContent;
-                LableErrorsBitsIsEnable = true;
                 TextBoxInformationBitsIsEnable = false;
+                TextBoxInformationBitsText = string.Empty;
                 ButtonInformationInformationBitsIsEnable = false;
-                ButtonInformationCodeWordIsEnable = true;
+                ButtonInformationInformationBitsTextColor = "DarkBlue";
+                TextBoxCodeCombinationText = string.Empty;
             }
             OnPropertyChanged();
 
@@ -134,6 +135,24 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+
+        #region Text Box Code Word Text Changed Command
+
+        public ICommand TextBoxCodeWordTextChangedCommand { get; }
+
+        private bool CanTextBoxCodeWordTextChangedCommandExecute(object p) => true;
+
+        private void OnTextBoxCodeWordTextChangedCommandExecuted(object p)
+        {
+            if (ComboBoxModeSelectedIndex == 0)
+            {
+                TextBoxCodeCombinationText = string.Empty;
+            }
+            OnPropertyChanged();
+        }
+
+        #endregion
+
 
         private void Encode()
         {
