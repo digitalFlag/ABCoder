@@ -169,7 +169,7 @@ namespace ABCoder.ViewModels
 
         #region Lable Code Instance Name
 
-        private string _LableCodeInstanceName = "Code type:";
+        private string _LableCodeInstanceName = "Code Type:";
         /// <summary>Lable Code Instance Name</summary>
         public string LableCodeInstanceName
         {
@@ -191,7 +191,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Code Word Length
 
-        private string _LableCodeWordLength = "Code word length:";
+        private string _LableCodeWordLength = "Code Word Length:";
         /// <summary>Lable Code Word Length</summary>
         public string LableCodeWordLength
         {

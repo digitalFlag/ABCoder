@@ -74,16 +74,16 @@
             </ComboBox>
             <Label Grid.Column="0" Grid.Row="2" 
                    Content="{Binding LableValueInformation}"
-                   Style="{StaticResource MainleLabel}" FontSize="14">
+                   Style="{StaticResource LabelMainStyle}" FontSize="14">
             </Label>
             <Label Grid.Column="0" Grid.Row="3"
                    Content="{Binding LableValueCodeCombination}"
-                   Style="{StaticResource MainleLabel}">
+                   Style="{StaticResource LabelMainStyle}">
             </Label>
             <Label Grid.Column="0" Grid.Row="4"
                    Content="{Binding LableValueErrorsBits}"
                    IsEnabled="{Binding LableErrorsBitsIsEnable}"
-                   Style="{StaticResource MainleLabel}">
+                   Style="{StaticResource LabelMainStyle}">
             </Label>
             <!--Mode Panel-->
 
@@ -152,74 +152,94 @@
             <!--Options Panel-->
         </Grid>
 
+        <!--Code parameters Panel-->
+        <Grid DockPanel.Dock="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="10"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <GroupBox Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="9"
+                      Header="{Binding LableValueCodeParameters}"
+                      Style="{StaticResource OptionsGroupBox}">
+            </GroupBox>
+            <Rectangle Grid.Column="0" Grid.Row="1" Fill="White" Margin="6,0,0,0"/>
+            <Label Grid.Column="0" Grid.Row="1"
+                   Content="{Binding LableCodeInstanceName}"
+                   Style="{StaticResource LabelMainStyle}">
+            </Label>
+            <Label Grid.Column="0" Grid.Row="2"
+                   Content="{Binding LableCodeInstancePolynomial}"
+                   Style="{StaticResource LabelMainStyle}">
+            </Label>
+            <Rectangle Grid.Column="0" Grid.Row="3" Fill="White" Margin="6,0,0,0"/>
+            <Label Grid.Column="0" Grid.Row="3"
+                   Content="{Binding LableCodeWordLength}"
+                   Style="{StaticResource LabelMainStyle}">
+            </Label>
+            <Label Grid.Column="0" Grid.Row="4"
+                   Content="{Binding LableInformationPartLength}"
+                   Style="{StaticResource LabelMainStyle}">
+            </Label>
+            <Rectangle Grid.Column="0" Grid.Row="5" Fill="White" Margin="6,0,0,0"/>
+            <Label Grid.Column="0" Grid.Row="5"
+                   Content="{Binding LableVerificationPartLength}"
+                   Style="{StaticResource LabelMainStyle}">
+            </Label>
+            <Label Grid.Column="0" Grid.Row="6"
+                   Content="{Binding LableDetectionCapability}"
+                   Style="{StaticResource LabelMainStyle}">
+            </Label>
+            <Rectangle Grid.Column="0" Grid.Row="7" Fill="White" Margin="6,0,0,0"/>
+            <Label Grid.Column="0" Grid.Row="7"
+                   Content="{Binding LableErrorCorrectionCapability}"
+                   Style="{StaticResource LabelMainStyle}">
+            </Label>
+            <Rectangle Grid.Column="1" Grid.Row="1" Fill="White" Margin="0,0,6,0"/>
+            <Label Grid.Column="1" Grid.Row="1"
+                   Content="{Binding LableValueCodeInstanceName}"
+                   Style="{StaticResource LabelValueStyle}">
+            </Label>
+            <Label Grid.Column="1" Grid.Row="2"
+                   Content="{Binding LableValueCodeInstancePolynomial}"
+                   Style="{StaticResource LabelValueStyle}">
+            </Label>
+            <Rectangle Grid.Column="1" Grid.Row="3" Fill="White" Margin="0,0,6,0"/>
+            <Label Grid.Column="1" Grid.Row="3"
+                   Content="{Binding LableValueCodeWordLength}"
+                   Style="{StaticResource LabelValueStyle}">
+            </Label>
+            <Label Grid.Column="1" Grid.Row="4"
+                   Content="{Binding LableValueInformationPartLength}"
+                   Style="{StaticResource LabelValueStyle}">
+            </Label>
+            <Rectangle Grid.Column="1" Grid.Row="5" Fill="White" Margin="0,0,6,0"/>
+            <Label Grid.Column="1" Grid.Row="5"
+                   Content="{Binding LableValueVerificationPartLength}"
+                   Style="{StaticResource LabelValueStyle}">
+            </Label>
+            <Label Grid.Column="1" Grid.Row="6"
+                   Content="{Binding LableValueErrorDetectionCapability}"
+                   Style="{StaticResource LabelValueStyle}">
+            </Label>
+            <Rectangle Grid.Column="1" Grid.Row="7" Fill="White" Margin="0,0,6,0"/>
+            <Label Grid.Column="1" Grid.Row="7"
+                   Content="{Binding LableValueErrorCorrectionCapability}"
+                   Style="{StaticResource LabelValueStyle}">
+            </Label>
 
 
-
-
-        <GroupBox DockPanel.Dock="Top"
-                  Header="{Binding LableValueCodeParameters}">
-            <Grid DockPanel.Dock="Top">
-                <!--Code Instans-->
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <Label Grid.Row="0" Grid.Column="0"
-                   Content="{Binding LableCodeInstanceName}">
-                </Label>
-                <Label Grid.Row="1" Grid.Column="0"
-                   Content="{Binding LableCodeInstancePolynomial}">
-                </Label>
-                <Label Grid.Row="2" Grid.Column="0"
-                   Content="{Binding LableCodeWordLength}">
-                </Label>
-                <Label Grid.Row="3" Grid.Column="0"
-                   Content="{Binding LableInformationPartLength}">
-                </Label>
-                <Label Grid.Row="4" Grid.Column="0"
-                   Content="{Binding LableVerificationPartLength}">
-                </Label>
-                <Label Grid.Row="5" Grid.Column="0"
-                   Content="{Binding LableDetectionCapability}">
-                </Label>
-                <Label Grid.Row="6" Grid.Column="0"
-                   Content="{Binding LableErrorCorrectionCapability}">
-                </Label>
-                <Label Grid.Row="0" Grid.Column="1"
-                   Content="{Binding LableValueCodeInstanceName}">
-                </Label>
-                <Label Grid.Row="1" Grid.Column="1"
-                   Content="{Binding LableValueCodeInstancePolynomial}">
-                </Label>
-                <Label Grid.Row="2" Grid.Column="1"
-                   Content="{Binding LableValueCodeWordLength}">
-                </Label>
-                <Label Grid.Row="3" Grid.Column="1"
-                   Content="{Binding LableValueInformationPartLength}">
-                </Label>
-                <Label Grid.Row="4" Grid.Column="1"
-                   Content="{Binding LableValueVerificationPartLength}">
-                </Label>
-                <Label Grid.Row="5" Grid.Column="1"
-                   Content="{Binding LableValueErrorDetectionCapability}">
-                </Label>
-                <Label Grid.Row="6" Grid.Column="1"
-                   Content="{Binding LableValueErrorCorrectionCapability}">
-                </Label>
-            </Grid>
-            <!--Code Instans-->
-
-        </GroupBox>
-        <!--Code Instans-->
-        <Grid></Grid>
+        </Grid>
+        <!--Code parameters Panel-->
     </DockPanel>
 </Window>
