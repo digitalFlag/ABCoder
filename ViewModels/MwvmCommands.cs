@@ -109,12 +109,12 @@ namespace ABCoder.ViewModels
         {
             StringBuilder informationInformationBitsToolTip = new();
             TextBoxInformationBitsBorderBrush = "Gray";
-            ButtonInformationInformationBitsTextColor = "Gray";
+            ButtonInformationInformationBitsTextColor = "Navy";
 
             if (TextBoxInformationBitsText == string.Empty)
             {
                 TextBoxInformationBitsBorderBrush = "Gray";
-                ButtonInformationInformationBitsTextColor = "BlueViolet";
+                ButtonInformationInformationBitsTextColor = "Firebrick";
                 informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field is empty.");
             }
             else
@@ -122,14 +122,14 @@ namespace ABCoder.ViewModels
                 if (!Golay2312C75Checks.InformationPartLength(ref _TextBoxInformationBitsText))//Lengtg Check
                 {
                     TextBoxInformationBitsBorderBrush = "Red";
-                    ButtonInformationInformationBitsTextColor = "BlueViolet";
+                    ButtonInformationInformationBitsTextColor = "Firebrick";
                     informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field length must be 12.");
                 }
 
                 if (!Golay2312C75Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
                 {
                     TextBoxInformationBitsBorderBrush = "Red";
-                    ButtonInformationInformationBitsTextColor = "BlueViolet";
+                    ButtonInformationInformationBitsTextColor = "Firebrick";
                     informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field contains a non-binary symbol.");
                 }
             }
