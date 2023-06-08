@@ -40,6 +40,7 @@ namespace ABCoder.ViewModels
                 ButtonInformationInformationBitsTextColor = "Firebrick";
                 ButtonInformationInformationBitsToolTipText = "The \"Information Bits\" field is empty.";
                 ButtonOpenInformationBitsIsEnable = true;
+                ButtonCloneInformationBitsIsEnable = true;
             }
             else
             {
@@ -50,6 +51,7 @@ namespace ABCoder.ViewModels
                 ButtonInformationInformationBitsTextColor = "DarkBlue";
                 TextBoxCodeCombinationText = string.Empty;
                 ButtonOpenInformationBitsIsEnable = false;
+                ButtonCloneInformationBitsIsEnable = false;
             }
             OnPropertyChanged();
         }
@@ -149,6 +151,26 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+
+        #region Press Button Copy Information Bits Command
+
+        public ICommand PressPressButtonCopyInformationBitsCommand { get; }
+
+        private bool CanPressPressButtonCopyInformationBitsCommandExecute(object p) => true;
+
+        private void OnPressPressButtonCopyInformationBitsCommandExecuted(object p)
+        {
+            if (string.IsNullOrEmpty(TextBoxInformationBitsText))
+            {
+                return;
+            }
+
+            Clipboard.SetDataObject(TextBoxInformationBitsText);
+            OnPropertyChanged();
+        }
+
+        #endregion
+
 
         private void Encode()
         {

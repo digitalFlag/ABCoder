@@ -98,6 +98,19 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Button Clone Information Bits Is Enable
+
+        private bool _ButtonCloneInformationBitsIsEnable = true;
+        /// <summary>Button Clone Information Bits Is Enable</summary>
+        public bool ButtonCloneInformationBitsIsEnable
+        {
+            get => _ButtonCloneInformationBitsIsEnable;
+            set => Set(ref _ButtonCloneInformationBitsIsEnable, value);
+        }
+
+        #endregion
+
+
         #region GroupBox Panel Mode Header
 
         private string _GroupBoxPanelModeHeader = "Mode";

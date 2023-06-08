@@ -166,6 +166,18 @@
                         </fa:ImageAwesome>
                     </Button.Content>
                 </Button>
+                <Button Command="{Binding PressPressButtonCopyInformationBitsCommand}"
+                        Style="{StaticResource ButtonInformationStyle}"
+                        IsEnabled="{Binding ButtonCloneInformationBitsIsEnable}"
+                        Margin="4,0,0,0"
+                        Width="24">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="Regular_Clone"
+                                         Foreground="DarkBlue"
+                                         Height="14">
+                        </fa:ImageAwesome>
+                    </Button.Content>
+                </Button>
             </StackPanel>
             <!--Options Panel-->
         </Grid>
