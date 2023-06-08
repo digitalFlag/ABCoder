@@ -32,6 +32,8 @@ namespace ABCoder.ViewModels
 
         private void OnChangeSelectionOfComboBoxModeCommandExecuted(object p)
         {
+            TextBoxInformationBitsText = string.Empty;
+            TextBoxCodeCombinationText = string.Empty;
             if (ComboBoxModeSelectedIndex == 0)
             {
                 ButtonActionContent = ComboBoxModeCodeContent;
@@ -40,18 +42,16 @@ namespace ABCoder.ViewModels
                 ButtonInformationInformationBitsTextColor = "Firebrick";
                 ButtonInformationInformationBitsToolTipText = "The \"Information Bits\" field is empty.";
                 ButtonOpenInformationBitsIsEnable = true;
-                ButtonCloneInformationBitsIsEnable = true;
+                TextBoxCodeCombinationIsEnable = false;
             }
             else
             {
                 ButtonActionContent = ComboBoxModeDecodeContent;
                 TextBoxInformationBitsIsEnable = false;
-                TextBoxInformationBitsText = string.Empty;
                 ButtonInformationInformationBitsIsEnable = false;
                 ButtonInformationInformationBitsTextColor = "DarkBlue";
-                TextBoxCodeCombinationText = string.Empty;
                 ButtonOpenInformationBitsIsEnable = false;
-                ButtonCloneInformationBitsIsEnable = false;
+                TextBoxCodeCombinationIsEnable = true;
             }
             OnPropertyChanged();
         }
@@ -166,6 +166,28 @@ namespace ABCoder.ViewModels
             }
 
             Clipboard.SetDataObject(TextBoxInformationBitsText);
+            OnPropertyChanged();
+        }
+
+        #endregion
+
+        #region Press Button Clear Information Bits Command
+
+        public ICommand PressPressButtonClearInformationBitsCommand { get; }
+
+        private bool CanPressPressButtonClearInformationBitsCommandExecute(object p) => true;
+
+        private void OnPressPressButtonClearInformationBitsCommandExecuted(object p)
+        {
+            if (string.IsNullOrEmpty(TextBoxInformationBitsText))
+            {
+                return;
+            }
+            else
+            {
+                TextBoxInformationBitsText = string.Empty;
+            }
+
             OnPropertyChanged();
         }
 

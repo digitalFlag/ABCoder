@@ -110,6 +110,17 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Button Clear Information Bits Is Enable
+
+        private bool _ButtonClearInformationBitsIsEnable = true;
+        /// <summary>Button Clear Information Bits Is Enable</summary>
+        public bool ButtonClearInformationBitsIsEnable
+        {
+            get => _ButtonClearInformationBitsIsEnable;
+            set => Set(ref _ButtonClearInformationBitsIsEnable, value);
+        }
+
+        #endregion
 
         #region GroupBox Panel Mode Header
 
@@ -546,6 +557,18 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Text Box Code Combination Border Brush
+
+        private string _TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
+        /// <summary>Text Box Code Combination Border Brush</summary>
+        public string TextBoxCodeCombinationBorderBrush
+        {
+            get => _TextBoxCodeCombinationBorderBrush;
+            set => Set(ref _TextBoxCodeCombinationBorderBrush, value);
+        }
+
+        #endregion
+
         #region Text Box Code Combination Text
 
         private string _TextBoxCodeCombinationText = string.Empty;
@@ -557,5 +580,17 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Text Box Code Combination Is Enable
+
+        private bool _TextBoxCodeCombinationIsEnable = false;
+        /// <summary>Text Box Code Combination Is Enable</summary>
+        public bool TextBoxCodeCombinationIsEnable
+        {
+            get => _TextBoxCodeCombinationIsEnable;
+            set => Set(ref _TextBoxCodeCombinationIsEnable, value);
+        }
+
+        #endregion
+
     }
 }

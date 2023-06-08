@@ -111,8 +111,9 @@
             </TextBox>
             <TextBox Grid.Column="1" Grid.Row="3"
                      Text="{Binding TextBoxCodeCombinationText, UpdateSourceTrigger=PropertyChanged}"
-                     BorderBrush="DeepSkyBlue"
-                     Style="{StaticResource TextBoxMainStyle}">
+                     Style="{StaticResource TextBoxMainStyle}"
+                     BorderBrush="{Binding TextBoxCodeCombinationBorderBrush}"
+                     IsEnabled="{Binding TextBoxCodeCombinationIsEnable}">
                 <!--<i:Interaction.Triggers>
                     <i:EventTrigger EventName="TextChanged">
                         <i:InvokeCommandAction
@@ -178,6 +179,19 @@
                         </fa:ImageAwesome>
                     </Button.Content>
                 </Button>
+                <Button Command="{Binding PressPressButtonClearInformationBitsCommand}"
+                        Style="{StaticResource ButtonInformationStyle}"
+                        IsEnabled="{Binding ButtonClearInformationBitsIsEnable}"
+                        Margin="4,0,0,0"
+                        Width="24">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="Solid_Eraser"
+                                         Foreground="DarkBlue"
+                                         Height="14">
+                        </fa:ImageAwesome>
+                    </Button.Content>
+                </Button>
+
             </StackPanel>
             <!--Options Panel-->
         </Grid>
