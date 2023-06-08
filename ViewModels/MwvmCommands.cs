@@ -1,11 +1,9 @@
-﻿using ABCoder.ViewModels.Base;
+﻿using ABCoder.BusinessLogic.CodesChecks;
+using ABCoder.ViewModels.Base;
 using System.IO;
-using System.Threading.Channels;
+using System.Text;
 using System.Windows;
 using System.Windows.Input;
-using ABCoder.BusinessLogic.CodesChecks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Text;
 
 namespace ABCoder.ViewModels
 {
@@ -39,6 +37,7 @@ namespace ABCoder.ViewModels
                 ButtonInformationInformationBitsIsEnable = true;
                 ButtonInformationInformationBitsTextColor = "Firebrick";
                 ButtonInformationInformationBitsToolTipText = "The \"Information Bits\" field is empty.";
+                ButtonOpenInformationBitsIsEnable = true;
             }
             else
             {
@@ -48,10 +47,9 @@ namespace ABCoder.ViewModels
                 ButtonInformationInformationBitsIsEnable = false;
                 ButtonInformationInformationBitsTextColor = "DarkBlue";
                 TextBoxCodeCombinationText = string.Empty;
+                ButtonOpenInformationBitsIsEnable = false;
             }
             OnPropertyChanged();
-
-
         }
 
         #endregion
@@ -153,7 +151,6 @@ namespace ABCoder.ViewModels
 
         #endregion
 
-
         private void Encode()
         {
             if (ComboBoxModeSelectedIndex == 0 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
@@ -175,7 +172,5 @@ namespace ABCoder.ViewModels
             }
             OnPropertyChanged();
         }
-
-
     }
 }

@@ -4,6 +4,7 @@ using Microsoft.VisualBasic;
 using System.Collections.ObjectModel;
 using System.Data.Common;
 using System.Windows.Controls;
+using System.Windows.Media;
 using System.Windows.Media.Animation;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -87,6 +88,18 @@ namespace ABCoder.ViewModels
         {
             get => _ButtonInformationCodeWordIsEnable;
             set => Set(ref _ButtonInformationCodeWordIsEnable, value);
+        }
+
+        #endregion
+
+        #region Button Open Information Bits Is Enable
+
+        private bool _ButtonOpenInformationBitsIsEnable = true;
+        /// <summary>Button Open Information Bits Is Enable</summary>
+        public bool ButtonOpenInformationBitsIsEnable
+        {
+            get => _ButtonOpenInformationBitsIsEnable;
+            set => Set(ref _ButtonOpenInformationBitsIsEnable, value);
         }
 
         #endregion

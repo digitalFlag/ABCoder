@@ -150,9 +150,17 @@
                         <fa:ImageAwesome Icon="Solid_Info"
                                          Height="14"
                                          Foreground="{Binding ButtonInformationInformationBitsTextColor}">
-                            <fa:ImageAwesome.Effect>
-                                <DropShadowEffect ShadowDepth="3"/>
-                            </fa:ImageAwesome.Effect>
+                        </fa:ImageAwesome>
+                    </Button.Content>
+                </Button>
+                <Button Style="{StaticResource ButtonInformationStyle}"
+                        IsEnabled="{Binding ButtonOpenInformationBitsIsEnable}"
+                        Margin="4,0,0,0"
+                        Width="24">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="Solid_FileImport"
+                                         Foreground="DarkBlue"
+                                         Height="14">
                         </fa:ImageAwesome>
                     </Button.Content>
                 </Button>
