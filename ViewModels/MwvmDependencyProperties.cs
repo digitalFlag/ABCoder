@@ -1,12 +1,6 @@
 ﻿using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
-using Microsoft.VisualBasic;
 using System.Collections.ObjectModel;
-using System.Data.Common;
-using System.Windows.Controls;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ABCoder.ViewModels
 {

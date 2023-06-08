@@ -3,6 +3,7 @@ using ABCoder.ViewModels.Base;
 using System.IO;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace ABCoder.ViewModels
@@ -150,6 +151,21 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+
+        #region Press Button Information Bits Information Command
+
+        public ICommand PressButtonInformationBitsInformationCommand { get; }
+
+        private bool CanPressButtonInformationBitsInformationCommandExecute(object p) => true;
+
+        private void OnPressButtonInformationBitsInformationCommandExecuted(object p)
+        {
+            MessageBox.Show(ButtonInformationInformationBitsToolTipText, "Attention", MessageBoxButton.OK, MessageBoxImage.Information);
+            OnPropertyChanged();
+        }
+
+        #endregion
+
 
         private void Encode()
         {
