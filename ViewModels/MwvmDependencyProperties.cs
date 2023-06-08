@@ -1,6 +1,8 @@
 ﻿using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
+using Microsoft.VisualBasic;
 using System.Collections.ObjectModel;
+using System.Windows.Media;
 
 namespace ABCoder.ViewModels
 {
@@ -52,40 +54,6 @@ namespace ABCoder.ViewModels
 
         #endregion
 
-        #region Button Information Code Word Text Color
-
-        private string _ButtonInformationCodeWordTextColor = "Red";
-        /// <summary>Button Information Code Word Text Color</summary>
-        public string ButtonInformationCodeWordTextColor
-        {
-            get => _ButtonInformationCodeWordTextColor;
-            set => Set(ref _ButtonInformationCodeWordTextColor, value);
-        }
-
-        #endregion
-        #region Button Information Code Word Tool Tip Text
-
-        private string _ButtonInformationCodeWordToolTipText = "The \"Code Word\" field is empty.";
-        /// <summary>Button Information Code Word Tool Tip Text</summary>
-        public string ButtonInformationCodeWordToolTipText
-        {
-            get => _ButtonInformationCodeWordToolTipText;
-            set => Set(ref _ButtonInformationCodeWordToolTipText, value);
-        }
-
-        #endregion
-        #region Button Information Code Word Is Enable
-
-        private bool _ButtonInformationCodeWordIsEnable = false;
-        /// <summary>Button Information Code Word Is Enable</summary>
-        public bool ButtonInformationCodeWordIsEnable
-        {
-            get => _ButtonInformationCodeWordIsEnable;
-            set => Set(ref _ButtonInformationCodeWordIsEnable, value);
-        }
-
-        #endregion
-
         #region Button Open Information Bits Is Enable
 
         private bool _ButtonOpenInformationBitsIsEnable = true;
@@ -118,6 +86,52 @@ namespace ABCoder.ViewModels
         {
             get => _ButtonClearInformationBitsIsEnable;
             set => Set(ref _ButtonClearInformationBitsIsEnable, value);
+        }
+
+        #endregion
+
+        #region Button Information Code Combination Text Color
+
+        private string _ButtonInformationCodeCombinationTextColor = "DarkBlue";
+        /// <summary>Button Information Code Combination Text Color</summary>
+        public string ButtonInformationCodeCombinationTextColor
+        {
+            get => _ButtonInformationCodeCombinationTextColor;
+            set => Set(ref _ButtonInformationCodeCombinationTextColor, value);
+        }
+
+        #endregion
+        #region Button Information Code Combination Tool Tip Text
+
+        private string _ButtonInformationCodeCombinationToolTipText = "The \"Code Combination\" field is empty.";
+        /// <summary>Button Information Code Combination Tool Tip Text</summary>
+        public string ButtonInformationCodeCombinationToolTipText
+        {
+            get => _ButtonInformationCodeCombinationToolTipText;
+            set => Set(ref _ButtonInformationCodeCombinationToolTipText, value);
+        }
+
+        #endregion
+        #region Button Information Code Combination Is Enable
+
+        private bool _ButtonInformationCodeCombinationIsEnable = false;
+        /// <summary>Button Information Code Combination Is Enable</summary>
+        public bool ButtonInformationCodeCombinationIsEnable
+        {
+            get => _ButtonInformationCodeCombinationIsEnable;
+            set => Set(ref _ButtonInformationCodeCombinationIsEnable, value);
+        }
+
+        #endregion
+
+        #region Button Open Code COmbination Is Enable
+
+        private bool _ButtonOpenCodeCOmbinationIsEnable = false;
+        /// <summary>Button Open Code COmbination Is Enable</summary>
+        public bool ButtonOpenCodeCOmbinationIsEnable
+        {
+            get => _ButtonOpenCodeCOmbinationIsEnable;
+            set => Set(ref _ButtonOpenCodeCOmbinationIsEnable, value);
         }
 
         #endregion

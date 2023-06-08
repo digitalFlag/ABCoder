@@ -1,9 +1,11 @@
 ﻿using ABCoder.BusinessLogic.CodesChecks;
 using ABCoder.ViewModels.Base;
+using Goley_2312_C75;
 using Microsoft.Win32;
 using System.IO;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using TextOptions;
 
@@ -43,6 +45,9 @@ namespace ABCoder.ViewModels
                 ButtonInformationInformationBitsToolTipText = "The \"Information Bits\" field is empty.";
                 ButtonOpenInformationBitsIsEnable = true;
                 TextBoxCodeCombinationIsEnable = false;
+                ButtonInformationCodeCombinationTextColor = "DarkBlue";
+                ButtonInformationCodeCombinationIsEnable = false;
+                ButtonOpenCodeCOmbinationIsEnable = false;
             }
             else
             {
@@ -52,6 +57,10 @@ namespace ABCoder.ViewModels
                 ButtonInformationInformationBitsTextColor = "DarkBlue";
                 ButtonOpenInformationBitsIsEnable = false;
                 TextBoxCodeCombinationIsEnable = true;
+                ButtonInformationCodeCombinationTextColor = "Firebrick";
+                ButtonInformationCodeCombinationIsEnable = true;
+                ButtonInformationCodeCombinationToolTipText = "The \"Code Combination\" field is empty.";
+                ButtonOpenCodeCOmbinationIsEnable = true;
             }
             OnPropertyChanged();
         }
@@ -130,6 +139,19 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Press Button Information Code Combination Command
+
+        public ICommand PressButtonInformationCodeCombinationCommand { get; }
+
+        private bool CanPressButtonInformationCodeCombinationCommandExecute(object p) => true;
+
+        private void OnPressButtonInformationCodeCombinationCommandExecuted(object p)
+        {
+            MessageBox.Show(ButtonInformationCodeCombinationToolTipText, "Attention", MessageBoxButton.OK, MessageBoxImage.Information);
+            OnPropertyChanged();
+        }
+
+        #endregion
 
         #region Press Button Open Information Bits Command
 
@@ -151,6 +173,27 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Press Button Open Code Combination Command
+
+        public ICommand PressButtonOpenCodeCombinationCommand { get; }
+
+        private bool CanPressButtonOpenCodeCombinationCommandExecute(object p) => true;
+
+        private void OnPressButtonOpenCodeCombinationCommandExecuted(object p)
+        {
+            OpenFileDialog ofd = new();
+            ofd.ShowDialog();
+            if (ofd.FileName != string.Empty)//Select new file
+            {
+                TextBoxCodeCombinationText = File.ReadAllText(ofd.FileName);
+                TextBoxCodeCombinationText = TextChecks.AsBinarySymbols(ref _TextBoxCodeCombinationText);
+                CheckInformationBitsCombination();
+            }
+            OnPropertyChanged();
+        }
+
+        #endregion
+
 
         #region Press Button Copy Information Bits Command
 
