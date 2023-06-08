@@ -1,10 +1,11 @@
 ﻿using ABCoder.BusinessLogic.CodesChecks;
 using ABCoder.ViewModels.Base;
+using Microsoft.Win32;
 using System.IO;
 using System.Text;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Input;
+using TextOptions;
 
 namespace ABCoder.ViewModels
 {
@@ -91,6 +92,88 @@ namespace ABCoder.ViewModels
 
         private void OnTextBoxInformationBitsTextChangedCommandExecuted(object p)
         {
+            CheckInformationBitsCombination();
+            OnPropertyChanged();
+        }
+
+        #endregion
+
+        #region Text Box Code Word Text Changed Command
+
+        public ICommand TextBoxCodeWordTextChangedCommand { get; }
+
+        private bool CanTextBoxCodeWordTextChangedCommandExecute(object p) => true;
+
+        private void OnTextBoxCodeWordTextChangedCommandExecuted(object p)
+        {
+            if (ComboBoxModeSelectedIndex == 0)
+            {
+                TextBoxCodeCombinationText = string.Empty;
+            }
+            OnPropertyChanged();
+        }
+
+        #endregion
+
+        #region Press Button Information Bits Information Command
+
+        public ICommand PressButtonInformationBitsInformationCommand { get; }
+
+        private bool CanPressButtonInformationBitsInformationCommandExecute(object p) => true;
+
+        private void OnPressButtonInformationBitsInformationCommandExecuted(object p)
+        {
+            MessageBox.Show(ButtonInformationInformationBitsToolTipText, "Attention", MessageBoxButton.OK, MessageBoxImage.Information);
+            OnPropertyChanged();
+        }
+
+        #endregion
+
+        #region Press Button Open Information Bits Command
+
+        public ICommand PressPressButtonOpenInformationBitsCommand { get; }
+
+        private bool CanPressPressButtonOpenInformationBitsCommandExecute(object p) => true;
+
+        private void OnPressPressButtonOpenInformationBitsCommandExecuted(object p)
+        {
+            OpenFileDialog ofd = new();
+            ofd.ShowDialog();
+            if (ofd.FileName != string.Empty)//Select new file
+            {
+                TextBoxInformationBitsText = File.ReadAllText(ofd.FileName);
+                TextBoxInformationBitsText = TextChecks.AsBinarySymbols(ref _TextBoxInformationBitsText);
+                CheckInformationBitsCombination();
+            }
+            OnPropertyChanged();
+        }
+
+        #endregion
+
+        private void Encode()
+        {
+            if (ComboBoxModeSelectedIndex == 0 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
+            {
+
+                if (Goley_2312_C75.CheckEntedData.CkeckInfornationBits(ref _TextBoxInformationBitsText))
+                {
+                    TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
+                    bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
+                    bool[] codeCombination = Goley_2312_C75.Code.Encode(ref informationBits);
+                    TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
+
+                }
+                else
+                {
+                    TextBoxInformationBitsBorderBrush = "Firebrick";
+                }
+
+            }
+            OnPropertyChanged();
+        }
+
+        private void CheckInformationBitsCombination()
+        {
             StringBuilder informationInformationBitsToolTip = new();
             TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
             ButtonInformationInformationBitsTextColor = "DarkBlue";
@@ -128,65 +211,6 @@ namespace ABCoder.ViewModels
             informationInformationBitsToolTip.Remove(informationInformationBitsToolTip.Length - 2, 2);
 
             ButtonInformationInformationBitsToolTipText = informationInformationBitsToolTip.ToString();
-
-
-            OnPropertyChanged();
-        }
-
-        #endregion
-
-        #region Text Box Code Word Text Changed Command
-
-        public ICommand TextBoxCodeWordTextChangedCommand { get; }
-
-        private bool CanTextBoxCodeWordTextChangedCommandExecute(object p) => true;
-
-        private void OnTextBoxCodeWordTextChangedCommandExecuted(object p)
-        {
-            if (ComboBoxModeSelectedIndex == 0)
-            {
-                TextBoxCodeCombinationText = string.Empty;
-            }
-            OnPropertyChanged();
-        }
-
-        #endregion
-
-        #region Press Button Information Bits Information Command
-
-        public ICommand PressButtonInformationBitsInformationCommand { get; }
-
-        private bool CanPressButtonInformationBitsInformationCommandExecute(object p) => true;
-
-        private void OnPressButtonInformationBitsInformationCommandExecuted(object p)
-        {
-            MessageBox.Show(ButtonInformationInformationBitsToolTipText, "Attention", MessageBoxButton.OK, MessageBoxImage.Information);
-            OnPropertyChanged();
-        }
-
-        #endregion
-
-
-        private void Encode()
-        {
-            if (ComboBoxModeSelectedIndex == 0 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
-            {
-
-                if (Goley_2312_C75.CheckEntedData.CkeckInfornationBits(ref _TextBoxInformationBitsText))
-                {
-                    TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
-                    bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
-                    bool[] codeCombination = Goley_2312_C75.Code.Encode(ref informationBits);
-                    TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
-
-                }
-                else
-                {
-                    TextBoxInformationBitsBorderBrush = "Firebrick";
-                }
-
-            }
-            OnPropertyChanged();
         }
     }
 }

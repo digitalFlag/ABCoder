@@ -19,6 +19,9 @@ namespace ABCoder.ViewModels
             TextBoxInformationBitsTextChangedCommand = new LambdaCommand(OnTextBoxInformationBitsTextChangedCommandExecuted, CanTextBoxInformationBitsTextChangedCommandExecute);
             TextBoxCodeWordTextChangedCommand = new LambdaCommand(OnTextBoxCodeWordTextChangedCommandExecuted, CanTextBoxCodeWordTextChangedCommandExecute);
             PressButtonInformationBitsInformationCommand = new LambdaCommand(OnPressButtonInformationBitsInformationCommandExecuted, CanPressButtonInformationBitsInformationCommandExecute);
+            PressPressButtonOpenInformationBitsCommand = new LambdaCommand(OnPressPressButtonOpenInformationBitsCommandExecuted, CanPressPressButtonOpenInformationBitsCommandExecute);
+
+            
 
             //--------------------------------------INTERFACE--------------------------------------
             ComboBoxModeSource = new ObservableCollection<Mode>()
@@ -30,12 +33,14 @@ namespace ABCoder.ViewModels
             {
                 new Mode() {CoderMode = ComboBoxCodeTypeGoley2312C75Content},
             };
-            CodeInstanceGoley2312C75 = new CodeInstance();
-            CodeInstanceGoley2312C75.Name = ComboBoxCodeTypeGoley2312C75Content;
-            CodeInstanceGoley2312C75.CodeWordLength = 23;
-            CodeInstanceGoley2312C75.InformationPartLength = 12;
-            CodeInstanceGoley2312C75.VerificationPartLength = 11;
-            CodeInstanceGoley2312C75.ErrorDetectionCapability = 7;
+            CodeInstanceGoley2312C75 = new CodeInstance
+            {
+                Name = ComboBoxCodeTypeGoley2312C75Content,
+                CodeWordLength = 23,
+                InformationPartLength = 12,
+                VerificationPartLength = 11,
+                ErrorDetectionCapability = 7
+            };
             CodeInstanceGoley2312C75.ErrorDetectionCapability = 3;
             CodeInstanceGoley2312C75.Polynomial = "x\u00b9\u00b9+x\u00b9\u2070+x\u2076+x\u2075+x\u2074+x\u00B2+1";
         }

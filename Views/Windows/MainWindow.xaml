@@ -154,7 +154,8 @@
                         </fa:ImageAwesome>
                     </Button.Content>
                 </Button>
-                <Button Style="{StaticResource ButtonInformationStyle}"
+                <Button Command="{Binding PressPressButtonOpenInformationBitsCommand}"
+                        Style="{StaticResource ButtonInformationStyle}"
                         IsEnabled="{Binding ButtonOpenInformationBitsIsEnable}"
                         Margin="4,0,0,0"
                         Width="24">
