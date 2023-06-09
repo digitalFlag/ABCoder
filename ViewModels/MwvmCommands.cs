@@ -213,6 +213,25 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Press Button Copy Code Combination Command
+
+        public ICommand PressButtonCopyCodeCombinationCommand { get; }
+
+        private bool CanPressButtonCopyCodeCombinationCommandExecute(object p) => true;
+
+        private void OnPressButtonCopyCodeCombinationCommandExecuted(object p)
+        {
+            if (string.IsNullOrEmpty(TextBoxCodeCombinationText))
+            {
+                return;
+            }
+
+            Clipboard.SetDataObject(TextBoxCodeCombinationText);
+            OnPropertyChanged();
+        }
+
+        #endregion
+
 
         #region Press Button Clear Information Bits Command
 
@@ -236,7 +255,6 @@ namespace ABCoder.ViewModels
 
         #endregion
 
-
         private void Encode()
         {
             if (ComboBoxModeSelectedIndex == 0 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
@@ -248,7 +266,6 @@ namespace ABCoder.ViewModels
                     bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
                     bool[] codeCombination = Goley_2312_C75.Code.Encode(ref informationBits);
                     TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
-
                 }
                 else
                 {

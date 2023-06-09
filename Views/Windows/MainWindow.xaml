@@ -220,6 +220,18 @@
                         </fa:ImageAwesome>
                     </Button.Content>
                 </Button>
+                <Button Command="{Binding PressButtonCopyCodeCombinationCommand}"
+                        Style="{StaticResource ButtonInformationStyle}"
+                        IsEnabled="{Binding ButtonCloneCodeCombinationIsEnable}"
+                        Margin="4,0,0,0"
+                        Width="24">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="Regular_Clone"
+                                         Foreground="DarkBlue"
+                                         Height="14">
+                        </fa:ImageAwesome>
+                    </Button.Content>
+                </Button>
 
             </StackPanel>
 

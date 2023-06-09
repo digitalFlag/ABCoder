@@ -1,8 +1,6 @@
 ﻿using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
-using Microsoft.VisualBasic;
 using System.Collections.ObjectModel;
-using System.Windows.Media;
 
 namespace ABCoder.ViewModels
 {
@@ -135,6 +133,19 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+
+        #region Button Clone Code Combination Is Enable
+
+        private bool _ButtonCloneCodeCombinationIsEnable = true;
+        /// <summary>Button Clone Code Combination Is Enable</summary>
+        public bool ButtonCloneCodeCombinationIsEnable
+        {
+            get => _ButtonCloneCodeCombinationIsEnable;
+            set => Set(ref _ButtonCloneCodeCombinationIsEnable, value);
+        }
+
+        #endregion
+
 
         #region GroupBox Panel Mode Header
 
