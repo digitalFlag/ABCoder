@@ -232,6 +232,18 @@
                         </fa:ImageAwesome>
                     </Button.Content>
                 </Button>
+                <Button Command="{Binding PressButtonClearCodeCombinationCommand}"
+                        Style="{StaticResource ButtonInformationStyle}"
+                        IsEnabled="{Binding ButtonClearCodeCombinationIsEnable}"
+                        Margin="4,0,0,0"
+                        Width="24">
+                    <Button.Content>
+                        <fa:ImageAwesome Icon="Solid_Eraser"
+                                         Foreground="DarkBlue"
+                                         Height="14">
+                        </fa:ImageAwesome>
+                    </Button.Content>
+                </Button>
 
             </StackPanel>
 

@@ -146,6 +146,17 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Button Clear Code Combination Is Enable
+
+        private bool _ButtonClearCodeCombinationIsEnable = true;
+        /// <summary>Button Clear Code Combination Is Enable</summary>
+        public bool ButtonClearCodeCombinationIsEnable
+        {
+            get => _ButtonClearCodeCombinationIsEnable;
+            set => Set(ref _ButtonClearCodeCombinationIsEnable, value);
+        }
+
+        #endregion
 
         #region GroupBox Panel Mode Header
 

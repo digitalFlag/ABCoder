@@ -254,6 +254,28 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Press Button Clear Code Combination Command
+
+        public ICommand PressButtonClearCodeCombinationCommand { get; }
+
+        private bool CanPressButtonClearCodeCombinationCommandExecute(object p) => true;
+
+        private void OnPressButtonClearCodeCombinationCommandExecuted(object p)
+        {
+            if (string.IsNullOrEmpty(TextBoxCodeCombinationText))
+            {
+                return;
+            }
+            else
+            {
+                TextBoxCodeCombinationText = string.Empty;
+            }
+
+            OnPropertyChanged();
+        }
+
+        #endregion
+
 
         private void Encode()
         {
