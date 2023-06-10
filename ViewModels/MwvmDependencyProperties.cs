@@ -1,6 +1,9 @@
 ﻿using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
 using System.Collections.ObjectModel;
+using System.Drawing;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ABCoder.ViewModels
 {
@@ -558,6 +561,30 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+
+        #region Rich Text Box Error Bits Foreground
+
+        private string _RichTextBoxErrorBitsForeground = "Green";
+        /// <summary>Rich Text Box Error Bits Foreground</summary>
+        public string RichTextBoxErrorBitsForeground
+        {
+            get => _RichTextBoxErrorBitsForeground;
+            set => Set(ref _RichTextBoxErrorBitsForeground, value);
+        }
+
+        #endregion
+        #region Rich Text Box Error Bits Is Enable
+
+        private bool _RichTextBoxErrorBitsIsEnable = false;
+        /// <summary>Rich Text Box Error Bits Is Enable</summary>
+        public bool RichTextBoxErrorBitsIsEnable
+        {
+            get => _RichTextBoxErrorBitsIsEnable;
+            set => Set(ref _RichTextBoxErrorBitsIsEnable, value);
+        }
+
+        #endregion
+
 
         #region Text Box Information Bits Border Brush
 

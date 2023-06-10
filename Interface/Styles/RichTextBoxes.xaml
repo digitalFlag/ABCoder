@@ -9,6 +9,7 @@
         <Setter Property="CaretBrush" Value="Navy"/>
         <Setter Property="Foreground" Value="Navy"/>
         <Setter Property="Background" Value="White"/>
+        <Setter Property="BorderBrush" Value="DeepSkyBlue"/>
 
     </Style>
 

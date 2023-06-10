@@ -123,8 +123,10 @@
                 </i:Interaction.Triggers>-->
             </TextBox>
             <RichTextBox Grid.Column="1" Grid.Row="4"
-                         IsEnabled="False"
-                         Style="{StaticResource RichTextBoxMainStyle}">
+                         Style="{StaticResource RichTextBoxMainStyle}"
+                         Foreground="{Binding RichTextBoxErrorBitsForeground}"
+                         IsEnabled="{Binding RichTextBoxErrorBitsIsEnable}">
+                
             </RichTextBox>
             <!--Values Panel-->
 
