@@ -297,7 +297,7 @@ namespace ABCoder.ViewModels
             if (ComboBoxModeSelectedIndex == 0 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
             {
 
-                if (Goley_2312_C75.CheckEntedData.CkeckInfornationBits(ref _TextBoxInformationBitsText))
+                if (Goley_2312_C75.CheckEnteredData.CkeckInfornationBits(ref _TextBoxInformationBitsText))
                 {
                     TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
                     bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
@@ -318,9 +318,10 @@ namespace ABCoder.ViewModels
             if (ComboBoxModeSelectedIndex == 1 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
             {
 
-                if (Goley_2312_C75.CheckEntedData.CkeckInfornationBits(ref _TextBoxCodeCombinationText))
+                if (Goley_2312_C75.CheckEnteredData.CkeckInfornationBits(ref _TextBoxCodeCombinationText))
                 {
                     TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
+                    bool[] codeWord = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxCodeCombinationText);
                     //bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
                     //bool[] codeCombination = Goley_2312_C75.Code.Encode(ref informationBits);
                     //TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
@@ -379,7 +380,7 @@ namespace ABCoder.ViewModels
             StringBuilder codeCombinationToolTip = new();
             TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
             ButtonInformationCodeCombinationTextColor = "DarkBlue";
-            if (TextBoxInformationBitsText == string.Empty)
+            if (TextBoxCodeCombinationText == string.Empty)
             {
                 TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
                 ButtonInformationCodeCombinationTextColor = "Firebrick";
