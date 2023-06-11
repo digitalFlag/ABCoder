@@ -1,9 +1,6 @@
 ﻿using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
 using System.Collections.ObjectModel;
-using System.Drawing;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ABCoder.ViewModels
 {
@@ -584,7 +581,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
 
         #region Text Box Information Bits Border Brush
 

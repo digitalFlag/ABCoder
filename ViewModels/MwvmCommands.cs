@@ -4,6 +4,7 @@ using Goley_2312_C75;
 using Microsoft.Win32;
 using System.IO;
 using System.Text;
+using System.Threading.Channels;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -108,6 +109,20 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Text Box Code Combination Text Changed Command
+
+        public ICommand TextBoxCodeCombinationTextChangedCommand { get; }
+
+        private bool CanTextBoxCodeCombinationTextChangedCommandExecute(object p) => true;
+
+        private void OnTextBoxCodeCombinationTextChangedCommandExecuted(object p)
+        {
+            CheckCodeWord();
+            OnPropertyChanged();
+        }
+
+        #endregion
+
 
         #region Text Box Code Word Text Changed Command
 
@@ -298,6 +313,27 @@ namespace ABCoder.ViewModels
             OnPropertyChanged();
         }
 
+        private void Decode()
+        {
+            if (ComboBoxModeSelectedIndex == 1 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
+            {
+
+                if (Goley_2312_C75.CheckEntedData.CkeckInfornationBits(ref _TextBoxCodeCombinationText))
+                {
+                    TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
+                    //bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
+                    //bool[] codeCombination = Goley_2312_C75.Code.Encode(ref informationBits);
+                    //TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
+                }
+                else
+                {
+                    TextBoxCodeCombinationBorderBrush = "Firebrick";
+                }
+
+            }
+            OnPropertyChanged();
+        }
+
         private void CheckInformationBitsCombination()
         {
             StringBuilder informationInformationBitsToolTip = new();
@@ -317,7 +353,6 @@ namespace ABCoder.ViewModels
                     TextBoxInformationBitsBorderBrush = "Firebrick";
                     ButtonInformationInformationBitsTextColor = "Firebrick";
                     informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field length must be 12.");
-                    TextBoxCodeCombinationText = string.Empty;
                 }
 
                 if (!Golay2312C75Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
@@ -338,5 +373,44 @@ namespace ABCoder.ViewModels
 
             ButtonInformationInformationBitsToolTipText = informationInformationBitsToolTip.ToString();
         }
+
+        private void CheckCodeWord()
+        {
+            StringBuilder codeCombinationToolTip = new();
+            TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
+            ButtonInformationCodeCombinationTextColor = "DarkBlue";
+            if (TextBoxInformationBitsText == string.Empty)
+            {
+                TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
+                ButtonInformationCodeCombinationTextColor = "Firebrick";
+                codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field is empty.");
+            }
+            else
+            {
+                if (!Golay2312C75Checks.CodeWordLength(ref _TextBoxCodeCombinationText))//Lengtg Check
+                {
+                    TextBoxCodeCombinationBorderBrush = "Firebrick";
+                    ButtonInformationCodeCombinationTextColor = "Firebrick";
+                    codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field length must be 23.");
+                }
+                if (!Golay2312C75Checks.BinaryFormat(ref _TextBoxCodeCombinationText))//String Format Check
+                {
+                    TextBoxCodeCombinationBorderBrush = "Firebrick";
+                    ButtonInformationCodeCombinationTextColor = "Firebrick";
+                    codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field contains a non-binary symbol.");
+                }
+            }
+
+            if (string.IsNullOrEmpty(codeCombinationToolTip.ToString()))
+            {
+                codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field is valid.");
+                Decode();
+            }
+
+            codeCombinationToolTip.Remove(codeCombinationToolTip.Length - 2, 2);
+
+            ButtonInformationCodeCombinationToolTipText = codeCombinationToolTip.ToString();
+        }
+
     }
 }

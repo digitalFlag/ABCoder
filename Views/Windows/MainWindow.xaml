@@ -114,15 +114,16 @@
                      Style="{StaticResource TextBoxMainStyle}"
                      BorderBrush="{Binding TextBoxCodeCombinationBorderBrush}"
                      IsEnabled="{Binding TextBoxCodeCombinationIsEnable}">
-                <!--<i:Interaction.Triggers>
+                <i:Interaction.Triggers>
                     <i:EventTrigger EventName="TextChanged">
                         <i:InvokeCommandAction
-                                    Command="{Binding TextBoxCodeWordTextChangedCommand}">
+                                    Command="{Binding TextBoxCodeCombinationTextChangedCommand}">
                         </i:InvokeCommandAction>
                     </i:EventTrigger>
-                </i:Interaction.Triggers>-->
+                </i:Interaction.Triggers>
             </TextBox>
             <RichTextBox Grid.Column="1" Grid.Row="4"
+                         Name="RtbErrorBits"
                          Style="{StaticResource RichTextBoxMainStyle}"
                          Foreground="{Binding RichTextBoxErrorBitsForeground}"
                          IsEnabled="{Binding RichTextBoxErrorBitsIsEnable}">
