@@ -595,8 +595,732 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Text Block Letter2 Text
 
+        private string _TextBlockLetter2Text = string.Empty;
+        /// <summary>Text Block Letter2 Text</summary>
+        public string TextBlockLetter2Text
+        {
+            get => _TextBlockLetter2Text;
+            set => Set(ref _TextBlockLetter2Text, value);
+        }
 
+        #endregion
+        #region Text Block Letter2 Foreground
+
+        private string _TextBlockLetter2Foreground = "Green";
+        /// <summary>Text Block Letter2 Foreground</summary>
+        public string TextBlockLetter2Foreground
+        {
+            get => _TextBlockLetter2Foreground;
+            set => Set(ref _TextBlockLetter2Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter2 Font Style
+
+        private string _TextBlockLetter2FontStyle = "Regular";
+        /// <summary>Text Block Letter2 Font Style</summary>
+        public string TextBlockLetter2FontStyle
+        {
+            get => _TextBlockLetter2FontStyle;
+            set => Set(ref _TextBlockLetter2FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter3 Text
+
+        private string _TextBlockLetter3Text = string.Empty;
+        /// <summary>Text Block Letter3 Text</summary>
+        public string TextBlockLetter3Text
+        {
+            get => _TextBlockLetter3Text;
+            set => Set(ref _TextBlockLetter3Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter3 Foreground
+
+        private string _TextBlockLetter3Foreground = "Green";
+        /// <summary>Text Block Letter3 Foreground</summary>
+        public string TextBlockLetter3Foreground
+        {
+            get => _TextBlockLetter3Foreground;
+            set => Set(ref _TextBlockLetter3Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter3 Font Style
+
+        private string _TextBlockLetter3FontStyle = "Regular";
+        /// <summary>Text Block Letter3 Font Style</summary>
+        public string TextBlockLetter3FontStyle
+        {
+            get => _TextBlockLetter3FontStyle;
+            set => Set(ref _TextBlockLetter3FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter4 Text
+
+        private string _TextBlockLetter4Text = string.Empty;
+        /// <summary>Text Block Letter4 Text</summary>
+        public string TextBlockLetter4Text
+        {
+            get => _TextBlockLetter4Text;
+            set => Set(ref _TextBlockLetter4Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter4 Foreground
+
+        private string _TextBlockLetter4Foreground = "Green";
+        /// <summary>Text Block Letter4 Foreground</summary>
+        public string TextBlockLetter4Foreground
+        {
+            get => _TextBlockLetter4Foreground;
+            set => Set(ref _TextBlockLetter4Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter4 Font Style
+
+        private string _TextBlockLetter4FontStyle = "Regular";
+        /// <summary>Text Block Letter4 Font Style</summary>
+        public string TextBlockLetter4FontStyle
+        {
+            get => _TextBlockLetter4FontStyle;
+            set => Set(ref _TextBlockLetter4FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter5 Text
+
+        private string _TextBlockLetter5Text = string.Empty;
+        /// <summary>Text Block Letter3 Text</summary>
+        public string TextBlockLetter5Text
+        {
+            get => _TextBlockLetter5Text;
+            set => Set(ref _TextBlockLetter5Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter5 Foreground
+
+        private string _TextBlockLetter5Foreground = "Green";
+        /// <summary>Text Block Letter3 Foreground</summary>
+        public string TextBlockLetter5Foreground
+        {
+            get => _TextBlockLetter5Foreground;
+            set => Set(ref _TextBlockLetter3Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter5 Font Style
+
+        private string _TextBlockLetter5FontStyle = "Regular";
+        /// <summary>Text Block Letter5 Font Style</summary>
+        public string TextBlockLetter5FontStyle
+        {
+            get => _TextBlockLetter5FontStyle;
+            set => Set(ref _TextBlockLetter5FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter6 Text
+
+        private string _TextBlockLetter6Text = string.Empty;
+        /// <summary>Text Block Letter6 Text</summary>
+        public string TextBlockLetter6Text
+        {
+            get => _TextBlockLetter6Text;
+            set => Set(ref _TextBlockLetter6Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter6 Foreground
+
+        private string _TextBlockLetter6Foreground = "Green";
+        /// <summary>Text Block Letter6 Foreground</summary>
+        public string TextBlockLetter6Foreground
+        {
+            get => _TextBlockLetter6Foreground;
+            set => Set(ref _TextBlockLetter6Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter6 Font Style
+
+        private string _TextBlockLetter6FontStyle = "Regular";
+        /// <summary>Text Block Letter3 Font Style</summary>
+        public string TextBlockLetter6FontStyle
+        {
+            get => _TextBlockLetter6FontStyle;
+            set => Set(ref _TextBlockLetter6FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter7 Text
+
+        private string _TextBlockLetter7Text = string.Empty;
+        /// <summary>Text Block Letter7 Text</summary>
+        public string TextBlockLetter7Text
+        {
+            get => _TextBlockLetter7Text;
+            set => Set(ref _TextBlockLetter7Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter7 Foreground
+
+        private string _TextBlockLetter7Foreground = "Green";
+        /// <summary>Text Block Letter7 Foreground</summary>
+        public string TextBlockLetter7Foreground
+        {
+            get => _TextBlockLetter7Foreground;
+            set => Set(ref _TextBlockLetter7Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter7 Font Style
+
+        private string _TextBlockLetter7FontStyle = "Regular";
+        /// <summary>Text Block Letter7 Font Style</summary>
+        public string TextBlockLetter7FontStyle
+        {
+            get => _TextBlockLetter7FontStyle;
+            set => Set(ref _TextBlockLetter7FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter8 Text
+
+        private string _TextBlockLetter8Text = string.Empty;
+        /// <summary>Text Block Letter8 Text</summary>
+        public string TextBlockLetter8Text
+        {
+            get => _TextBlockLetter8Text;
+            set => Set(ref _TextBlockLetter8Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter8 Foreground
+
+        private string _TextBlockLetter8Foreground = "Green";
+        /// <summary>Text Block Letter8 Foreground</summary>
+        public string TextBlockLetter8Foreground
+        {
+            get => _TextBlockLetter8Foreground;
+            set => Set(ref _TextBlockLetter8Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter8 Font Style
+
+        private string _TextBlockLetter8FontStyle = "Regular";
+        /// <summary>Text Block Letter8 Font Style</summary>
+        public string TextBlockLetter8FontStyle
+        {
+            get => _TextBlockLetter8FontStyle;
+            set => Set(ref _TextBlockLetter8FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter9 Text
+
+        private string _TextBlockLetter9Text = string.Empty;
+        /// <summary>Text Block Letter9 Text</summary>
+        public string TextBlockLetter9Text
+        {
+            get => _TextBlockLetter9Text;
+            set => Set(ref _TextBlockLetter9Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter9 Foreground
+
+        private string _TextBlockLetter9Foreground = "Green";
+        /// <summary>Text Block Letter9 Foreground</summary>
+        public string TextBlockLetter9Foreground
+        {
+            get => _TextBlockLetter9Foreground;
+            set => Set(ref _TextBlockLetter9Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter9 Font Style
+
+        private string _TextBlockLetter9FontStyle = "Regular";
+        /// <summary>Text Block Letter9 Font Style</summary>
+        public string TextBlockLetter9FontStyle
+        {
+            get => _TextBlockLetter9FontStyle;
+            set => Set(ref _TextBlockLetter9FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter10 Text
+
+        private string _TextBlockLetter10Text = string.Empty;
+        /// <summary>Text Block Letter10 Text</summary>
+        public string TextBlockLetter10Text
+        {
+            get => _TextBlockLetter10Text;
+            set => Set(ref _TextBlockLetter10Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter10 Foreground
+
+        private string _TextBlockLetter10Foreground = "Green";
+        /// <summary>Text Block Letter10 Foreground</summary>
+        public string TextBlockLetter10Foreground
+        {
+            get => _TextBlockLetter10Foreground;
+            set => Set(ref _TextBlockLetter10Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter10 Font Style
+
+        private string _TextBlockLetter10FontStyle = "Regular";
+        /// <summary>Text Block Letter10 Font Style</summary>
+        public string TextBlockLetter10FontStyle
+        {
+            get => _TextBlockLetter10FontStyle;
+            set => Set(ref _TextBlockLetter10FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter11 Text
+
+        private string _TextBlockLetter11Text = string.Empty;
+        /// <summary>Text Block Letter11 Text</summary>
+        public string TextBlockLetter11Text
+        {
+            get => _TextBlockLetter11Text;
+            set => Set(ref _TextBlockLetter11Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter11 Foreground
+
+        private string _TextBlockLetter11Foreground = "Green";
+        /// <summary>Text Block Letter11 Foreground</summary>
+        public string TextBlockLetter11Foreground
+        {
+            get => _TextBlockLetter11Foreground;
+            set => Set(ref _TextBlockLetter11Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter11 Font Style
+
+        private string _TextBlockLetter11FontStyle = "Regular";
+        /// <summary>Text Block Letter11 Font Style</summary>
+        public string TextBlockLetter11FontStyle
+        {
+            get => _TextBlockLetter11FontStyle;
+            set => Set(ref _TextBlockLetter11FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter12 Text
+
+        private string _TextBlockLetter12Text = string.Empty;
+        /// <summary>Text Block Letter12 Text</summary>
+        public string TextBlockLetter12Text
+        {
+            get => _TextBlockLetter12Text;
+            set => Set(ref _TextBlockLetter12Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter12 Foreground
+
+        private string _TextBlockLetter12Foreground = "Green";
+        /// <summary>Text Block Letter12 Foreground</summary>
+        public string TextBlockLetter12Foreground
+        {
+            get => _TextBlockLetter12Foreground;
+            set => Set(ref _TextBlockLetter12Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter12 Font Style
+
+        private string _TextBlockLetter12FontStyle = "Regular";
+        /// <summary>Text Block Letter12 Font Style</summary>
+        public string TextBlockLetter12FontStyle
+        {
+            get => _TextBlockLetter12FontStyle;
+            set => Set(ref _TextBlockLetter12FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter13 Text
+
+        private string _TextBlockLetter13Text = string.Empty;
+        /// <summary>Text Block Letter13 Text</summary>
+        public string TextBlockLetter13Text
+        {
+            get => _TextBlockLetter13Text;
+            set => Set(ref _TextBlockLetter13Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter13 Foreground
+
+        private string _TextBlockLetter13Foreground = "Green";
+        /// <summary>Text Block Letter13 Foreground</summary>
+        public string TextBlockLetter13Foreground
+        {
+            get => _TextBlockLetter13Foreground;
+            set => Set(ref _TextBlockLetter13Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter13 Font Style
+
+        private string _TextBlockLetter13FontStyle = "Regular";
+        /// <summary>Text Block Letter13 Font Style</summary>
+        public string TextBlockLetter13FontStyle
+        {
+            get => _TextBlockLetter13FontStyle;
+            set => Set(ref _TextBlockLetter13FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter14 Text
+
+        private string _TextBlockLetter14Text = string.Empty;
+        /// <summary>Text Block Letter14 Text</summary>
+        public string TextBlockLetter14Text
+        {
+            get => _TextBlockLetter14Text;
+            set => Set(ref _TextBlockLetter14Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter14 Foreground
+
+        private string _TextBlockLetter14Foreground = "Green";
+        /// <summary>Text Block Letter14 Foreground</summary>
+        public string TextBlockLetter14Foreground
+        {
+            get => _TextBlockLetter14Foreground;
+            set => Set(ref _TextBlockLetter14Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter14 Font Style
+
+        private string _TextBlockLetter14FontStyle = "Regular";
+        /// <summary>Text Block Letter14 Font Style</summary>
+        public string TextBlockLetter14FontStyle
+        {
+            get => _TextBlockLetter14FontStyle;
+            set => Set(ref _TextBlockLetter14FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter15 Text
+
+        private string _TextBlockLetter15Text = string.Empty;
+        /// <summary>Text Block Letter15 Text</summary>
+        public string TextBlockLetter15Text
+        {
+            get => _TextBlockLetter15Text;
+            set => Set(ref _TextBlockLetter15Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter15 Foreground
+
+        private string _TextBlockLetter15Foreground = "Green";
+        /// <summary>Text Block Letter15 Foreground</summary>
+        public string TextBlockLetter15Foreground
+        {
+            get => _TextBlockLetter15Foreground;
+            set => Set(ref _TextBlockLetter15Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter15 Font Style
+
+        private string _TextBlockLetter15FontStyle = "Regular";
+        /// <summary>Text Block Letter15 Font Style</summary>
+        public string TextBlockLetter15FontStyle
+        {
+            get => _TextBlockLetter15FontStyle;
+            set => Set(ref _TextBlockLetter15FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter16 Text
+
+        private string _TextBlockLetter16Text = string.Empty;
+        /// <summary>Text Block Letter16 Text</summary>
+        public string TextBlockLetter16Text
+        {
+            get => _TextBlockLetter16Text;
+            set => Set(ref _TextBlockLetter16Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter16 Foreground
+
+        private string _TextBlockLetter16Foreground = "Green";
+        /// <summary>Text Block Letter16 Foreground</summary>
+        public string TextBlockLetter16Foreground
+        {
+            get => _TextBlockLetter16Foreground;
+            set => Set(ref _TextBlockLetter16Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter16 Font Style
+
+        private string _TextBlockLetter16FontStyle = "Regular";
+        /// <summary>Text Block Letter16 Font Style</summary>
+        public string TextBlockLetter16FontStyle
+        {
+            get => _TextBlockLetter16FontStyle;
+            set => Set(ref _TextBlockLetter16FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter17 Text
+
+        private string _TextBlockLetter17Text = string.Empty;
+        /// <summary>Text Block Letter17 Text</summary>
+        public string TextBlockLetter17Text
+        {
+            get => _TextBlockLetter17Text;
+            set => Set(ref _TextBlockLetter17Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter17 Foreground
+
+        private string _TextBlockLetter17Foreground = "Green";
+        /// <summary>Text Block Letter17 Foreground</summary>
+        public string TextBlockLetter17Foreground
+        {
+            get => _TextBlockLetter17Foreground;
+            set => Set(ref _TextBlockLetter17Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter17 Font Style
+
+        private string _TextBlockLetter17FontStyle = "Regular";
+        /// <summary>Text Block Letter17 Font Style</summary>
+        public string TextBlockLetter17FontStyle
+        {
+            get => _TextBlockLetter17FontStyle;
+            set => Set(ref _TextBlockLetter17FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter18 Text
+
+        private string _TextBlockLetter18Text = string.Empty;
+        /// <summary>Text Block Letter18 Text</summary>
+        public string TextBlockLetter18Text
+        {
+            get => _TextBlockLetter18Text;
+            set => Set(ref _TextBlockLetter18Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter18 Foreground
+
+        private string _TextBlockLetter18Foreground = "Green";
+        /// <summary>Text Block Letter18 Foreground</summary>
+        public string TextBlockLetter18Foreground
+        {
+            get => _TextBlockLetter18Foreground;
+            set => Set(ref _TextBlockLetter18Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter18 Font Style
+
+        private string _TextBlockLetter18FontStyle = "Regular";
+        /// <summary>Text Block Letter18 Font Style</summary>
+        public string TextBlockLetter18FontStyle
+        {
+            get => _TextBlockLetter18FontStyle;
+            set => Set(ref _TextBlockLetter18FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter19 Text
+
+        private string _TextBlockLetter19Text = string.Empty;
+        /// <summary>Text Block Letter19 Text</summary>
+        public string TextBlockLetter19Text
+        {
+            get => _TextBlockLetter19Text;
+            set => Set(ref _TextBlockLetter19Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter19 Foreground
+
+        private string _TextBlockLetter19Foreground = "Green";
+        /// <summary>Text Block Letter19 Foreground</summary>
+        public string TextBlockLetter19Foreground
+        {
+            get => _TextBlockLetter19Foreground;
+            set => Set(ref _TextBlockLetter19Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter19 Font Style
+
+        private string _TextBlockLetter19FontStyle = "Regular";
+        /// <summary>Text Block Letter19 Font Style</summary>
+        public string TextBlockLetter19FontStyle
+        {
+            get => _TextBlockLetter19FontStyle;
+            set => Set(ref _TextBlockLetter19FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter20 Text
+
+        private string _TextBlockLetter20Text = string.Empty;
+        /// <summary>Text Block Letter20 Text</summary>
+        public string TextBlockLetter20Text
+        {
+            get => _TextBlockLetter20Text;
+            set => Set(ref _TextBlockLetter20Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter20 Foreground
+
+        private string _TextBlockLetter20Foreground = "Green";
+        /// <summary>Text Block Letter20 Foreground</summary>
+        public string TextBlockLetter20Foreground
+        {
+            get => _TextBlockLetter20Foreground;
+            set => Set(ref _TextBlockLetter20Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter20 Font Style
+
+        private string _TextBlockLetter20FontStyle = "Regular";
+        /// <summary>Text Block Letter20 Font Style</summary>
+        public string TextBlockLetter20FontStyle
+        {
+            get => _TextBlockLetter20FontStyle;
+            set => Set(ref _TextBlockLetter20FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter21 Text
+
+        private string _TextBlockLetter21Text = string.Empty;
+        /// <summary>Text Block Letter21 Text</summary>
+        public string TextBlockLetter21Text
+        {
+            get => _TextBlockLetter21Text;
+            set => Set(ref _TextBlockLetter21Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter21 Foreground
+
+        private string _TextBlockLetter21Foreground = "Green";
+        /// <summary>Text Block Letter21 Foreground</summary>
+        public string TextBlockLetter21Foreground
+        {
+            get => _TextBlockLetter21Foreground;
+            set => Set(ref _TextBlockLetter21Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter21 Font Style
+
+        private string _TextBlockLetter21FontStyle = "Regular";
+        /// <summary>Text Block Letter21 Font Style</summary>
+        public string TextBlockLetter21FontStyle
+        {
+            get => _TextBlockLetter21FontStyle;
+            set => Set(ref _TextBlockLetter21FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter22 Text
+
+        private string _TextBlockLetter22Text = string.Empty;
+        /// <summary>Text Block Letter22 Text</summary>
+        public string TextBlockLetter22Text
+        {
+            get => _TextBlockLetter22Text;
+            set => Set(ref _TextBlockLetter22Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter22 Foreground
+
+        private string _TextBlockLetter22Foreground = "Green";
+        /// <summary>Text Block Letter22 Foreground</summary>
+        public string TextBlockLetter22Foreground
+        {
+            get => _TextBlockLetter22Foreground;
+            set => Set(ref _TextBlockLetter22Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter22 Font Style
+
+        private string _TextBlockLetter22FontStyle = "Regular";
+        /// <summary>Text Block Letter22 Font Style</summary>
+        public string TextBlockLetter22FontStyle
+        {
+            get => _TextBlockLetter22FontStyle;
+            set => Set(ref _TextBlockLetter22FontStyle, value);
+        }
+
+        #endregion
+        #region Text Block Letter23 Text
+
+        private string _TextBlockLetter23Text = string.Empty;
+        /// <summary>Text Block Letter23 Text</summary>
+        public string TextBlockLetter23Text
+        {
+            get => _TextBlockLetter23Text;
+            set => Set(ref _TextBlockLetter23Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter23 Foreground
+
+        private string _TextBlockLetter23Foreground = "Green";
+        /// <summary>Text Block Letter23 Foreground</summary>
+        public string TextBlockLetter23Foreground
+        {
+            get => _TextBlockLetter23Foreground;
+            set => Set(ref _TextBlockLetter23Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter23 Font Style
+
+        private string _TextBlockLetter23FontStyle = "Regular";
+        /// <summary>Text Block Letter23 Font Style</summary>
+        public string TextBlockLetter23FontStyle
+        {
+            get => _TextBlockLetter23FontStyle;
+            set => Set(ref _TextBlockLetter23FontStyle, value);
+        }
+
+        #endregion
 
         #region Text Box Information Bits Border Brush
 

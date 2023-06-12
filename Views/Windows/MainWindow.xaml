@@ -122,12 +122,37 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </TextBox>
+            <TextBlock Grid.Column="1" Grid.Row="4"
+                       Style="{StaticResource TextBlockMainStyle}">
+                <Run Text="{Binding TextBlockLetter1Text}" Foreground="{Binding TextBlockLetter1Foreground}" FontStyle="{Binding TextBlockLetter1FontStyle}"/><Run 
+                     Text="{Binding TextBlockLetter2Text}" Foreground="{Binding TextBlockLetter2Foreground}" FontStyle="{Binding TextBlockLetter2FontStyle}"/><Run 
+                     Text="{Binding TextBlockLetter3Text}" Foreground="{Binding TextBlockLetter3Foreground}" FontStyle="{Binding TextBlockLetter3FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter4Text}" Foreground="{Binding TextBlockLetter4Foreground}" FontStyle="{Binding TextBlockLetter4FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter5Text}" Foreground="{Binding TextBlockLetter5Foreground}" FontStyle="{Binding TextBlockLetter5FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter6Text}" Foreground="{Binding TextBlockLetter6Foreground}" FontStyle="{Binding TextBlockLetter6FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter7Text}" Foreground="{Binding TextBlockLetter7Foreground}" FontStyle="{Binding TextBlockLetter7FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter8Text}" Foreground="{Binding TextBlockLetter8Foreground}" FontStyle="{Binding TextBlockLetter8FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter9Text}" Foreground="{Binding TextBlockLetter9Foreground}" FontStyle="{Binding TextBlockLetter9FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter10Text}" Foreground="{Binding TextBlockLetter10Foreground}" FontStyle="{Binding TextBlockLetter10FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter11Text}" Foreground="{Binding TextBlockLetter11Foreground}" FontStyle="{Binding TextBlockLetter11FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter12Text}" Foreground="{Binding TextBlockLetter12Foreground}" FontStyle="{Binding TextBlockLetter12FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter13Text}" Foreground="{Binding TextBlockLetter13Foreground}" FontStyle="{Binding TextBlockLetter13FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter14Text}" Foreground="{Binding TextBlockLetter14Foreground}" FontStyle="{Binding TextBlockLetter14FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter15Text}" Foreground="{Binding TextBlockLetter15Foreground}" FontStyle="{Binding TextBlockLetter15FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter16Text}" Foreground="{Binding TextBlockLetter16Foreground}" FontStyle="{Binding TextBlockLetter16FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter17Text}" Foreground="{Binding TextBlockLetter17Foreground}" FontStyle="{Binding TextBlockLetter17FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter18Text}" Foreground="{Binding TextBlockLetter18Foreground}" FontStyle="{Binding TextBlockLetter18FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter19Text}" Foreground="{Binding TextBlockLetter19Foreground}" FontStyle="{Binding TextBlockLetter19FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter20Text}" Foreground="{Binding TextBlockLetter20Foreground}" FontStyle="{Binding TextBlockLetter20FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter21Text}" Foreground="{Binding TextBlockLetter21Foreground}" FontStyle="{Binding TextBlockLetter21FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter22Text}" Foreground="{Binding TextBlockLetter22Foreground}" FontStyle="{Binding TextBlockLetter22FontStyle}"/><Run
+                     Text="{Binding TextBlockLetter23Text}" Foreground="{Binding TextBlockLetter23Foreground}" FontStyle="{Binding TextBlockLetter23FontStyle}"/>
+            </TextBlock>
+            <Rectangle Grid.Column="1" Grid.Row="4"
+                       Stroke="LightSkyBlue"
+                       Margin="6,2,6,0">
+            </Rectangle>
 
-            <RichTextBox Grid.Column="1" Grid.Row="4"
-                         Style="{StaticResource RichTextBoxMainStyle}"
-                         IsEnabled="False">
-                
-            </RichTextBox>
             <!--Values Panel-->
 
             <!--Options Panel-->
