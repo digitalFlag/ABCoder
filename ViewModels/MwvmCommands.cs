@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Channels;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Input;
 using TextOptions;
 
@@ -74,6 +75,11 @@ namespace ABCoder.ViewModels
 
         private void OnExecuteButtonCommandExecuted(object p)
         {
+            //FlowDocument fd = new FlowDocument();
+            //Paragraph ObjPara1 = new Paragraph();
+            //ObjPara1.Inlines.Add(new Run("Hellow"));
+            //fd.Blocks.Add(ObjPara1);
+
             Encode();
             OnPropertyChanged();
         }

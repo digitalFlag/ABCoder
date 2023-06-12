@@ -12,6 +12,7 @@
                 <ResourceDictionary Source="Interface/Styles/GroupBoxes.xaml"/>
                 <ResourceDictionary Source="Interface/Styles/Labels.xaml"/>
                 <ResourceDictionary Source="Interface/Styles/Menues.xaml"/>
+                <ResourceDictionary Source="Interface/Styles/RichTextBoxes.xaml"/>
                 <ResourceDictionary Source="Interface/Styles/StackPanels.xaml"/>
                 <ResourceDictionary Source="Interface/Styles/TextBlocks.xaml"/>
                 <ResourceDictionary Source="Interface/Styles/TextBoxes.xaml"/>
