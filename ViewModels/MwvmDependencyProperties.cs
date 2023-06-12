@@ -1,9 +1,6 @@
 ﻿using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
 using System.Collections.ObjectModel;
-using System.Windows.Documents;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ABCoder.ViewModels
 {
@@ -562,6 +559,39 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Text Block Letter0 Text
+
+        private string _TextBlockLetter0Text = string.Empty;
+        /// <summary>Text Block Letter0 Text</summary>
+        public string TextBlockLetter0Text
+        {
+            get => _TextBlockLetter0Text;
+            set => Set(ref _TextBlockLetter0Text, value);
+        }
+
+        #endregion
+        #region Text Block Letter0 Foreground
+
+        private string _TextBlockLetter0Foreground = "Green";
+        /// <summary>Text Block Letter0 Foreground</summary>
+        public string TextBlockLetter0Foreground
+        {
+            get => _TextBlockLetter0Foreground;
+            set => Set(ref _TextBlockLetter0Foreground, value);
+        }
+
+        #endregion
+        #region Text Block Letter0 Font Style
+
+        private string _TextBlockLetter0FontStyle = "Regular";
+        /// <summary>Text Block Letter0 Font Style</summary>
+        public string TextBlockLetter0FontStyle
+        {
+            get => _TextBlockLetter0FontStyle;
+            set => Set(ref _TextBlockLetter0FontStyle, value);
+        }
+
+        #endregion
         #region Text Block Letter1 Text
 
         private string _TextBlockLetter1Text = string.Empty;
@@ -1285,39 +1315,6 @@ namespace ABCoder.ViewModels
         {
             get => _TextBlockLetter22FontStyle;
             set => Set(ref _TextBlockLetter22FontStyle, value);
-        }
-
-        #endregion
-        #region Text Block Letter23 Text
-
-        private string _TextBlockLetter23Text = string.Empty;
-        /// <summary>Text Block Letter23 Text</summary>
-        public string TextBlockLetter23Text
-        {
-            get => _TextBlockLetter23Text;
-            set => Set(ref _TextBlockLetter23Text, value);
-        }
-
-        #endregion
-        #region Text Block Letter23 Foreground
-
-        private string _TextBlockLetter23Foreground = "Green";
-        /// <summary>Text Block Letter23 Foreground</summary>
-        public string TextBlockLetter23Foreground
-        {
-            get => _TextBlockLetter23Foreground;
-            set => Set(ref _TextBlockLetter23Foreground, value);
-        }
-
-        #endregion
-        #region Text Block Letter23 Font Style
-
-        private string _TextBlockLetter23FontStyle = "Regular";
-        /// <summary>Text Block Letter23 Font Style</summary>
-        public string TextBlockLetter23FontStyle
-        {
-            get => _TextBlockLetter23FontStyle;
-            set => Set(ref _TextBlockLetter23FontStyle, value);
         }
 
         #endregion

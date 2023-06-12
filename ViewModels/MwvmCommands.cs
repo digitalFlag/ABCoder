@@ -2,10 +2,7 @@
 using Microsoft.Win32;
 using System.IO;
 using System.Text;
-using System.Threading.Channels;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
 using System.Windows.Input;
 using TextOptions;
 
@@ -48,6 +45,7 @@ namespace ABCoder.ViewModels
                 ButtonInformationCodeCombinationTextColor = "DarkBlue";
                 ButtonInformationCodeCombinationIsEnable = false;
                 ButtonOpenCodeCOmbinationIsEnable = false;
+                SetErrorBitsFieldDefaultValues();
             }
             else
             {
@@ -310,12 +308,14 @@ namespace ABCoder.ViewModels
             if (ComboBoxModeSelectedIndex == 1 && ComboBoxCodeTypeSelectedIndex == 0)// DeCode Goley (23, 12) C75
             {
 
-                    TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
                     bool[] codeWord = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxCodeCombinationText);
+                    bool[] errors = new bool[23];
+                errors[1] = true;
                     if (Goley_2312_C75.Decode.IsValidCombination(ref codeWord))
                     {
                         bool[] infornationPart = Goley_2312_C75.Parts.SelectTheInformationPartFromTheCodeWord(ref codeWord);
                         TextBoxInformationBitsText = Converter.BoolArrayToBinaryString.Convert(ref infornationPart);
+                        CreateErrorBitsText23(ref codeWord, ref errors);
                     }
 
 
@@ -406,6 +406,123 @@ namespace ABCoder.ViewModels
             codeCombinationToolTip.Remove(codeCombinationToolTip.Length - 2, 2);
 
             ButtonInformationCodeCombinationToolTipText = codeCombinationToolTip.ToString();
+        }
+
+        private void SetErrorBitsFieldDefaultValues()
+        {
+            string color = "Green";
+            string fontStyle = "Regular";
+
+
+            TextBlockLetter0Text = string.Empty;
+            TextBlockLetter1Text = string.Empty;
+            TextBlockLetter2Text = string.Empty;
+            TextBlockLetter3Text = string.Empty;
+            TextBlockLetter4Text = string.Empty;
+            TextBlockLetter5Text = string.Empty;
+            TextBlockLetter6Text = string.Empty;
+            TextBlockLetter7Text = string.Empty;
+            TextBlockLetter8Text = string.Empty;
+            TextBlockLetter9Text = string.Empty;
+            TextBlockLetter10Text = string.Empty;
+            TextBlockLetter11Text = string.Empty;
+            TextBlockLetter12Text = string.Empty;
+            TextBlockLetter13Text = string.Empty;
+            TextBlockLetter14Text = string.Empty;
+            TextBlockLetter15Text = string.Empty;
+            TextBlockLetter16Text = string.Empty;
+            TextBlockLetter17Text = string.Empty;
+            TextBlockLetter18Text = string.Empty;
+            TextBlockLetter19Text = string.Empty;
+            TextBlockLetter20Text = string.Empty;
+            TextBlockLetter21Text = string.Empty;
+            TextBlockLetter22Text = string.Empty;
+
+            TextBlockLetter0Foreground = color;
+            TextBlockLetter1Foreground = color;
+            TextBlockLetter2Foreground = color;
+            TextBlockLetter3Foreground = color;
+            TextBlockLetter4Foreground = color;
+            TextBlockLetter5Foreground = color;
+            TextBlockLetter6Foreground = color;
+            TextBlockLetter7Foreground = color;
+            TextBlockLetter8Foreground = color;
+            TextBlockLetter9Foreground = color;
+            TextBlockLetter10Foreground = color;
+            TextBlockLetter11Foreground = color;
+            TextBlockLetter12Foreground = color;
+            TextBlockLetter13Foreground = color;
+            TextBlockLetter14Foreground = color;
+            TextBlockLetter15Foreground = color;
+            TextBlockLetter16Foreground = color;
+            TextBlockLetter17Foreground = color;
+            TextBlockLetter18Foreground = color;
+            TextBlockLetter19Foreground = color;
+            TextBlockLetter20Foreground = color;
+            TextBlockLetter21Foreground = color;
+            TextBlockLetter22Foreground = color;
+
+            TextBlockLetter0FontStyle = fontStyle;
+            TextBlockLetter1FontStyle = fontStyle;
+            TextBlockLetter2FontStyle = fontStyle;
+            TextBlockLetter3FontStyle = fontStyle;
+            TextBlockLetter4FontStyle = fontStyle;
+            TextBlockLetter5FontStyle = fontStyle;
+            TextBlockLetter6FontStyle = fontStyle;
+            TextBlockLetter7FontStyle = fontStyle;
+            TextBlockLetter8FontStyle = fontStyle;
+            TextBlockLetter9FontStyle = fontStyle;
+            TextBlockLetter10FontStyle = fontStyle;
+            TextBlockLetter11FontStyle = fontStyle;
+            TextBlockLetter12FontStyle = fontStyle;
+            TextBlockLetter13FontStyle = fontStyle;
+            TextBlockLetter14FontStyle = fontStyle;
+            TextBlockLetter15FontStyle = fontStyle;
+            TextBlockLetter16FontStyle = fontStyle;
+            TextBlockLetter17FontStyle = fontStyle;
+            TextBlockLetter18FontStyle = fontStyle;
+            TextBlockLetter19FontStyle = fontStyle;
+            TextBlockLetter20FontStyle = fontStyle;
+            TextBlockLetter21FontStyle = fontStyle;
+            TextBlockLetter22FontStyle = fontStyle;
+        }
+
+        private void CreateErrorBitsText23(ref bool[] codeWord, ref bool[] errors)
+        {
+            SetErrorBitsFieldDefaultValues();
+
+            if (errors[0])
+            {
+                TextBlockLetter0Text = codeWord[0] ? "0" : "1";
+                TextBlockLetter0Foreground = "Firebrick";
+                TextBlockLetter0FontStyle = "Bold";
+            }
+            else
+            {
+                TextBlockLetter0Text = codeWord[0] ? "1" : "0";
+            }
+
+            if (errors[1])
+            {
+                TextBlockLetter1Text = codeWord[1] ? "0" : "1";
+                TextBlockLetter1Foreground = "Firebrick";
+                TextBlockLetter1FontStyle = "Bold";
+            }
+            else
+            {
+                TextBlockLetter1Text = codeWord[1] ? "1" : "0";
+            }
+
+            if (errors[2])
+            {
+                TextBlockLetter2Text = codeWord[2] ? "0" : "1";
+                TextBlockLetter2Foreground = "Firebrick";
+                TextBlockLetter2FontStyle = "Bold";
+            }
+            else
+            {
+                TextBlockLetter2Text = codeWord[1] ? "1" : "0";
+            }
         }
 
     }
