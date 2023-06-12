@@ -1,6 +1,4 @@
-﻿using ABCoder.BusinessLogic.CodesChecks;
-using ABCoder.ViewModels.Base;
-using Goley_2312_C75;
+﻿using ABCoder.ViewModels.Base;
 using Microsoft.Win32;
 using System.IO;
 using System.Text;
@@ -123,7 +121,6 @@ namespace ABCoder.ViewModels
 
         #endregion
 
-
         #region Text Box Code Word Text Changed Command
 
         public ICommand TextBoxCodeWordTextChangedCommand { get; }
@@ -209,7 +206,6 @@ namespace ABCoder.ViewModels
 
         #endregion
 
-
         #region Press Button Copy Information Bits Command
 
         public ICommand PressPressButtonCopyInformationBitsCommand { get; }
@@ -246,7 +242,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
 
         #region Press Button Clear Information Bits Command
 
@@ -294,43 +289,34 @@ namespace ABCoder.ViewModels
 
         private void Encode()
         {
-            if (ComboBoxModeSelectedIndex == 0 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
+            if (ComboBoxModeSelectedIndex == 0 && ComboBoxCodeTypeSelectedIndex == 0)// EnCode Goley (23, 12) C75
             {
-
-                if (Goley_2312_C75.CheckEnteredData.CkeckInfornationBits(ref _TextBoxInformationBitsText))
-                {
                     TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
                     bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
                     bool[] codeCombination = Goley_2312_C75.Code.Encode(ref informationBits);
                     TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
-                }
-                else
-                {
-                    TextBoxInformationBitsBorderBrush = "Firebrick";
-                }
-
             }
             OnPropertyChanged();
         }
 
         private void Decode()
         {
-            if (ComboBoxModeSelectedIndex == 1 && ComboBoxCodeTypeSelectedIndex == 0)// Code Goley (23, 12) C75
+            if (ComboBoxModeSelectedIndex == 1 && ComboBoxCodeTypeSelectedIndex == 0)// DeCode Goley (23, 12) C75
             {
 
-                if (Goley_2312_C75.CheckEnteredData.CkeckInfornationBits(ref _TextBoxCodeCombinationText))
-                {
                     TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
                     bool[] codeWord = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxCodeCombinationText);
+                    if (Goley_2312_C75.Decode.IsValidCombination(ref codeWord))
+                    {
+                        bool[] infornationPart = Goley_2312_C75.Parts.SelectTheInformationPartFromTheCodeWord(ref codeWord);
+                        TextBoxInformationBitsText = Converter.BoolArrayToBinaryString.Convert(ref infornationPart);
+                    }
+
+
+
                     //bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
                     //bool[] codeCombination = Goley_2312_C75.Code.Encode(ref informationBits);
                     //TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
-                }
-                else
-                {
-                    TextBoxCodeCombinationBorderBrush = "Firebrick";
-                }
-
             }
             OnPropertyChanged();
         }
@@ -349,14 +335,15 @@ namespace ABCoder.ViewModels
             }
             else
             {
-                if (!Golay2312C75Checks.InformationPartLength(ref _TextBoxInformationBitsText))//Lengtg Check
+                if (!Goley_2312_C75.Checks.InformationPartLength(ref _TextBoxInformationBitsText))//Lengtg Check
                 {
                     TextBoxInformationBitsBorderBrush = "Firebrick";
                     ButtonInformationInformationBitsTextColor = "Firebrick";
                     informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field length must be 12.");
+                    TextBoxCodeCombinationText = string.Empty;
                 }
 
-                if (!Golay2312C75Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
+                if (!Goley_2312_C75.Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
                 {
                     TextBoxInformationBitsBorderBrush = "Firebrick";
                     ButtonInformationInformationBitsTextColor = "Firebrick";
@@ -388,17 +375,19 @@ namespace ABCoder.ViewModels
             }
             else
             {
-                if (!Golay2312C75Checks.CodeWordLength(ref _TextBoxCodeCombinationText))//Lengtg Check
+                if (!Goley_2312_C75.Checks.CodeWordLength(ref _TextBoxCodeCombinationText))//Lengtg Check
                 {
                     TextBoxCodeCombinationBorderBrush = "Firebrick";
                     ButtonInformationCodeCombinationTextColor = "Firebrick";
                     codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field length must be 23.");
+                    TextBoxInformationBitsText = string.Empty;
                 }
-                if (!Golay2312C75Checks.BinaryFormat(ref _TextBoxCodeCombinationText))//String Format Check
+                if (!Goley_2312_C75.Checks.BinaryFormat(ref _TextBoxCodeCombinationText))//String Format Check
                 {
                     TextBoxCodeCombinationBorderBrush = "Firebrick";
                     ButtonInformationCodeCombinationTextColor = "Firebrick";
                     codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field contains a non-binary symbol.");
+                    TextBoxInformationBitsText = string.Empty;
                 }
             }
 

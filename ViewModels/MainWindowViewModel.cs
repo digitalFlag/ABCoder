@@ -3,6 +3,7 @@ using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
 using ABCoder.ViewModels.Base;
 using System.Collections.ObjectModel;
+using System.Windows.Controls;
 
 namespace ABCoder.ViewModels
 {
@@ -41,13 +42,16 @@ namespace ABCoder.ViewModels
             CodeInstanceGoley2312C75 = new CodeInstance
             {
                 Name = ComboBoxCodeTypeGoley2312C75Content,
+                Polynomial = "x\u00b9\u00b9+x\u00b9\u2070+x\u2076+x\u2075+x\u2074+x\u00B2+1",
                 CodeWordLength = 23,
                 InformationPartLength = 12,
                 VerificationPartLength = 11,
-                ErrorDetectionCapability = 7
+                ErrorDetectionCapability = 7,
+                ErrorCorrectionCapability = 3
             };
-            CodeInstanceGoley2312C75.ErrorDetectionCapability = 3;
-            CodeInstanceGoley2312C75.Polynomial = "x\u00b9\u00b9+x\u00b9\u2070+x\u2076+x\u2075+x\u2074+x\u00B2+1";
+
+            RichTextBox rtbErrorBits = new RichTextBox();
+
         }
     }
 }

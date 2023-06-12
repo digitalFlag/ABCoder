@@ -122,13 +122,18 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </TextBox>
-            <RichTextBox Grid.Column="1" Grid.Row="4"
-                         Name="RtbErrorBits"
-                         Style="{StaticResource RichTextBoxMainStyle}"
-                         Foreground="{Binding RichTextBoxErrorBitsForeground}"
-                         IsEnabled="{Binding RichTextBoxErrorBitsIsEnable}">
-                
-            </RichTextBox>
+            
+            <TextBlock Grid.Column="1" Grid.Row="4"
+                       Style="{StaticResource TextBlockMainStyle}"
+                       IsEnabled="False"> 
+                   <Run Text="HELLO" Foreground="GREEN"/>
+                   <Run Text="Word" Foreground="Red"/>
+            </TextBlock>
+            <Rectangle Grid.Column="1" Grid.Row="4"
+                       StrokeThickness="1"
+                       Stroke="LightSkyBlue"
+                       Margin="6,2,6,0">
+            </Rectangle>
             <!--Values Panel-->
 
             <!--Options Panel-->
