@@ -73,7 +73,7 @@ namespace ABCoder.ViewModels
 
         private void OnExecuteButtonCommandExecuted(object p)
         {
-
+            Goley_2312_C75.Test.Se();
             OnPropertyChanged();
         }
 
@@ -304,8 +304,6 @@ namespace ABCoder.ViewModels
             {
                 bool[] codeWord = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxCodeCombinationText);
                 bool[] errors = new bool[23];
-                bool[] syndrom = Goley_2312_C75.Decode.CalculateSindrom(ref codeWord);
-                LableCodeInstanceName = Converter.BoolArrayToBinaryString.Convert(ref syndrom);
                 if (Goley_2312_C75.Decode.IsValidCombination(ref codeWord))// 0 errors
                 {
                     bool[] infornationPart = Goley_2312_C75.Parts.SelectTheInformationPartFromTheCodeWord(ref codeWord);
@@ -313,12 +311,12 @@ namespace ABCoder.ViewModels
                     CreateErrorBitsText23(ref codeWord, ref errors);
                     return;
                 }// 0 errors
-
-
-
-
-
-
+                bool[] syndrom = Goley_2312_C75.Decode.CalculateSindrom(ref codeWord);
+                if (Goley_2312_C75.SingleError.ErrorIsSingle(ref syndrom, ref errors))// 1 error
+                {
+                    CreateErrorBitsText23(ref codeWord, ref errors);
+                    return;
+                }// 1 error
             }
             OnPropertyChanged();
         }
