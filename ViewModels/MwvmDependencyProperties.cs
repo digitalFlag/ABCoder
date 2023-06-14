@@ -738,11 +738,11 @@ namespace ABCoder.ViewModels
         #region Text Block Letter5 Foreground
 
         private string _TextBlockLetter5Foreground = "Green";
-        /// <summary>Text Block Letter3 Foreground</summary>
+        /// <summary>Text Block Letter5 Foreground</summary>
         public string TextBlockLetter5Foreground
         {
             get => _TextBlockLetter5Foreground;
-            set => Set(ref _TextBlockLetter3Foreground, value);
+            set => Set(ref _TextBlockLetter5Foreground, value);
         }
 
         #endregion

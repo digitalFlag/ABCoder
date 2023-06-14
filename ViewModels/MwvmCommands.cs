@@ -322,6 +322,13 @@ namespace ABCoder.ViewModels
                     CreateErrorBitsText23(ref codeWord, ref errors);
                     return;
                 }// Double error
+                if (Goley_2312_C75.TripleError.Check(ref syndrom, ref errors))// Triple error
+                {
+                    CreateErrorBitsText23(ref codeWord, ref errors);
+                    return;
+                }// Triple error
+                Converter.InvertBoolArrayValues.Execute(ref errors);
+                CreateErrorBitsText23(ref codeWord, ref errors);
             }
             OnPropertyChanged();
         }
