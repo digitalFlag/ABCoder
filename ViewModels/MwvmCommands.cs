@@ -304,19 +304,24 @@ namespace ABCoder.ViewModels
             {
                 bool[] codeWord = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxCodeCombinationText);
                 bool[] errors = new bool[23];
-                if (Goley_2312_C75.Decode.IsValidCombination(ref codeWord))// 0 errors
+                if (Goley_2312_C75.Decode.IsValidCombination(ref codeWord))// No errors
                 {
                     bool[] infornationPart = Goley_2312_C75.Parts.SelectTheInformationPartFromTheCodeWord(ref codeWord);
                     TextBoxInformationBitsText = Converter.BoolArrayToBinaryString.Convert(ref infornationPart);
                     CreateErrorBitsText23(ref codeWord, ref errors);
                     return;
-                }// 0 errors
+                }// No errors
                 bool[] syndrom = Goley_2312_C75.Decode.CalculateSindrom(ref codeWord);
-                if (Goley_2312_C75.SingleError.ErrorIsSingle(ref syndrom, ref errors))// 1 error
+                if (Goley_2312_C75.SingleError.Check(ref syndrom, ref errors))// Single error
                 {
                     CreateErrorBitsText23(ref codeWord, ref errors);
                     return;
-                }// 1 error
+                }// Single error
+                if (Goley_2312_C75.DoubleError.Check(ref syndrom, ref errors))// Double error
+                {
+                    CreateErrorBitsText23(ref codeWord, ref errors);
+                    return;
+                }// Double error
             }
             OnPropertyChanged();
         }
@@ -737,6 +742,11 @@ namespace ABCoder.ViewModels
             {
                 TextBlockLetter22Text = codeWord[22] ? "1" : "0";
             }
+
+            TextBoxInformationBitsText = TextBlockLetter0Text + TextBlockLetter1Text + TextBlockLetter2Text + TextBlockLetter3Text +
+                                         TextBlockLetter4Text + TextBlockLetter5Text + TextBlockLetter6Text + TextBlockLetter7Text +
+                                         TextBlockLetter8Text + TextBlockLetter9Text + TextBlockLetter10Text + TextBlockLetter11Text;
+
         }
 
     }
