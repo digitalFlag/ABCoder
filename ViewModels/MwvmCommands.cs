@@ -65,20 +65,6 @@ namespace ABCoder.ViewModels
 
         #endregion
 
-        #region Execute Button Command
-
-        public ICommand ExecuteButtonCommand { get; }
-
-        private bool CanExecuteButtonCommandExecute(object p) => true;
-
-        private void OnExecuteButtonCommandExecuted(object p)
-        {
-            Goley_2312_C75.Test.Se();
-            OnPropertyChanged();
-        }
-
-        #endregion
-
         #region Select Main Menu Help About Command
 
         public ICommand SelectMainMenuHelpAboutCommand { get; }
@@ -379,6 +365,7 @@ namespace ABCoder.ViewModels
             StringBuilder codeCombinationToolTip = new();
             TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
             ButtonInformationCodeCombinationTextColor = "DarkBlue";
+            SetErrorBitsFieldDefaultValues();
             if (TextBoxCodeCombinationText == string.Empty)
             {
                 TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
