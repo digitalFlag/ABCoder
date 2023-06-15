@@ -1,7 +1,6 @@
 ﻿using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
 using System.Collections.ObjectModel;
-using System.Windows.Controls;
 
 namespace ABCoder.ViewModels
 {
@@ -195,7 +194,7 @@ namespace ABCoder.ViewModels
 
         #region Main Window Title
 
-        private string _MainWindowTitle = "ABCoder";
+        private string _MainWindowTitle = "ABCoder 1.0.0";
         /// <summary>Main Window Title</summary>
 
         public string MainWindowTitle
@@ -280,8 +279,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
-
 
         #region Lable Value Information
 

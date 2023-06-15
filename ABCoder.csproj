@@ -5,6 +5,7 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Interface\Icons\Icon_calculator-solid.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,6 +14,10 @@
     <None Remove="Views\Windows\circle-info-solid.ico" />
     <None Remove="Views\Windows\door-open-solid.ico" />
     <None Remove="Views\Windows\Icon_calculator-solid.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Interface\Icons\Icon_calculator-solid.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,15 +32,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interface\Icons\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Views\Windows\arrow-right-from-bracket-solid.ico" />
     <Resource Include="Views\Windows\bullhorn-solid.ico" />
     <Resource Include="Views\Windows\circle-info-solid.ico" />
     <Resource Include="Views\Windows\door-open-solid.ico" />
     <Resource Include="Views\Windows\Icon_calculator-solid.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Libraries\" />
   </ItemGroup>
 
 </Project>
