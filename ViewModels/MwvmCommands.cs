@@ -79,6 +79,21 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Select Main Menu Help Feedback Command
+
+        public ICommand SelectMainMenuHelpFeedbackCommand { get; }
+
+        private bool CanSelectMainMenuHelpFeedbackCommandExecute(object p) => true;
+
+        private void OnSelectMainMenuHelpFeedbackCommandExecuted(object p)
+        {
+            MessageBox.Show(MainMenuHelpFeedbackText, MainMenuHelpFeedbackItem, MessageBoxButton.OK, MessageBoxImage.Information);
+            OnPropertyChanged();
+        }
+
+        #endregion
+
+
         #region Text Box Information Bits Text Changed Command
 
         public ICommand TextBoxInformationBitsTextChangedCommand { get; }

@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Views\Windows\arrow-right-from-bracket-solid.ico" />
+    <None Remove="Views\Windows\bullhorn-solid.ico" />
+    <None Remove="Views\Windows\circle-info-solid.ico" />
+    <None Remove="Views\Windows\door-open-solid.ico" />
     <None Remove="Views\Windows\Icon_calculator-solid.ico" />
   </ItemGroup>
 
@@ -27,6 +31,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Views\Windows\arrow-right-from-bracket-solid.ico" />
+    <Resource Include="Views\Windows\bullhorn-solid.ico" />
+    <Resource Include="Views\Windows\circle-info-solid.ico" />
+    <Resource Include="Views\Windows\door-open-solid.ico" />
     <Resource Include="Views\Windows\Icon_calculator-solid.ico" />
   </ItemGroup>
 

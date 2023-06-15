@@ -27,7 +27,9 @@ namespace ABCoder.ViewModels
             PressButtonCopyCodeCombinationCommand = new LambdaCommand(OnPressButtonCopyCodeCombinationCommandExecuted, CanPressButtonCopyCodeCombinationCommandExecute);
             PressButtonClearCodeCombinationCommand = new LambdaCommand(OnPressButtonClearCodeCombinationCommandExecuted, CanPressButtonClearCodeCombinationCommandExecute);
             TextBoxCodeCombinationTextChangedCommand = new LambdaCommand(OnTextBoxCodeCombinationTextChangedCommandExecuted, CanTextBoxCodeCombinationTextChangedCommandExecute);
+            SelectMainMenuHelpFeedbackCommand = new LambdaCommand(OnSelectMainMenuHelpFeedbackCommandExecuted, CanSelectMainMenuHelpFeedbackCommandExecute);
 
+            
             //--------------------------------------INTERFACE--------------------------------------
             ComboBoxModeSource = new ObservableCollection<Mode>()
             {

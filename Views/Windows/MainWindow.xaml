@@ -28,14 +28,30 @@
             <MenuItem Header="{Binding MainMenuFileItem}">
                 <MenuItem Header="{Binding MainMenuFileExitItem}"
                           Command="{Binding CloseApplicationCommand}"
-                          InputGestureText="Ctrl + Q">
+                          InputGestureText="Ctrl + Q"
+                          Style="{StaticResource MenuItemMainStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="/Views/Windows/arrow-right-from-bracket-solid.ico"/>
+                    </MenuItem.Icon>
                 </MenuItem>
             </MenuItem>
             <MenuItem Header="{Binding MainMenuHelpItem}">
                 <MenuItem Header="{Binding MainMenuHelpAboutABCoderItem}"
                           Command="{Binding SelectMainMenuHelpAboutCommand}"
-                          InputGestureText="Ctrl + H">
+                          InputGestureText="Ctrl + H"
+                          Style="{StaticResource MenuItemMainStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="/Views/Windows/circle-info-solid.ico"/>
+                    </MenuItem.Icon>
                 </MenuItem>
+                <MenuItem Header="{Binding MainMenuHelpFeedbackItem}"
+                          Command="{Binding SelectMainMenuHelpFeedbackCommand}"
+                          Style="{StaticResource MenuItemMainStyle}">
+                    <MenuItem.Icon>
+                        <Image Source="/Views/Windows/bullhorn-solid.ico"/>
+                    </MenuItem.Icon>
+                </MenuItem>
+
             </MenuItem>
         </Menu>
         <!--Menu-->

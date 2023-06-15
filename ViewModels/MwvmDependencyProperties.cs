@@ -1,6 +1,7 @@
 ﻿using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
 using System.Collections.ObjectModel;
+using System.Windows.Controls;
 
 namespace ABCoder.ViewModels
 {
@@ -253,6 +254,34 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Main Menu Help Feedback Item
+
+        private string _MainMenuHelpFeedbackItem = "Feedback";
+        /// <summary>Main Menu Help Feedback Item</summary>
+
+        public string MainMenuHelpFeedbackItem
+        {
+            get => _MainMenuHelpFeedbackItem;
+            set => Set(ref _MainMenuHelpFeedbackItem, value);
+        }
+
+        #endregion
+
+        #region Main Menu Help Feedback Text
+
+        private string _MainMenuHelpFeedbackText =
+            "Send your feedback about the program, as well as suggestions for its improvement by email gelpostbox@gmail.com";
+        /// <summary>Main Menu Help Feedback Text</summary>
+
+        public string MainMenuHelpFeedbackText
+        {
+            get => _MainMenuHelpFeedbackText;
+            set => Set(ref _MainMenuHelpFeedbackText, value);
+        }
+
+        #endregion
+
+
 
         #region Lable Value Information
 
