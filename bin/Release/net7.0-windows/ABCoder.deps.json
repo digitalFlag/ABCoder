@@ -1,0 +1,97 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "ABCoder/1.0.0": {
+        "dependencies": {
+          "Converter": "1.0.0",
+          "FontAwesome5": "2.1.11",
+          "Goley_2312_C75": "1.0.0",
+          "Microsoft.Xaml.Behaviors.Wpf": "1.1.39",
+          "TextOptions": "1.0.0"
+        },
+        "runtime": {
+          "ABCoder.dll": {}
+        }
+      },
+      "FontAwesome5/2.1.11": {
+        "runtime": {
+          "lib/net6.0-windows7.0/FontAwesome5.Net.dll": {
+            "assemblyVersion": "2.1.11.0",
+            "fileVersion": "2.1.11.0"
+          },
+          "lib/net6.0-windows7.0/FontAwesome5.dll": {
+            "assemblyVersion": "2.1.11.0",
+            "fileVersion": "2.1.11.0"
+          }
+        }
+      },
+      "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+        "runtime": {
+          "lib/net5.0-windows7.0/Microsoft.Xaml.Behaviors.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.39.4716"
+          }
+        }
+      },
+      "Converter/1.0.0": {
+        "runtime": {
+          "Converter.dll": {}
+        }
+      },
+      "Goley_2312_C75/1.0.0": {
+        "dependencies": {
+          "Converter": "1.0.0"
+        },
+        "runtime": {
+          "Goley_2312_C75.dll": {}
+        }
+      },
+      "TextOptions/1.0.0": {
+        "runtime": {
+          "TextOptions.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ABCoder/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FontAwesome5/2.1.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OGwy+ZJoJR7U71eA3BenwP7rdVviVYp8p6ptdBEhoMRuRsSV4vGM/LypVBhonBI43WSxXBysSoE5uQ2SkYKNvA==",
+      "path": "fontawesome5/2.1.11",
+      "hashPath": "fontawesome5.2.1.11.nupkg.sha512"
+    },
+    "Microsoft.Xaml.Behaviors.Wpf/1.1.39": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8PZKqw9QOcu42xk8puY4P1+EXHL9YGOR9b7qhaYx5cILHul456H073tj99vyPcCt0W0781T9RwHqkx507ZyUpQ==",
+      "path": "microsoft.xaml.behaviors.wpf/1.1.39",
+      "hashPath": "microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+    },
+    "Converter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Goley_2312_C75/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TextOptions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
