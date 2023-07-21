@@ -74,35 +74,15 @@ namespace ABCoder.ViewModels
 
         private void OnChangeSelectionOfComboBoxCodeTypeCommandExecuted(object p)
         {
-            //TextBoxInformationBitsText = "Hellow!!!!";
-            //TextBoxCodeCombinationText = string.Empty;
-            //if (ComboBoxModeSelectedIndex == 0)
-            //{
-            //    ButtonActionContent = ComboBoxModeCodeContent;
-            //    TextBoxInformationBitsIsEnable = true;
-            //    ButtonInformationInformationBitsIsEnable = true;
-            //    ButtonInformationInformationBitsTextColor = "Firebrick";
-            //    ButtonInformationInformationBitsToolTipText = "The \"Information Bits\" field is empty.";
-            //    ButtonOpenInformationBitsIsEnable = true;
-            //    TextBoxCodeCombinationIsEnable = false;
-            //    ButtonInformationCodeCombinationTextColor = "DarkBlue";
-            //    ButtonInformationCodeCombinationIsEnable = false;
-            //    ButtonOpenCodeCOmbinationIsEnable = false;
-            //    SetErrorBitsFieldDefaultValues();
-            //}
-            //else
-            //{
-            //    ButtonActionContent = ComboBoxModeDecodeContent;
-            //    TextBoxInformationBitsIsEnable = false;
-            //    ButtonInformationInformationBitsIsEnable = false;
-            //    ButtonInformationInformationBitsTextColor = "DarkBlue";
-            //    ButtonOpenInformationBitsIsEnable = false;
-            //    TextBoxCodeCombinationIsEnable = true;
-            //    ButtonInformationCodeCombinationTextColor = "Firebrick";
-            //    ButtonInformationCodeCombinationIsEnable = true;
-            //    ButtonInformationCodeCombinationToolTipText = "The \"Code Combination\" field is empty.";
-            //    ButtonOpenCodeCOmbinationIsEnable = true;
-            //}
+            if (ComboBoxModeSelectedIndex == 0)
+            {
+                CheckInformationBitsCombination();
+            }
+            else 
+            {
+                CheckCodeWord();
+            }
+
             OnPropertyChanged();
         }
 
@@ -393,19 +373,42 @@ namespace ABCoder.ViewModels
             }
             else
             {
-                if (!Goley_2312_C75.Checks.InformationPartLength(ref _TextBoxInformationBitsText))//Lengtg Check
+                //Goley (23, 12) C75
+                if (ComboBoxCodeTypeSelectedIndex == 0)
                 {
-                    TextBoxInformationBitsBorderBrush = "Firebrick";
-                    ButtonInformationInformationBitsTextColor = "Firebrick";
-                    informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field length must be 12.");
-                    TextBoxCodeCombinationText = string.Empty;
+                    if (!Goley_2312_C75.Checks.InformationPartLength(ref _TextBoxInformationBitsText))//Lengtg Check
+                    {
+                        TextBoxInformationBitsBorderBrush = "Firebrick";
+                        ButtonInformationInformationBitsTextColor = "Firebrick";
+                        informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field length must be 12.");
+                        TextBoxCodeCombinationText = string.Empty;
+                    }
+
+                    if (!Goley_2312_C75.Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
+                    {
+                        TextBoxInformationBitsBorderBrush = "Firebrick";
+                        ButtonInformationInformationBitsTextColor = "Firebrick";
+                        informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field contains a non-binary symbol.");
+                    }
                 }
 
-                if (!Goley_2312_C75.Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
+                //Hamming (16, 11) 13
+                if (ComboBoxCodeTypeSelectedIndex == 1)
                 {
-                    TextBoxInformationBitsBorderBrush = "Firebrick";
-                    ButtonInformationInformationBitsTextColor = "Firebrick";
-                    informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field contains a non-binary symbol.");
+                    //    if (!Goley_2312_C75.Checks.InformationPartLength(ref _TextBoxInformationBitsText))//Lengtg Check
+                    //    {
+                    //        TextBoxInformationBitsBorderBrush = "Firebrick";
+                    //        ButtonInformationInformationBitsTextColor = "Firebrick";
+                    //        informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field length must be 12.");
+                    //        TextBoxCodeCombinationText = string.Empty;
+                    //    }
+
+                    //    if (!Goley_2312_C75.Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
+                    //    {
+                    //        TextBoxInformationBitsBorderBrush = "Firebrick";
+                    //        ButtonInformationInformationBitsTextColor = "Firebrick";
+                    //        informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field contains a non-binary symbol.");
+                    //    }
                 }
             }
 
