@@ -111,6 +111,13 @@
                       ItemsSource="{Binding ComboBoxCodeTypeSource}" DisplayMemberPath="CoderMode"
                       SelectedIndex="{Binding ComboBoxCodeTypeSelectedIndex}"
                       Style="{StaticResource ComboBoxMainStyle}">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <i:InvokeCommandAction
+                            Command="{Binding ChangeSelectionOfComboBoxCodeTypeCommand}">
+                        </i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
             </ComboBox>
             <TextBox Grid.Column="1" Grid.Row="2"
                      Text="{Binding TextBoxInformationBitsText, UpdateSourceTrigger=PropertyChanged}"

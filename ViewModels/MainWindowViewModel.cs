@@ -28,6 +28,7 @@ namespace ABCoder.ViewModels
             PressButtonClearCodeCombinationCommand = new LambdaCommand(OnPressButtonClearCodeCombinationCommandExecuted, CanPressButtonClearCodeCombinationCommandExecute);
             TextBoxCodeCombinationTextChangedCommand = new LambdaCommand(OnTextBoxCodeCombinationTextChangedCommandExecuted, CanTextBoxCodeCombinationTextChangedCommandExecute);
             SelectMainMenuHelpFeedbackCommand = new LambdaCommand(OnSelectMainMenuHelpFeedbackCommandExecuted, CanSelectMainMenuHelpFeedbackCommandExecute);
+            ChangeSelectionOfComboBoxCodeTypeCommand = new LambdaCommand(OnChangeSelectionOfComboBoxCodeTypeCommandExecuted, CanChangeSelectionOfComboBoxCodeTypeCommandExecute);
 
             
             //--------------------------------------INTERFACE--------------------------------------
@@ -61,9 +62,6 @@ namespace ABCoder.ViewModels
                 ErrorDetectionCapability = 2,
                 ErrorCorrectionCapability = 2
             };
-
-
-            RichTextBox rtbErrorBits = new RichTextBox();
 
         }
     }

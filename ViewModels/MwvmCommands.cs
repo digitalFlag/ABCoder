@@ -1,4 +1,5 @@
 ﻿using ABCoder.ViewModels.Base;
+using Goley_2312_C75;
 using Microsoft.Win32;
 using System.IO;
 using System.Text;
@@ -64,6 +65,50 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+
+        #region Change Selection Of Combo Box Code Type Command
+
+        public ICommand ChangeSelectionOfComboBoxCodeTypeCommand { get; }
+
+        private bool CanChangeSelectionOfComboBoxCodeTypeCommandExecute(object p) => true;
+
+        private void OnChangeSelectionOfComboBoxCodeTypeCommandExecuted(object p)
+        {
+            //TextBoxInformationBitsText = "Hellow!!!!";
+            //TextBoxCodeCombinationText = string.Empty;
+            //if (ComboBoxModeSelectedIndex == 0)
+            //{
+            //    ButtonActionContent = ComboBoxModeCodeContent;
+            //    TextBoxInformationBitsIsEnable = true;
+            //    ButtonInformationInformationBitsIsEnable = true;
+            //    ButtonInformationInformationBitsTextColor = "Firebrick";
+            //    ButtonInformationInformationBitsToolTipText = "The \"Information Bits\" field is empty.";
+            //    ButtonOpenInformationBitsIsEnable = true;
+            //    TextBoxCodeCombinationIsEnable = false;
+            //    ButtonInformationCodeCombinationTextColor = "DarkBlue";
+            //    ButtonInformationCodeCombinationIsEnable = false;
+            //    ButtonOpenCodeCOmbinationIsEnable = false;
+            //    SetErrorBitsFieldDefaultValues();
+            //}
+            //else
+            //{
+            //    ButtonActionContent = ComboBoxModeDecodeContent;
+            //    TextBoxInformationBitsIsEnable = false;
+            //    ButtonInformationInformationBitsIsEnable = false;
+            //    ButtonInformationInformationBitsTextColor = "DarkBlue";
+            //    ButtonOpenInformationBitsIsEnable = false;
+            //    TextBoxCodeCombinationIsEnable = true;
+            //    ButtonInformationCodeCombinationTextColor = "Firebrick";
+            //    ButtonInformationCodeCombinationIsEnable = true;
+            //    ButtonInformationCodeCombinationToolTipText = "The \"Code Combination\" field is empty.";
+            //    ButtonOpenCodeCOmbinationIsEnable = true;
+            //}
+            OnPropertyChanged();
+        }
+
+        #endregion
+
+
 
         #region Select Main Menu Help About Command
 
