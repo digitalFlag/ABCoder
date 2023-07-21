@@ -1,6 +1,7 @@
-﻿using ABCoder.ViewModels.Base;
-using Goley_2312_C75;
+﻿using ABCoder.Models.ComboBox;
+using ABCoder.ViewModels.Base;
 using Microsoft.Win32;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Text;
 using System.Windows;
@@ -74,12 +75,13 @@ namespace ABCoder.ViewModels
 
         private void OnChangeSelectionOfComboBoxCodeTypeCommandExecuted(object p)
         {
-            if (ComboBoxModeSelectedIndex == 0)
+            if (ComboBoxCodeTypeSelectedIndex == 0)
             {
                 CheckInformationBitsCombination();
             }
             else 
             {
+                SetHumming161113Options();
                 CheckCodeWord();
             }
 

@@ -54,7 +54,7 @@ namespace ABCoder.ViewModels
             };
             CodeInstanceHamming161113 = new CodeInstance
             {
-                Name = ComboBoxCodeTypeGoley2312C75Content,
+                Name = ComboBoxCodeTypeHamming161113Content,
                 Polynomial = "x\u2074+x+1",
                 CodeWordLength = 16,
                 InformationPartLength = 11,
