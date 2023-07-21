@@ -550,6 +550,18 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Code Instance Hamming (16, 11) 13
+
+        private CodeInstance _CodeInstanceHamming161113;
+        /// <summary>Code Instance Hamming (16, 11) 13</summary>
+        public CodeInstance CodeInstanceHamming161113
+        {
+            get => _CodeInstanceHamming161113;
+            set => Set(ref _CodeInstanceHamming161113, value);
+        }
+
+        #endregion
+
 
         #region Combo Box Code Type Source
 
@@ -584,6 +596,18 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Combo Box Code Type Hamming (16, 11) 13 Content
+
+        private string _ComboBoxCodeTypeHamming161113Content = "Hamming (16, 11) 13";
+        /// <summary>Combo Box Code Type Hamming (16, 11) 13 Content</summary>
+        public string ComboBoxCodeTypeHamming161113Content
+        {
+            get => _ComboBoxCodeTypeHamming161113Content;
+            set => Set(ref _ComboBoxCodeTypeHamming161113Content, value);
+        }
+
+        #endregion
+
 
         #region Text Block Letter0 Text
 

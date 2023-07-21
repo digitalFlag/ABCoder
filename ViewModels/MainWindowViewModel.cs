@@ -39,6 +39,7 @@ namespace ABCoder.ViewModels
             ComboBoxCodeTypeSource = new ObservableCollection<Mode>()
             {
                 new Mode() {CoderMode = ComboBoxCodeTypeGoley2312C75Content},
+                new Mode() {CoderMode = ComboBoxCodeTypeHamming161113Content},
             };
             CodeInstanceGoley2312C75 = new CodeInstance
             {
@@ -50,6 +51,17 @@ namespace ABCoder.ViewModels
                 ErrorDetectionCapability = 7,
                 ErrorCorrectionCapability = 3
             };
+            CodeInstanceHamming161113 = new CodeInstance
+            {
+                Name = ComboBoxCodeTypeGoley2312C75Content,
+                Polynomial = "x\u2074+x+1",
+                CodeWordLength = 16,
+                InformationPartLength = 11,
+                VerificationPartLength = 5,
+                ErrorDetectionCapability = 2,
+                ErrorCorrectionCapability = 2
+            };
+
 
             RichTextBox rtbErrorBits = new RichTextBox();
 
