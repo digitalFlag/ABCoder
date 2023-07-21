@@ -77,6 +77,7 @@ namespace ABCoder.ViewModels
         {
             if (ComboBoxCodeTypeSelectedIndex == 0)
             {
+                SetGoley2312C75Options();
                 CheckInformationBitsCombination();
             }
             else 
