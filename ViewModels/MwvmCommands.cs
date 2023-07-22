@@ -385,7 +385,7 @@ namespace ABCoder.ViewModels
                         TextBoxCodeCombinationText = string.Empty;
                     }
 
-                    if (!Goley_2312_C75.Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
+                    if (!ChecksGeneral.Checks.BinaryFormat(ref _TextBoxInformationBitsText))//String Format Check
                     {
                         TextBoxInformationBitsBorderBrush = "Firebrick";
                         ButtonInformationInformationBitsTextColor = "Firebrick";
@@ -445,7 +445,7 @@ namespace ABCoder.ViewModels
                     codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field length must be 23.");
                     TextBoxInformationBitsText = string.Empty;
                 }
-                if (!Goley_2312_C75.Checks.BinaryFormat(ref _TextBoxCodeCombinationText))//String Format Check
+                if (!ChecksGeneral.Checks.BinaryFormat(ref _TextBoxCodeCombinationText))//String Format Check
                 {
                     TextBoxCodeCombinationBorderBrush = "Firebrick";
                     ButtonInformationCodeCombinationTextColor = "Firebrick";

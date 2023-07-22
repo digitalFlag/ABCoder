@@ -26,8 +26,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ChecksGeneral\ChecksGeneral.csproj" />
     <ProjectReference Include="..\Converter\Converter.csproj" />
     <ProjectReference Include="..\Goley_2312_C75\Goley_2312_C75.csproj" />
+    <ProjectReference Include="..\Hamming_1611_13\Hamming_1611_13.csproj" />
     <ProjectReference Include="..\TextOptions\TextOptions.csproj" />
   </ItemGroup>
 
