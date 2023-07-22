@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Goley_2312_C75", "..\Goley_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Converter", "..\Converter\Converter.csproj", "{AC3FA01A-4537-4837-841D-51F1238F41DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextOptions", "..\TextOptions\TextOptions.csproj", "{997B17D8-D97E-4462-B5DD-D501EDA0669D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextOptions", "..\TextOptions\TextOptions.csproj", "{997B17D8-D97E-4462-B5DD-D501EDA0669D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hamming_1611_13", "..\Hamming_1611_13\Hamming_1611_13.csproj", "{E9259B67-FEEB-4F99-942C-19D50803EADF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{997B17D8-D97E-4462-B5DD-D501EDA0669D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{997B17D8-D97E-4462-B5DD-D501EDA0669D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{997B17D8-D97E-4462-B5DD-D501EDA0669D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9259B67-FEEB-4F99-942C-19D50803EADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9259B67-FEEB-4F99-942C-19D50803EADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9259B67-FEEB-4F99-942C-19D50803EADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9259B67-FEEB-4F99-942C-19D50803EADF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{1E2DA0EB-AB74-4628-9407-B46A7F9C6D46} = {463E3050-FE3C-4C16-BFAD-3888DD76AD78}
 		{AC3FA01A-4537-4837-841D-51F1238F41DE} = {463E3050-FE3C-4C16-BFAD-3888DD76AD78}
 		{997B17D8-D97E-4462-B5DD-D501EDA0669D} = {463E3050-FE3C-4C16-BFAD-3888DD76AD78}
+		{E9259B67-FEEB-4F99-942C-19D50803EADF} = {463E3050-FE3C-4C16-BFAD-3888DD76AD78}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F7A3F269-D177-4524-AB78-5F17BF94ACB6}
