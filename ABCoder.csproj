@@ -26,14 +26,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ChecksGeneral\ChecksGeneral.csproj" />
-    <ProjectReference Include="..\Converter\Converter.csproj" />
-    <ProjectReference Include="..\Goley_2312_C75\Goley_2312_C75.csproj" />
-    <ProjectReference Include="..\Hamming_1611_13\Hamming_1611_13.csproj" />
-    <ProjectReference Include="..\TextOptions\TextOptions.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Resource Include="Views\Windows\arrow-right-from-bracket-solid.ico" />
     <Resource Include="Views\Windows\bullhorn-solid.ico" />
     <Resource Include="Views\Windows\circle-info-solid.ico" />
@@ -43,6 +35,15 @@
 
   <ItemGroup>
     <Folder Include="Libraries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ChecksGeneral\ChecksGeneral.csproj" />
+    <ProjectReference Include="..\Converter\Converter.csproj" />
+    <ProjectReference Include="..\Goley_2312_C75\Goley_2312_C75.csproj" />
+    <ProjectReference Include="..\Hamming_1611_13\Hamming_1611_13.csproj" />
+    <ProjectReference Include="..\OperationsGeneral\OperationsGeneral.csproj" />
+    <ProjectReference Include="..\TextOptions\TextOptions.csproj" />
   </ItemGroup>
 
 </Project>
