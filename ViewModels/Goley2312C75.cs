@@ -35,6 +35,24 @@ namespace ABCoder.ViewModels
             }
         }
 
+        private void CheckGoley2312C75CodeWord(ref StringBuilder codeCombinationToolTip)
+        {
+            if (!Goley_2312_C75.Checks.CodeWordLength(ref _TextBoxCodeCombinationText))//Lengtg Check
+            {
+                TextBoxCodeCombinationBorderBrush = "Firebrick";
+                ButtonInformationCodeCombinationTextColor = "Firebrick";
+                codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field length must be 23.");
+                TextBoxInformationBitsText = string.Empty;
+            }
+            if (!ChecksGeneral.Checks.BinaryFormat(ref _TextBoxCodeCombinationText))//String Format Check
+            {
+                TextBoxCodeCombinationBorderBrush = "Firebrick";
+                ButtonInformationCodeCombinationTextColor = "Firebrick";
+                codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field contains a non-binary symbol.");
+                TextBoxInformationBitsText = string.Empty;
+            }
+        }
+
         private void EncodeGoley2312C75()
         {
             TextBoxInformationBitsBorderBrush = "DeepSkyBlue";

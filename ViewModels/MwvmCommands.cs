@@ -81,7 +81,7 @@ namespace ABCoder.ViewModels
             //Hamming (16, 11) 13
             if (ComboBoxCodeTypeSelectedIndex == 0)
             {
-                SetHumming161113Options();
+                SetHamming161113Options();
             }
 
             CheckInformationBitsCombination();
@@ -324,7 +324,7 @@ namespace ABCoder.ViewModels
             //EnCode Hamming (16,11) 13
             if (ComboBoxCodeTypeSelectedIndex == 1)
             {
-                EncodeHumming161113();
+                EncodeHamming161113();
             }
 
             OnPropertyChanged();
@@ -379,18 +379,21 @@ namespace ABCoder.ViewModels
             }
             else
             {
-                //Goley (23, 12) C75
-                if (ComboBoxCodeTypeSelectedIndex == 0)
+                //Encode
+                if (ComboBoxModeSelectedIndex == 0)
                 {
-                    CheckGoley2312C75InformationBitsCombination(ref informationInformationBitsToolTip);
-                }
+                    //Goley (23, 12) C75
+                    if (ComboBoxCodeTypeSelectedIndex == 0)
+                    {
+                        CheckGoley2312C75InformationBitsCombination(ref informationInformationBitsToolTip);
+                    }
 
-                //Hamming (16, 11) 13
-                if (ComboBoxCodeTypeSelectedIndex == 1)
-                {
-                    CheckHumming161113InformationBitsCombination(ref informationInformationBitsToolTip);
+                    //Hamming (16, 11) 13
+                    if (ComboBoxCodeTypeSelectedIndex == 1)
+                    {
+                        CheckHamming161113InformationBitsCombination(ref informationInformationBitsToolTip);
+                    }
                 }
-
             }
 
             if (string.IsNullOrEmpty(informationInformationBitsToolTip.ToString()))
@@ -418,19 +421,15 @@ namespace ABCoder.ViewModels
             }
             else
             {
-                if (!Goley_2312_C75.Checks.CodeWordLength(ref _TextBoxCodeCombinationText))//Lengtg Check
+                //Goley (23, 12) C75
+                if (ComboBoxCodeTypeSelectedIndex == 0)
                 {
-                    TextBoxCodeCombinationBorderBrush = "Firebrick";
-                    ButtonInformationCodeCombinationTextColor = "Firebrick";
-                    codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field length must be 23.");
-                    TextBoxInformationBitsText = string.Empty;
+                    CheckGoley2312C75CodeWord(ref codeCombinationToolTip);
                 }
-                if (!ChecksGeneral.Checks.BinaryFormat(ref _TextBoxCodeCombinationText))//String Format Check
+                //Hamming (16, 11) 13
+                if (ComboBoxCodeTypeSelectedIndex == 1)
                 {
-                    TextBoxCodeCombinationBorderBrush = "Firebrick";
-                    ButtonInformationCodeCombinationTextColor = "Firebrick";
-                    codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field contains a non-binary symbol.");
-                    TextBoxInformationBitsText = string.Empty;
+                    CheckHamming161113CodeWord(ref codeCombinationToolTip);
                 }
             }
 

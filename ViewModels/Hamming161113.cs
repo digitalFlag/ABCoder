@@ -5,7 +5,7 @@ namespace ABCoder.ViewModels
 {
     internal partial class MainWindowViewModel : ViewModel
     {
-        private void SetHumming161113Options()
+        private void SetHamming161113Options()
         {
             LableValueCodeInstanceName = CodeInstanceHamming161113.Name;
             LableValueCodeInstancePolynomial = CodeInstanceHamming161113.Polynomial;
@@ -16,7 +16,7 @@ namespace ABCoder.ViewModels
             LableValueErrorCorrectionCapability = CodeInstanceHamming161113.ErrorCorrectionCapability;
         }
 
-        private void CheckHumming161113InformationBitsCombination(ref StringBuilder informationInformationBitsToolTip)
+        private void CheckHamming161113InformationBitsCombination(ref StringBuilder informationInformationBitsToolTip)
         {
             if (!Hamming_1611_13.Checks.InformationPartLength(ref _TextBoxInformationBitsText))//Lengtg Check
             {
@@ -34,12 +34,32 @@ namespace ABCoder.ViewModels
             }
         }
 
-        private void EncodeHumming161113()
+        private void CheckHamming161113CodeWord(ref StringBuilder codeCombinationToolTip)
+        {
+            if (!Hamming_1611_13.Checks.CodeWordLength(ref _TextBoxCodeCombinationText))//Lengtg Check
+            {
+                TextBoxCodeCombinationBorderBrush = "Firebrick";
+                ButtonInformationCodeCombinationTextColor = "Firebrick";
+                codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field length must be 16.");
+                TextBoxInformationBitsText = string.Empty;
+            }
+            if (!ChecksGeneral.Checks.BinaryFormat(ref _TextBoxCodeCombinationText))//String Format Check
+            {
+                TextBoxCodeCombinationBorderBrush = "Firebrick";
+                ButtonInformationCodeCombinationTextColor = "Firebrick";
+                codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field contains a non-binary symbol.");
+                TextBoxInformationBitsText = string.Empty;
+            }
+        }
+
+
+        private void EncodeHamming161113()
         {
             TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
             bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
             bool[] codeCombination = Hamming_1611_13.Code.Encode(ref informationBits);
             TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
         }
+
     }
 }
