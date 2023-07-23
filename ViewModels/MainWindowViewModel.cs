@@ -59,7 +59,7 @@ namespace ABCoder.ViewModels
                 CodeWordLength = 16,
                 InformationPartLength = 11,
                 VerificationPartLength = 5,
-                ErrorDetectionCapability = 2,
+                ErrorDetectionCapability = 1,
                 ErrorCorrectionCapability = 2
             };
 
