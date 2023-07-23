@@ -8,10 +8,13 @@
     ".NETCoreApp,Version=v7.0": {
       "ABCoder/1.0.0": {
         "dependencies": {
+          "ChecksGeneral": "1.0.0",
           "Converter": "1.0.0",
           "FontAwesome5": "2.1.11",
           "Goley_2312_C75": "1.0.0",
+          "Hamming_1611_13": "1.0.0",
           "Microsoft.Xaml.Behaviors.Wpf": "1.1.39",
+          "OperationsGeneral": "1.0.0",
           "TextOptions": "1.0.0"
         },
         "runtime": {
@@ -38,6 +41,14 @@
           }
         }
       },
+      "ChecksGeneral/1.0.0": {
+        "dependencies": {
+          "OperationsGeneral": "1.0.0"
+        },
+        "runtime": {
+          "ChecksGeneral.dll": {}
+        }
+      },
       "Converter/1.0.0": {
         "runtime": {
           "Converter.dll": {}
@@ -45,10 +56,26 @@
       },
       "Goley_2312_C75/1.0.0": {
         "dependencies": {
+          "ChecksGeneral": "1.0.0",
           "Converter": "1.0.0"
         },
         "runtime": {
           "Goley_2312_C75.dll": {}
+        }
+      },
+      "Hamming_1611_13/1.0.0": {
+        "dependencies": {
+          "ChecksGeneral": "1.0.0",
+          "Converter": "1.0.0",
+          "OperationsGeneral": "1.0.0"
+        },
+        "runtime": {
+          "Hamming_1611_13.dll": {}
+        }
+      },
+      "OperationsGeneral/1.0.0": {
+        "runtime": {
+          "OperationsGeneral.dll": {}
         }
       },
       "TextOptions/1.0.0": {
@@ -78,12 +105,27 @@
       "path": "microsoft.xaml.behaviors.wpf/1.1.39",
       "hashPath": "microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
     },
+    "ChecksGeneral/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Converter/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Goley_2312_C75/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Hamming_1611_13/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OperationsGeneral/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

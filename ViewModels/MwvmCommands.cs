@@ -79,7 +79,7 @@ namespace ABCoder.ViewModels
                 SetGoley2312C75Options();
             }
             //Hamming (16, 11) 13
-            if (ComboBoxCodeTypeSelectedIndex == 0)
+            if (ComboBoxCodeTypeSelectedIndex == 1)
             {
                 SetHamming161113Options();
             }

@@ -3,7 +3,6 @@ using ABCoder.Models.Code;
 using ABCoder.Models.ComboBox;
 using ABCoder.ViewModels.Base;
 using System.Collections.ObjectModel;
-using System.Windows.Controls;
 
 namespace ABCoder.ViewModels
 {
