@@ -38,8 +38,19 @@ namespace ABCoder.ViewModels
             };
             ComboBoxCodeTypeSource = new ObservableCollection<Mode>()
             {
+                new Mode() {CoderMode = ComboBoxCodeTypeGoley208C75Content},
                 new Mode() {CoderMode = ComboBoxCodeTypeGoley2312C75Content},
                 new Mode() {CoderMode = ComboBoxCodeTypeHamming161113Content},
+            };
+            CodeInstanceGoley208C75 = new CodeInstance
+            {
+                Name = ComboBoxCodeTypeGoley208C75Content,
+                Polynomial = "x\u00b9\u00b9+x\u00b9\u2070+x\u2076+x\u2075+x\u2074+x\u00B2+1",
+                CodeWordLength = 20,
+                InformationPartLength = 8,
+                VerificationPartLength = 12,
+                ErrorDetectionCapability = 3,
+                ErrorCorrectionCapability = 4,
             };
             CodeInstanceGoley2312C75 = new CodeInstance
             {

@@ -539,6 +539,17 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Code Instance Goley (20, 8) C75
+
+        private CodeInstance _CodeInstanceGoley208C75;
+        /// <summary>Code Instance Goley (20, 8) C75</summary>
+        public CodeInstance CodeInstanceGoley208C75
+        {
+            get => _CodeInstanceGoley208C75;
+            set => Set(ref _CodeInstanceGoley208C75, value);
+        }
+
+        #endregion
         #region Code Instance Goley (23, 12) C75
 
         private CodeInstance _CodeInstanceGoley2312C75;
@@ -585,6 +596,18 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Combo Box Code Type Goley (20, 8) C75 Content
+
+        private string _ComboBoxCodeTypeGoley208C75Content = "Goley (20, 8) C75";
+        /// <summary>Combo Box Code Type Goley (20, 8) C75 Content</summary>
+        public string ComboBoxCodeTypeGoley208C75Content
+        {
+            get => _ComboBoxCodeTypeGoley208C75Content;
+            set => Set(ref _ComboBoxCodeTypeGoley208C75Content, value);
+        }
+
+        #endregion
+
         #region Combo Box Code Type Goley (23, 12) C75 Content
 
         private string _ComboBoxCodeTypeGoley2312C75Content = "Goley (23, 12) C75";
