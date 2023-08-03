@@ -596,6 +596,8 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+
+
         #region Combo Box Code Type Goley (20, 8) C75 Content
 
         private string _ComboBoxCodeTypeGoley208C75Content = "Goley (20, 8) C75";
@@ -607,7 +609,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
         #region Combo Box Code Type Goley (23, 12) C75 Content
 
         private string _ComboBoxCodeTypeGoley2312C75Content = "Goley (23, 12) C75";
