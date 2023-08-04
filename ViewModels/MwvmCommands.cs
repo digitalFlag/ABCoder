@@ -73,12 +73,6 @@ namespace ABCoder.ViewModels
 
         private void OnChangeSelectionOfComboBoxCodeTypeCommandExecuted(object p)
         {
-            /* 
-             * 0 -> Goley (20, 8) C75
-             * 1 -> Goley (23, 12) C 75
-             * 2 -> Hamming (16, 11) 13 
-             */
-
             //Goley (20, 8) C75
             if (ComboBoxCodeTypeSelectedIndex == 0)
             {
@@ -101,8 +95,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
-
 
         #region Select Main Menu Help About Command
 
@@ -131,7 +123,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-
 
         #region Text Box Information Bits Text Changed Command
 
@@ -331,16 +322,26 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+/* 
+* 0 -> Goley (20, 8) C75
+* 1 -> Goley (23, 12) C 75
+* 2 -> Hamming (16, 11) 13 
+*/
 
         private void Encode()
         {
-            // EnCode Goley (23, 12) C75
+            // EnCode Goley (20, 8) C75
             if (ComboBoxCodeTypeSelectedIndex == 0)
+            {
+                EncodeGoley208C75();
+            }
+            // EnCode Goley (23, 12) C75
+            if (ComboBoxCodeTypeSelectedIndex == 1)
             {
                 EncodeGoley2312C75();
             }
             //EnCode Hamming (16,11) 13
-            if (ComboBoxCodeTypeSelectedIndex == 1)
+            if (ComboBoxCodeTypeSelectedIndex == 2)
             {
                 EncodeHamming161113();
             }
@@ -350,13 +351,18 @@ namespace ABCoder.ViewModels
 
         private void Decode()
         {
-            //Goley (23, 12) C75
+            //Goley (20, 8) C75
             if (ComboBoxCodeTypeSelectedIndex == 0)
+            {
+                DecodeGoley208C75();
+            }
+            //Goley (23, 12) C75
+            if (ComboBoxCodeTypeSelectedIndex == 1)
             {
                 DecodeGoley2312C75();
             }
             //EnCode Hamming (16,11) 13
-            if (ComboBoxCodeTypeSelectedIndex == 1)
+            if (ComboBoxCodeTypeSelectedIndex == 2)
             {
                 DecodeHamming161113();
             }
@@ -381,14 +387,18 @@ namespace ABCoder.ViewModels
                 //Encode
                 if (ComboBoxModeSelectedIndex == 0)
                 {
-                    //Goley (23, 12) C75
+                    //Goley (20, 8) C75
                     if (ComboBoxCodeTypeSelectedIndex == 0)
+                    {
+                        CheckGoley208C75InformationBitsCombination(ref informationInformationBitsToolTip);
+                    }
+                    //Goley (23, 12) C75
+                    if (ComboBoxCodeTypeSelectedIndex == 1)
                     {
                         CheckGoley2312C75InformationBitsCombination(ref informationInformationBitsToolTip);
                     }
-
                     //Hamming (16, 11) 13
-                    if (ComboBoxCodeTypeSelectedIndex == 1)
+                    if (ComboBoxCodeTypeSelectedIndex == 2)
                     {
                         CheckHamming161113InformationBitsCombination(ref informationInformationBitsToolTip);
                     }
@@ -396,12 +406,16 @@ namespace ABCoder.ViewModels
                 //Decode
                 if (ComboBoxModeSelectedIndex == 1)
                 {
+                    //Goley (20, 8) C75
+                    if (ComboBoxCodeTypeSelectedIndex == 0)
+                    {
+                        CheckGoley208C75CodeWord(ref informationInformationBitsToolTip);
+                    }
                     //Goley (23, 12) C75
                     if (ComboBoxCodeTypeSelectedIndex == 0)
                     {
                         CheckGoley2312C75CodeWord(ref informationInformationBitsToolTip);
                     }
-
                     //Hamming (16, 11) 13
                     if (ComboBoxCodeTypeSelectedIndex == 1)
                     {
@@ -415,8 +429,6 @@ namespace ABCoder.ViewModels
                 informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" combination is valid.");
                 Encode();
             }
-
-            //informationInformationBitsToolTip.Remove(informationInformationBitsToolTip.Length - 2, 2);
 
             ButtonInformationInformationBitsToolTipText = informationInformationBitsToolTip.ToString();
         }
@@ -436,13 +448,18 @@ namespace ABCoder.ViewModels
             else
             //Decode
             {
-                //Goley (23, 12) C75
+                //Goley (20, 8) C75
                 if (ComboBoxCodeTypeSelectedIndex == 0)
+                {
+                    CheckGoley208C75CodeWord(ref codeCombinationToolTip);
+                }
+                //Goley (23, 12) C75
+                if (ComboBoxCodeTypeSelectedIndex == 1)
                 {
                     CheckGoley2312C75CodeWord(ref codeCombinationToolTip);
                 }
                 //Hamming (16, 11) 13
-                if (ComboBoxCodeTypeSelectedIndex == 1)
+                if (ComboBoxCodeTypeSelectedIndex == 2)
                 {
                     CheckHamming161113CodeWord(ref codeCombinationToolTip);
                 }
@@ -453,8 +470,6 @@ namespace ABCoder.ViewModels
                 codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field is valid.");
                 Decode();
             }
-
-            //codeCombinationToolTip.Remove(codeCombinationToolTip.Length - 2, 2);
 
             ButtonInformationCodeCombinationToolTipText = codeCombinationToolTip.ToString();
         }
@@ -537,7 +552,6 @@ namespace ABCoder.ViewModels
             TextBlockLetter21FontStyle = fontStyle;
             TextBlockLetter22FontStyle = fontStyle;
         }
-
 
     }
 }
