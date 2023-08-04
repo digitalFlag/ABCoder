@@ -78,11 +78,11 @@ namespace ABCoder.ViewModels
                 CreateErrorBitsTextGoley208C75(ref codeWord, ref errors);
                 return;
             }// Single error
-            //if (Goley_208_C75.DoubleError.Check(ref syndrom, ref errors))// Double error
-            //{
-            //    CreateErrorBitsTextGoley208C75(ref codeWord, ref errors);
-            //    return;
-            //}// Double error
+            if (Goley_208_C75.DoubleError.Check(ref syndrom, ref errors))// Double error
+            {
+                CreateErrorBitsTextGoley208C75(ref codeWord, ref errors);
+                return;
+            }// Double error
             //if (Goley_208_C75.TripleError.Check(ref syndrom, ref errors))// Triple error
             //{
             //    CreateErrorBitsTextGoley208C75(ref codeWord, ref errors);
