@@ -49,8 +49,8 @@ namespace ABCoder.ViewModels
                 CodeWordLength = 20,
                 InformationPartLength = 8,
                 VerificationPartLength = 12,
-                ErrorDetectionCapability = 3,
-                ErrorCorrectionCapability = 4,
+                ErrorDetectionCapability = 7,
+                ErrorCorrectionCapability = 3,
             };
             CodeInstanceGoley2312C75 = new CodeInstance
             {

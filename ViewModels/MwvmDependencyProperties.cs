@@ -417,7 +417,7 @@ namespace ABCoder.ViewModels
 
         #region Lable Value Code Instance Name
 
-        private string _LableValueCodeInstanceName = "Goley (23, 12) C75";
+        private string _LableValueCodeInstanceName = "Goley (20, 8) C75";
         /// <summary>Lable Value Code Instance Name</summary>
         public string LableValueCodeInstanceName
         {
@@ -439,7 +439,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Code Word Length
 
-        private int _LableValueCodeWordLength = 23;
+        private int _LableValueCodeWordLength = 20;
         /// <summary>Lable Value Code Word Length</summary>
         public int LableValueCodeWordLength
         {
@@ -450,7 +450,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Information Part Length
 
-        private int _LableValueInformationPartLength = 12;
+        private int _LableValueInformationPartLength = 8;
         /// <summary>Lable Value Information Part Length</summary>
         public int LableValueInformationPartLength
         {
@@ -461,7 +461,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Verification Part Length
 
-        private int _LableValueVerificationPartLength = 11;
+        private int _LableValueVerificationPartLength = 12;
         /// <summary>Lable Value Verification Part Length</summary>
         public int LableValueVerificationPartLength
         {
