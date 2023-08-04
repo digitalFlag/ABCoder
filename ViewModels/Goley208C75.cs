@@ -73,21 +73,21 @@ namespace ABCoder.ViewModels
                 return;
             }// No errors
             bool[] syndrom = Goley_208_C75.Decode.CalculateSindrom(ref codeWord);
-            if (Goley_208_C75.SingleError.Check(ref syndrom, ref errors))// Single error
-            {
-                CreateErrorBitsTextGoley208C75(ref codeWord, ref errors);
-                return;
-            }// Single error
-            if (Goley_208_C75.DoubleError.Check(ref syndrom, ref errors))// Double error
-            {
-                CreateErrorBitsTextGoley208C75(ref codeWord, ref errors);
-                return;
-            }// Double error
-            if (Goley_208_C75.TripleError.Check(ref syndrom, ref errors))// Triple error
-            {
-                CreateErrorBitsTextGoley208C75(ref codeWord, ref errors);
-                return;
-            }// Triple error
+            //if (Goley_208_C75.SingleError.Check(ref syndrom, ref errors))// Single error
+            //{
+            //    CreateErrorBitsTextGoley208C75(ref codeWord, ref errors);
+            //    return;
+            //}// Single error
+            //if (Goley_208_C75.DoubleError.Check(ref syndrom, ref errors))// Double error
+            //{
+            //    CreateErrorBitsTextGoley208C75(ref codeWord, ref errors);
+            //    return;
+            //}// Double error
+            //if (Goley_208_C75.TripleError.Check(ref syndrom, ref errors))// Triple error
+            //{
+            //    CreateErrorBitsTextGoley208C75(ref codeWord, ref errors);
+            //    return;
+            //}// Triple error
             Converter.InvertBoolArrayValues.Execute(ref errors);
             CreateErrorBitsTextGoley208C75(ref codeWord, ref errors);
         }
@@ -321,3 +321,4 @@ namespace ABCoder.ViewModels
 
         }
     }
+}

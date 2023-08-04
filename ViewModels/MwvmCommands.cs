@@ -73,13 +73,24 @@ namespace ABCoder.ViewModels
 
         private void OnChangeSelectionOfComboBoxCodeTypeCommandExecuted(object p)
         {
-            //Goley (23, 12) C75
+            /* 
+             * 0 -> Goley (20, 8) C75
+             * 1 -> Goley (23, 12) C 75
+             * 2 -> Hamming (16, 11) 13 
+             */
+
+            //Goley (20, 8) C75
             if (ComboBoxCodeTypeSelectedIndex == 0)
+            {
+                SetGoley208C75Options();
+            }
+            //Goley (23, 12) C75
+            if (ComboBoxCodeTypeSelectedIndex == 1)
             {
                 SetGoley2312C75Options();
             }
             //Hamming (16, 11) 13
-            if (ComboBoxCodeTypeSelectedIndex == 1)
+            if (ComboBoxCodeTypeSelectedIndex == 2)
             {
                 SetHamming161113Options();
             }
