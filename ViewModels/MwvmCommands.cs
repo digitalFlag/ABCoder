@@ -77,7 +77,7 @@ namespace ABCoder.ViewModels
             if (ComboBoxCodeTypeSelectedIndex == 0)
             {
                 SetGoley208C75Options();
-                Goley_208_C75.Test.DoubleError();
+                Goley_208_C75.Test.QuadrupleError();
             }
             //Goley (23, 12) C75
             if (ComboBoxCodeTypeSelectedIndex == 1)
