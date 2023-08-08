@@ -122,14 +122,14 @@ namespace ABCoder.ViewModels
 
         #endregion
 
-        #region Button Open Code COmbination Is Enable
+        #region Button Open Code Combination Is Enable
 
-        private bool _ButtonOpenCodeCOmbinationIsEnable = false;
+        private bool _ButtonOpenCodeCombinationIsEnable = false;
         /// <summary>Button Open Code COmbination Is Enable</summary>
-        public bool ButtonOpenCodeCOmbinationIsEnable
+        public bool ButtonOpenCodeCombinationIsEnable
         {
-            get => _ButtonOpenCodeCOmbinationIsEnable;
-            set => Set(ref _ButtonOpenCodeCOmbinationIsEnable, value);
+            get => _ButtonOpenCodeCombinationIsEnable;
+            set => Set(ref _ButtonOpenCodeCombinationIsEnable, value);
         }
 
         #endregion
@@ -417,7 +417,7 @@ namespace ABCoder.ViewModels
 
         #region Lable Value Code Instance Name
 
-        private string _LableValueCodeInstanceName = "Goley (20, 8) C75";
+        private string _LableValueCodeInstanceName = "(16, 11) 13 Hamming";
         /// <summary>Lable Value Code Instance Name</summary>
         public string LableValueCodeInstanceName
         {
@@ -428,7 +428,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Code Instance Polynomial
 
-        private string _LableValueCodeInstancePolynomial = "x\u00b9\u00b9+x\u00b9\u2070+x\u2076+x\u2075+x\u2074+x\u00B2+1";
+        private string _LableValueCodeInstancePolynomial = "x⁴+x+1";
         /// <summary>Lable Value Code Instance Polynomial</summary>
         public string LableValueCodeInstancePolynomial
         {
@@ -439,7 +439,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Code Word Length
 
-        private int _LableValueCodeWordLength = 20;
+        private int _LableValueCodeWordLength = 16;
         /// <summary>Lable Value Code Word Length</summary>
         public int LableValueCodeWordLength
         {
@@ -450,7 +450,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Information Part Length
 
-        private int _LableValueInformationPartLength = 8;
+        private int _LableValueInformationPartLength = 11;
         /// <summary>Lable Value Information Part Length</summary>
         public int LableValueInformationPartLength
         {
@@ -461,7 +461,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Verification Part Length
 
-        private int _LableValueVerificationPartLength = 12;
+        private int _LableValueVerificationPartLength = 5;
         /// <summary>Lable Value Verification Part Length</summary>
         public int LableValueVerificationPartLength
         {
@@ -472,7 +472,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Error Detection Capability
 
-        private int _LableValueErrorDetectionCapability = 7;
+        private int _LableValueErrorDetectionCapability = 3;
         /// <summary>Lable Value Error Detection Capability</summary>
         public int LableValueErrorDetectionCapability
         {
@@ -483,7 +483,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Error Correction Capability
 
-        private int _LableValueErrorCorrectionCapability = 3;
+        private int _LableValueErrorCorrectionCapability = 1;
         /// <summary>Lable Value Error Correction Capability</summary>
         public int LableValueErrorCorrectionCapability
         {
@@ -600,7 +600,7 @@ namespace ABCoder.ViewModels
 
         #region Combo Box Code Type Goley (20, 8) C75 Content
 
-        private string _ComboBoxCodeTypeGoley208C75Content = "Goley (20, 8) C75";
+        private string _ComboBoxCodeTypeGoley208C75Content = "(20, 8) C75 Goley";
         /// <summary>Combo Box Code Type Goley (20, 8) C75 Content</summary>
         public string ComboBoxCodeTypeGoley208C75Content
         {
@@ -611,7 +611,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Combo Box Code Type Goley (23, 12) C75 Content
 
-        private string _ComboBoxCodeTypeGoley2312C75Content = "Goley (23, 12) C75";
+        private string _ComboBoxCodeTypeGoley2312C75Content = "(23, 12) C75 Goley";
         /// <summary>Combo Box Code Type Goley (23, 12) C75 Content</summary>
         public string ComboBoxCodeTypeGoley2312C75Content
         {
@@ -622,7 +622,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Combo Box Code Type Hamming (16, 11) 13 Content
 
-        private string _ComboBoxCodeTypeHamming161113Content = "Hamming (16, 11) 13";
+        private string _ComboBoxCodeTypeHamming161113Content = "(16, 11) 13 Hamming";
         /// <summary>Combo Box Code Type Hamming (16, 11) 13 Content</summary>
         public string ComboBoxCodeTypeHamming161113Content
         {

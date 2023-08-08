@@ -8,8 +8,23 @@ namespace ABCoder.ViewModels
 
         private void SetGoley208C75Options()
         {
-            LableValueCodeInstanceName = CodeInstanceGoley208C75.Name;
-            LableValueCodeInstancePolynomial = CodeInstanceGoley208C75.Polynomial;
+            if (string.IsNullOrEmpty(CodeInstanceGoley208C75.Name))
+            {
+                LableValueCodeInstanceName = ComboBoxCodeTypeGoley208C75Content;
+            }
+            else
+            {
+                LableValueCodeInstanceName = CodeInstanceGoley208C75.Name;
+
+            }
+            if (string.IsNullOrEmpty(CodeInstanceGoley208C75.Polynomial))
+            {
+                LableValueCodeInstancePolynomial = "x\u00b9\u00b9+x\u00b9\u2070+x\u2076+x\u2075+x\u2074+x\u00B2+1";
+            }
+            else
+            {
+                LableValueCodeInstancePolynomial = CodeInstanceGoley208C75.Polynomial;
+            }
             LableValueCodeWordLength = CodeInstanceGoley208C75.CodeWordLength;
             LableValueInformationPartLength = CodeInstanceGoley208C75.InformationPartLength;
             LableValueVerificationPartLength = CodeInstanceGoley208C75.VerificationPartLength;

@@ -7,8 +7,23 @@ namespace ABCoder.ViewModels
     {
         private void SetHamming161113Options()
         {
-            LableValueCodeInstanceName = CodeInstanceHamming161113.Name;
-            LableValueCodeInstancePolynomial = CodeInstanceHamming161113.Polynomial;
+            if (string.IsNullOrEmpty(CodeInstanceHamming161113.Name))
+            {
+                LableValueCodeInstanceName = ComboBoxCodeTypeHamming161113Content;
+            }
+            else
+            {
+                LableValueCodeInstanceName = CodeInstanceHamming161113.Name;
+
+            }
+            if (string.IsNullOrEmpty(CodeInstanceHamming161113.Polynomial))
+            {
+                LableValueCodeInstancePolynomial = "x\u2074+x+1";
+            }
+            else
+            {
+                LableValueCodeInstancePolynomial = CodeInstanceHamming161113.Polynomial;
+            }
             LableValueCodeWordLength = CodeInstanceHamming161113.CodeWordLength;
             LableValueInformationPartLength = CodeInstanceHamming161113.InformationPartLength;
             LableValueVerificationPartLength = CodeInstanceHamming161113.VerificationPartLength;
