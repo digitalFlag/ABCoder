@@ -194,7 +194,7 @@ namespace ABCoder.ViewModels
 
         #region Main Window Title
 
-        private string _MainWindowTitle = "ABCoder 1.2.0";
+        private string _MainWindowTitle = "ABCoder 1.2.7";
         /// <summary>Main Window Title</summary>
 
         public string MainWindowTitle
@@ -417,7 +417,7 @@ namespace ABCoder.ViewModels
 
         #region Lable Value Code Instance Name
 
-        private string _LableValueCodeInstanceName = "(16, 11) 13 Hamming";
+        private string _LableValueCodeInstanceName = "(16, 7) 139 Quadratic Residue";
         /// <summary>Lable Value Code Instance Name</summary>
         public string LableValueCodeInstanceName
         {
@@ -428,7 +428,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Code Instance Polynomial
 
-        private string _LableValueCodeInstancePolynomial = "x⁴+x+1";
+        private string _LableValueCodeInstancePolynomial = "x⁸+x⁵+x⁴+x³+1";
         /// <summary>Lable Value Code Instance Polynomial</summary>
         public string LableValueCodeInstancePolynomial
         {
@@ -450,7 +450,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Information Part Length
 
-        private int _LableValueInformationPartLength = 11;
+        private int _LableValueInformationPartLength = 7;
         /// <summary>Lable Value Information Part Length</summary>
         public int LableValueInformationPartLength
         {
@@ -461,7 +461,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Verification Part Length
 
-        private int _LableValueVerificationPartLength = 5;
+        private int _LableValueVerificationPartLength = 9;
         /// <summary>Lable Value Verification Part Length</summary>
         public int LableValueVerificationPartLength
         {
@@ -472,7 +472,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Error Detection Capability
 
-        private int _LableValueErrorDetectionCapability = 3;
+        private int _LableValueErrorDetectionCapability = 6;
         /// <summary>Lable Value Error Detection Capability</summary>
         public int LableValueErrorDetectionCapability
         {
@@ -483,7 +483,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Error Correction Capability
 
-        private int _LableValueErrorCorrectionCapability = 1;
+        private int _LableValueErrorCorrectionCapability = 2;
         /// <summary>Lable Value Error Correction Capability</summary>
         public int LableValueErrorCorrectionCapability
         {
@@ -539,6 +539,28 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Code Instance (16, 7) 139 Quadratic Residue
+
+        private CodeInstance _CodeInstance167139QuadraticResidue;
+        /// <summary>Code Instance (16, 7) 139 Quadratic Residue</summary>
+        public CodeInstance CodeInstance167139QuadraticResidue
+        {
+            get => _CodeInstance167139QuadraticResidue;
+            set => Set(ref _CodeInstance167139QuadraticResidue, value);
+        }
+
+        #endregion
+        #region Code Instance Hamming (16, 11) 13
+
+        private CodeInstance _CodeInstanceHamming161113;
+        /// <summary>Code Instance Hamming (16, 11) 13</summary>
+        public CodeInstance CodeInstanceHamming161113
+        {
+            get => _CodeInstanceHamming161113;
+            set => Set(ref _CodeInstanceHamming161113, value);
+        }
+
+        #endregion
         #region Code Instance Goley (20, 8) C75
 
         private CodeInstance _CodeInstanceGoley208C75;
@@ -561,18 +583,6 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
-        #region Code Instance Hamming (16, 11) 13
-
-        private CodeInstance _CodeInstanceHamming161113;
-        /// <summary>Code Instance Hamming (16, 11) 13</summary>
-        public CodeInstance CodeInstanceHamming161113
-        {
-            get => _CodeInstanceHamming161113;
-            set => Set(ref _CodeInstanceHamming161113, value);
-        }
-
-        #endregion
-
 
         #region Combo Box Code Type Source
 
@@ -597,7 +607,28 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Combo Box Code Type (16, 7) 139 Quadratic Residue Content
 
+        private string _ComboBoxCodeType167139QuadraticResidueContent = "(16, 7) 139 Quadratic Residue";
+        /// <summary>Combo Box Code Type (16, 7) 139 Quadratic Residue Content</summary>
+        public string ComboBoxCodeType167139QuadraticResidueContent
+        {
+            get => _ComboBoxCodeType167139QuadraticResidueContent;
+            set => Set(ref _ComboBoxCodeType167139QuadraticResidueContent, value);
+        }
+
+        #endregion
+        #region Combo Box Code Type Hamming (16, 11) 13 Content
+
+        private string _ComboBoxCodeTypeHamming161113Content = "(16, 11) 13 Hamming";
+        /// <summary>Combo Box Code Type Hamming (16, 11) 13 Content</summary>
+        public string ComboBoxCodeTypeHamming161113Content
+        {
+            get => _ComboBoxCodeTypeHamming161113Content;
+            set => Set(ref _ComboBoxCodeTypeHamming161113Content, value);
+        }
+
+        #endregion
         #region Combo Box Code Type Goley (20, 8) C75 Content
 
         private string _ComboBoxCodeTypeGoley208C75Content = "(20, 8) C75 Goley";
@@ -617,17 +648,6 @@ namespace ABCoder.ViewModels
         {
             get => _ComboBoxCodeTypeGoley2312C75Content;
             set => Set(ref _ComboBoxCodeTypeGoley2312C75Content, value);
-        }
-
-        #endregion
-        #region Combo Box Code Type Hamming (16, 11) 13 Content
-
-        private string _ComboBoxCodeTypeHamming161113Content = "(16, 11) 13 Hamming";
-        /// <summary>Combo Box Code Type Hamming (16, 11) 13 Content</summary>
-        public string ComboBoxCodeTypeHamming161113Content
-        {
-            get => _ComboBoxCodeTypeHamming161113Content;
-            set => Set(ref _ComboBoxCodeTypeHamming161113Content, value);
         }
 
         #endregion

@@ -38,9 +38,20 @@ namespace ABCoder.ViewModels
             };
             ComboBoxCodeTypeSource = new ObservableCollection<Mode>()
             {
+                new Mode() {CoderMode = ComboBoxCodeType167139QuadraticResidueContent},
                 new Mode() {CoderMode = ComboBoxCodeTypeHamming161113Content},
                 new Mode() {CoderMode = ComboBoxCodeTypeGoley208C75Content},
                 new Mode() {CoderMode = ComboBoxCodeTypeGoley2312C75Content},
+            };
+            CodeInstance167139QuadraticResidue = new CodeInstance
+            {
+                Name = ComboBoxCodeType167139QuadraticResidueContent,
+                Polynomial = "x⁸+x⁵+x⁴+x³+1",
+                CodeWordLength = 16,
+                InformationPartLength = 7,
+                VerificationPartLength = 9,
+                ErrorDetectionCapability = 6,
+                ErrorCorrectionCapability = 2
             };
             CodeInstanceHamming161113 = new CodeInstance
             {
@@ -49,13 +60,13 @@ namespace ABCoder.ViewModels
                 CodeWordLength = 16,
                 InformationPartLength = 11,
                 VerificationPartLength = 5,
-                ErrorDetectionCapability = 3,
+                ErrorDetectionCapability = 4,
                 ErrorCorrectionCapability = 1
             };
             CodeInstanceGoley208C75 = new CodeInstance
             {
                 Name = ComboBoxCodeTypeGoley208C75Content,
-                Polynomial = "x\u00b9\u00b9+x\u00b9\u2070+x\u2076+x\u2075+x\u2074+x\u00B2+1",
+                Polynomial = "x\u00b9\u00b9+x\u00b9\u2070+x\u2076+x\u2075+x\u2074+x\u00B3+1",
                 CodeWordLength = 20,
                 InformationPartLength = 8,
                 VerificationPartLength = 12,

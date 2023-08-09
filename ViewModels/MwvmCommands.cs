@@ -73,18 +73,23 @@ namespace ABCoder.ViewModels
 
         private void OnChangeSelectionOfComboBoxCodeTypeCommandExecuted(object p)
         {
-            //(16, 11) 13 Hamming
+            //(16, 7) 139 Quadratic Residue
             if (ComboBoxCodeTypeSelectedIndex == 0)
+            {
+                Set167139QuadraticResidueOptions();
+            }
+            //(16, 11) 13 Hamming
+            if (ComboBoxCodeTypeSelectedIndex == 1)
             {
                 SetHamming161113Options();
             }
             //(20, 8) C75 Goley
-            if (ComboBoxCodeTypeSelectedIndex == 1)
+            if (ComboBoxCodeTypeSelectedIndex == 2)
             {
                 SetGoley208C75Options();
             }
             //(23, 12) C75 Goley
-            if (ComboBoxCodeTypeSelectedIndex == 2)
+            if (ComboBoxCodeTypeSelectedIndex == 3)
             {
                 SetGoley2312C75Options();
             }
@@ -322,26 +327,32 @@ namespace ABCoder.ViewModels
 
         #endregion
 
-/* 
- * 0 -> (16, 11) 13 Hamming
- * 1 -> (20, 8) C75 Goley
- * 2 -> (23, 12) C75 Goley
-*/
+        /* 
+         * 0 -> (16, 7) 139 Quadratic Residue
+         * 1 -> (16, 11) 13 Hamming
+         * 2 -> (20, 8) C75 Goley
+         * 3 -> (23, 12) C75 Goley
+        */
 
         private void Encode()
         {
-            // EnCode (16, 11) 13 Hamming
+            // EnCode (16, 7) 139 Quadratic Residue
             if (ComboBoxCodeTypeSelectedIndex == 0)
+            {
+                Encode167139QuadraticResidue();
+            }
+            // EnCode (16, 11) 13 Hamming
+            if (ComboBoxCodeTypeSelectedIndex == 1)
             {
                 EncodeHamming161113();
             }
             // EnCode (20, 8) C75 Goley
-            if (ComboBoxCodeTypeSelectedIndex == 1)
+            if (ComboBoxCodeTypeSelectedIndex == 2)
             {
                 EncodeGoley208C75();
             }
             //EnCode (23, 12) C75 Goley
-            if (ComboBoxCodeTypeSelectedIndex == 2)
+            if (ComboBoxCodeTypeSelectedIndex == 3)
             {
                 EncodeGoley2312C75();
             }
@@ -351,18 +362,23 @@ namespace ABCoder.ViewModels
 
         private void Decode()
         {
-            //(16, 11) 13 Hamming
+            // (16, 7) 139 Quadratic Residue
             if (ComboBoxCodeTypeSelectedIndex == 0)
+            {
+                Decode167139QuadraticResidue();
+            }
+            //(16, 11) 13 Hamming
+            if (ComboBoxCodeTypeSelectedIndex == 1)
             {
                 DecodeHamming161113();
             }
             //(20, 8) C75 Goley
-            if (ComboBoxCodeTypeSelectedIndex == 1)
+            if (ComboBoxCodeTypeSelectedIndex == 2)
             {
                 DecodeGoley208C75();
             }
             //(23, 12) C75 Goley
-            if (ComboBoxCodeTypeSelectedIndex == 2)
+            if (ComboBoxCodeTypeSelectedIndex == 3)
             {
                 DecodeGoley2312C75();
             }
@@ -387,18 +403,23 @@ namespace ABCoder.ViewModels
                 //Encode
                 if (ComboBoxModeSelectedIndex == 0)
                 {
-                    //(16, 11) 13 Hamming
+                    //(16, 7) 139 Quadratic Residue
                     if (ComboBoxCodeTypeSelectedIndex == 0)
+                    {
+                        Check167139QuadraticResidueInformationBitsCombination(ref informationInformationBitsToolTip);
+                    }
+                    //(16, 11) 13 Hamming
+                    if (ComboBoxCodeTypeSelectedIndex == 1)
                     {
                         CheckHamming161113InformationBitsCombination(ref informationInformationBitsToolTip);
                     }
                     //(20, 8) C75 Goley
-                    if (ComboBoxCodeTypeSelectedIndex == 1)
+                    if (ComboBoxCodeTypeSelectedIndex == 2)
                     {
                         CheckGoley208C75InformationBitsCombination(ref informationInformationBitsToolTip);
                     }
                     //(23, 12) C75 Goley
-                    if (ComboBoxCodeTypeSelectedIndex == 2)
+                    if (ComboBoxCodeTypeSelectedIndex == 3)
                     {
                         CheckGoley2312C75InformationBitsCombination(ref informationInformationBitsToolTip);
                     }
@@ -406,18 +427,23 @@ namespace ABCoder.ViewModels
                 //Decode
                 if (ComboBoxModeSelectedIndex == 1)
                 {
-                    //(16, 11) 13 Hamming
+                    //(16, 7) 139 Quadratic Residue
                     if (ComboBoxCodeTypeSelectedIndex == 0)
+                    {
+                        Check167139QuadraticResidueCodeWord(ref informationInformationBitsToolTip);
+                    }
+                    //(16, 11) 13 Hamming
+                    if (ComboBoxCodeTypeSelectedIndex == 1)
                     {
                         CheckHamming161113CodeWord(ref informationInformationBitsToolTip);
                     }
                     //(20, 8) C75 Goley
-                    if (ComboBoxCodeTypeSelectedIndex == 0)
+                    if (ComboBoxCodeTypeSelectedIndex == 2)
                     {
                         CheckGoley208C75CodeWord(ref informationInformationBitsToolTip);
                     }
                     //(23, 12) C75 Goley
-                    if (ComboBoxCodeTypeSelectedIndex == 1)
+                    if (ComboBoxCodeTypeSelectedIndex == 3)
                     {
                         CheckGoley2312C75CodeWord(ref informationInformationBitsToolTip);
                     }
@@ -448,18 +474,23 @@ namespace ABCoder.ViewModels
             else
             //Decode
             {
-                //(16, 11) 13 Hamming
+                //(16, 7) 139 Quadratic Residue
                 if (ComboBoxCodeTypeSelectedIndex == 0)
+                {
+                    Check167139QuadraticResidueCodeWord(ref codeCombinationToolTip);
+                }
+                //(16, 11) 13 Hamming
+                if (ComboBoxCodeTypeSelectedIndex == 1)
                 {
                     CheckHamming161113CodeWord(ref codeCombinationToolTip);
                 }
                 //(20, 8) C75 Goley
-                if (ComboBoxCodeTypeSelectedIndex == 1)
+                if (ComboBoxCodeTypeSelectedIndex == 2)
                 {
                     CheckGoley208C75CodeWord(ref codeCombinationToolTip);
                 }
                 //(23, 12) C75 Goley
-                if (ComboBoxCodeTypeSelectedIndex == 2)
+                if (ComboBoxCodeTypeSelectedIndex == 3)
                 {
                     CheckGoley2312C75CodeWord(ref codeCombinationToolTip);
                 }

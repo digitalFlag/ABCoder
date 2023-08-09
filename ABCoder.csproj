@@ -38,6 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\16_7_139_QuadraticResidue\16_7_139_QuadraticResidue.csproj" />
     <ProjectReference Include="..\ChecksGeneral\ChecksGeneral.csproj" />
     <ProjectReference Include="..\Converter\Converter.csproj" />
     <ProjectReference Include="..\Goley_208_C75\Goley_208_C75.csproj" />
