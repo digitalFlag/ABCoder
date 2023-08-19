@@ -73,6 +73,11 @@ namespace ABCoder.ViewModels
 
         private void OnChangeSelectionOfComboBoxCodeTypeCommandExecuted(object p)
         {
+            if (ComboBoxModeSelectedIndex == 1)
+            {
+                TextBoxInformationBitsText = string.Empty;
+            }
+
             //(16, 7) 139 Quadratic Residue
             if (ComboBoxCodeTypeSelectedIndex == 0)
             {
@@ -144,6 +149,7 @@ namespace ABCoder.ViewModels
         {
             if (ComboBoxModeSelectedIndex == 0)
             {
+                TextBoxCodeCombinationBorderBrush = "DeepSkyBlue";
                 CheckInformationBitsCombination();
                 OnPropertyChanged();
             }
@@ -459,7 +465,7 @@ namespace ABCoder.ViewModels
                         CheckHamming161113CodeWord(ref informationInformationBitsToolTip);
                     }
                     // (17, 12) 45 Hamming
-                    if (ComboBoxCodeTypeSelectedIndex == 1)
+                    if (ComboBoxCodeTypeSelectedIndex == 2)
                     {
                         CheckHamming171245CodeWord(ref informationInformationBitsToolTip);
                     }

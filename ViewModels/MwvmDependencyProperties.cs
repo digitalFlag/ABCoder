@@ -194,7 +194,7 @@ namespace ABCoder.ViewModels
 
         #region Main Window Title
 
-        private string _MainWindowTitle = "ABCoder 1.3.0";
+        private string _MainWindowTitle = "ABCoder 1.4.0";
         /// <summary>Main Window Title</summary>
 
         public string MainWindowTitle

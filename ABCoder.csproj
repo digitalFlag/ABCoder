@@ -34,16 +34,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Libraries\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\16_7_139_QuadraticResidue\16_7_139_QuadraticResidue.csproj" />
     <ProjectReference Include="..\ChecksGeneral\ChecksGeneral.csproj" />
     <ProjectReference Include="..\Converter\Converter.csproj" />
     <ProjectReference Include="..\Goley_208_C75\Goley_208_C75.csproj" />
     <ProjectReference Include="..\Goley_2312_C75\Goley_2312_C75.csproj" />
     <ProjectReference Include="..\Hamming_1611_13\Hamming_1611_13.csproj" />
+    <ProjectReference Include="..\Hamming_1712_45\Hamming_1712_45.csproj" />
     <ProjectReference Include="..\OperationsGeneral\OperationsGeneral.csproj" />
     <ProjectReference Include="..\TextOptions\TextOptions.csproj" />
   </ItemGroup>

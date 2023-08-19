@@ -278,15 +278,14 @@ namespace ABCoder.ViewModels
 
             if (errors[16])
             {
-                TextBlockLetter15Text = codeWord[16] ? "0" : "1";
-                TextBlockLetter15Foreground = "Firebrick";
-                TextBlockLetter15FontStyle = "Bold";
+                TextBlockLetter16Text = codeWord[16] ? "0" : "1";
+                TextBlockLetter16Foreground = "Firebrick";
+                TextBlockLetter16FontStyle = "Bold";
             }
             else
             {
-                TextBlockLetter15Text = codeWord[16] ? "1" : "0";
+                TextBlockLetter16Text = codeWord[16] ? "1" : "0";
             }
-
 
             TextBoxInformationBitsText = TextBlockLetter0Text + TextBlockLetter1Text + TextBlockLetter2Text + TextBlockLetter3Text +
                                          TextBlockLetter4Text + TextBlockLetter5Text + TextBlockLetter6Text + TextBlockLetter7Text +
