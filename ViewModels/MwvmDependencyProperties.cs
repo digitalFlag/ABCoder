@@ -561,6 +561,17 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Code Instance Hamming (17, 12) 45
+
+        private CodeInstance _CodeInstanceHamming171245;
+        /// <summary>Code Instance Hamming (17, 12) 45</summary>
+        public CodeInstance CodeInstanceHamming171245
+        {
+            get => _CodeInstanceHamming171245;
+            set => Set(ref _CodeInstanceHamming171245, value);
+        }
+
+        #endregion
         #region Code Instance Goley (20, 8) C75
 
         private CodeInstance _CodeInstanceGoley208C75;
@@ -626,6 +637,17 @@ namespace ABCoder.ViewModels
         {
             get => _ComboBoxCodeTypeHamming161113Content;
             set => Set(ref _ComboBoxCodeTypeHamming161113Content, value);
+        }
+
+        #endregion
+        #region Combo Box Code Type Hamming (17, 12) 45 Content
+
+        private string _ComboBoxCodeTypeHamming171245Content = "(17, 12) 45 Hamming";
+        /// <summary>Combo Box Code Type Hamming (17, 12) 45 Content</summary>
+        public string ComboBoxCodeTypeHamming171245Content
+        {
+            get => _ComboBoxCodeTypeHamming171245Content;
+            set => Set(ref _ComboBoxCodeTypeHamming171245Content, value);
         }
 
         #endregion

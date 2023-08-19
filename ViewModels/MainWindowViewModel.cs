@@ -40,6 +40,7 @@ namespace ABCoder.ViewModels
             {
                 new Mode() {CoderMode = ComboBoxCodeType167139QuadraticResidueContent},
                 new Mode() {CoderMode = ComboBoxCodeTypeHamming161113Content},
+                new Mode() {CoderMode = ComboBoxCodeTypeHamming171245Content},
                 new Mode() {CoderMode = ComboBoxCodeTypeGoley208C75Content},
                 new Mode() {CoderMode = ComboBoxCodeTypeGoley2312C75Content},
             };
@@ -61,6 +62,16 @@ namespace ABCoder.ViewModels
                 InformationPartLength = 11,
                 VerificationPartLength = 5,
                 ErrorDetectionCapability = 4,
+                ErrorCorrectionCapability = 1
+            };
+            CodeInstanceHamming171245 = new CodeInstance
+            {
+                Name = ComboBoxCodeTypeHamming171245Content,
+                Polynomial = "x\u2075+x\u00B2+1",
+                CodeWordLength = 17,
+                InformationPartLength = 12,
+                VerificationPartLength = 5,
+                ErrorDetectionCapability = 3,
                 ErrorCorrectionCapability = 1
             };
             CodeInstanceGoley208C75 = new CodeInstance
