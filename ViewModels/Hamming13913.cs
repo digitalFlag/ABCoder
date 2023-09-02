@@ -5,39 +5,39 @@ namespace ABCoder.ViewModels
 {
     internal partial class MainWindowViewModel : ViewModel
     {
-        private void SetHamming161113Options()
+        private void SetHamming13913Options()
         {
-            if (string.IsNullOrEmpty(CodeInstanceHamming161113.Name))
+            if (string.IsNullOrEmpty(CodeInstanceHamming13913.Name))
             {
-                LableValueCodeInstanceName = ComboBoxCodeTypeHamming161113Content;
+                LableValueCodeInstanceName = ComboBoxCodeTypeHamming13913Content;
             }
             else
             {
-                LableValueCodeInstanceName = CodeInstanceHamming161113.Name;
+                LableValueCodeInstanceName = CodeInstanceHamming13913.Name;
 
             }
-            if (string.IsNullOrEmpty(CodeInstanceHamming161113.Polynomial))
+            if (string.IsNullOrEmpty(CodeInstanceHamming13913.Polynomial))
             {
                 LableValueCodeInstancePolynomial = "x\u2074+x+1";
             }
             else
             {
-                LableValueCodeInstancePolynomial = CodeInstanceHamming161113.Polynomial;
+                LableValueCodeInstancePolynomial = CodeInstanceHamming13913.Polynomial;
             }
-            LableValueCodeWordLength = CodeInstanceHamming161113.CodeWordLength;
-            LableValueInformationPartLength = CodeInstanceHamming161113.InformationPartLength;
-            LableValueVerificationPartLength = CodeInstanceHamming161113.VerificationPartLength;
-            LableValueErrorDetectionCapability = CodeInstanceHamming161113.ErrorDetectionCapability;
-            LableValueErrorCorrectionCapability = CodeInstanceHamming161113.ErrorCorrectionCapability;
+            LableValueCodeWordLength = CodeInstanceHamming13913.CodeWordLength;
+            LableValueInformationPartLength = CodeInstanceHamming13913.InformationPartLength;
+            LableValueVerificationPartLength = CodeInstanceHamming13913.VerificationPartLength;
+            LableValueErrorDetectionCapability = CodeInstanceHamming13913.ErrorDetectionCapability;
+            LableValueErrorCorrectionCapability = CodeInstanceHamming13913.ErrorCorrectionCapability;
         }
 
-        private void CheckHamming161113InformationBitsCombination(ref StringBuilder informationInformationBitsToolTip)
+        private void CheckHamming13913InformationBitsCombination(ref StringBuilder informationInformationBitsToolTip)
         {
-            if (!Hamming_1611_13.Checks.InformationPartLength(ref _TextBoxInformationBitsText))//Lengtg Check
+            if (!Hamming_139_13.Checks.InformationPartLength(ref _TextBoxInformationBitsText))//Lengtg Check
             {
                 TextBoxInformationBitsBorderBrush = "Firebrick";
                 ButtonInformationInformationBitsTextColor = "Firebrick";
-                informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field length must be 11.");
+                informationInformationBitsToolTip.AppendLine("* The \"" + LableValueInformation + "\" field length must be 9.");
                 TextBoxCodeCombinationText = string.Empty;
             }
 
@@ -49,13 +49,13 @@ namespace ABCoder.ViewModels
             }
         }
 
-        private void CheckHamming161113CodeWord(ref StringBuilder codeCombinationToolTip)
+        private void CheckHamming13913CodeWord(ref StringBuilder codeCombinationToolTip)
         {
-            if (!Hamming_1611_13.Checks.CodeWordLength(ref _TextBoxCodeCombinationText))//Lengtg Check
+            if (!Hamming_139_13.Checks.CodeWordLength(ref _TextBoxCodeCombinationText))//Lengtg Check
             {
                 TextBoxCodeCombinationBorderBrush = "Firebrick";
                 ButtonInformationCodeCombinationTextColor = "Firebrick";
-                codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field length must be 16.");
+                codeCombinationToolTip.AppendLine("* The \"" + LableValueCodeCombination + "\" field length must be 13.");
                 TextBoxInformationBitsText = string.Empty;
             }
             if (!ChecksGeneral.Checks.BinaryFormat(ref _TextBoxCodeCombinationText))//String Format Check
@@ -67,7 +67,7 @@ namespace ABCoder.ViewModels
             }
         }
 
-        private void EncodeHamming161113()
+        private void EncodeHamming13913()
         {
             TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
             bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
@@ -75,28 +75,28 @@ namespace ABCoder.ViewModels
             TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
         }
 
-        private void DecodeHamming161113()
+        private void DecodeHamming13913()
         {
             bool[] codeWord = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxCodeCombinationText);
-            bool[] errors = new bool[16];
-            if (Hamming_1611_13.Decode.IsValidCombination(ref codeWord))// No errors
+            bool[] errors = new bool[13];
+            if (Hamming_139_13.Decode.IsValidCombination(ref codeWord))// No errors
             {
-                bool[] infornationPart = Hamming_1611_13.Parts.SelectTheInformationPartFromTheCodeWord(ref codeWord);
+                bool[] infornationPart = Hamming_139_13.Parts.SelectTheInformationPartFromTheCodeWord(ref codeWord);
                 TextBoxInformationBitsText = Converter.BoolArrayToBinaryString.Convert(ref infornationPart);
-                CreateErrorBitsTextHamming161113(ref codeWord, ref errors);
+                CreateErrorBitsTextHamming13913(ref codeWord, ref errors);
                 return;
             }// No errors
-            bool[] syndrom = Hamming_1611_13.Decode.CalculateSindrom(ref codeWord);
-            if (Hamming_1611_13.SingleError.Check(ref syndrom, ref errors))// Single error
+            bool[] syndrom = Hamming_139_13.Decode.CalculateSindrom(ref codeWord);
+            if (Hamming_139_13.SingleError.Check(ref syndrom, ref errors))// Single error
             {
-                CreateErrorBitsTextHamming161113(ref codeWord, ref errors);
+                CreateErrorBitsTextHamming13913(ref codeWord, ref errors);
                 return;
             }// Single error
             Converter.InvertBoolArrayValues.Execute(ref errors);
-            CreateErrorBitsTextHamming161113(ref codeWord, ref errors);
+            CreateErrorBitsTextHamming13913(ref codeWord, ref errors);
         }
 
-        private void CreateErrorBitsTextHamming161113(ref bool[] codeWord, ref bool[] errors)
+        private void CreateErrorBitsTextHamming13913(ref bool[] codeWord, ref bool[] errors)
         {
             SetErrorBitsFieldDefaultValues();
 
@@ -243,45 +243,9 @@ namespace ABCoder.ViewModels
                 TextBlockLetter12Text = codeWord[12] ? "1" : "0";
             }
 
-            if (errors[13])
-            {
-                TextBlockLetter13Text = codeWord[13] ? "0" : "1";
-                TextBlockLetter13Foreground = "Firebrick";
-                TextBlockLetter13FontStyle = "Bold";
-            }
-            else
-            {
-                TextBlockLetter13Text = codeWord[13] ? "1" : "0";
-            }
-
-            if (errors[14])
-            {
-                TextBlockLetter14Text = codeWord[14] ? "0" : "1";
-                TextBlockLetter14Foreground = "Firebrick";
-                TextBlockLetter14FontStyle = "Bold";
-            }
-            else
-            {
-                TextBlockLetter14Text = codeWord[14] ? "1" : "0";
-            }
-
-            if (errors[15])
-            {
-                TextBlockLetter15Text = codeWord[15] ? "0" : "1";
-                TextBlockLetter15Foreground = "Firebrick";
-                TextBlockLetter15FontStyle = "Bold";
-            }
-            else
-            {
-                TextBlockLetter15Text = codeWord[15] ? "1" : "0";
-            }
-
-
-
             TextBoxInformationBitsText = TextBlockLetter0Text + TextBlockLetter1Text + TextBlockLetter2Text + TextBlockLetter3Text +
                                          TextBlockLetter4Text + TextBlockLetter5Text + TextBlockLetter6Text + TextBlockLetter7Text +
-                                         TextBlockLetter8Text + TextBlockLetter9Text + TextBlockLetter10Text;
-
+                                         TextBlockLetter8Text;
         }
     }
 }
