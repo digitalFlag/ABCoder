@@ -71,7 +71,7 @@ namespace ABCoder.ViewModels
         {
             TextBoxInformationBitsBorderBrush = "DeepSkyBlue";
             bool[] informationBits = Converter.BinaryStringToBoolArray.Convert(ref _TextBoxInformationBitsText);
-            bool[] codeCombination = Hamming_1611_13.Code.Encode(ref informationBits);
+            bool[] codeCombination = Hamming_139_13.Code.Encode(ref informationBits);
             TextBoxCodeCombinationText = Converter.BoolArrayToBinaryString.Convert(ref codeCombination);
         }
 
