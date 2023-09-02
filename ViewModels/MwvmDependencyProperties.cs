@@ -618,6 +618,28 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Combo Box Code Type Hamming (13, 9) 13 Content
+
+        private string _ComboBoxCodeTypeHamming13913Content = "(13, 9) 13 Hamming";
+        /// <summary>Combo Box Code Type Hamming (13, 9) 13 Content</summary>
+        public string ComboBoxCodeTypeHamming13913Content
+        {
+            get => _ComboBoxCodeTypeHamming13913Content;
+            set => Set(ref _ComboBoxCodeTypeHamming13913Content, value);
+        }
+
+        #endregion
+        #region Combo Box Code Type Hamming (15, 11) 13 Content
+
+        private string _ComboBoxCodeTypeHamming151113Content = "(15, 11) 13 Hamming";
+        /// <summary>Combo Box Code Type Hamming (15, 11) 13 Content</summary>
+        public string ComboBoxCodeTypeHamming151113Content
+        {
+            get => _ComboBoxCodeTypeHamming151113Content;
+            set => Set(ref _ComboBoxCodeTypeHamming151113Content, value);
+        }
+
+        #endregion
         #region Combo Box Code Type (16, 7) 139 Quadratic Residue Content
 
         private string _ComboBoxCodeType167139QuadraticResidueContent = "(16, 7) 139 Quadratic Residue";
