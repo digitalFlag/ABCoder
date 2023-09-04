@@ -78,28 +78,38 @@ namespace ABCoder.ViewModels
                 TextBoxInformationBitsText = string.Empty;
             }
 
-            //(16, 7) 139 Quadratic Residue
+            //(13, 9) 13 Hamming
             if (ComboBoxCodeTypeSelectedIndex == 0)
+            {
+                SetHamming13913Options();
+            }
+            //(15, 11) 13 Hamming
+            if (ComboBoxCodeTypeSelectedIndex == 1)
+            {
+                SetHamming151113Options();
+            }
+            //(16, 7) 139 Quadratic Residue
+            if (ComboBoxCodeTypeSelectedIndex == 2)
             {
                 Set167139QuadraticResidueOptions();
             }
             //(16, 11) 13 Hamming
-            if (ComboBoxCodeTypeSelectedIndex == 1)
+            if (ComboBoxCodeTypeSelectedIndex == 3)
             {
                 SetHamming161113Options();
             }
             //(17, 12) 45 Hamming
-            if (ComboBoxCodeTypeSelectedIndex == 2)
+            if (ComboBoxCodeTypeSelectedIndex == 4)
             {
                 SetHamming171245Options();
             }
             //(20, 8) C75 Goley
-            if (ComboBoxCodeTypeSelectedIndex == 3)
+            if (ComboBoxCodeTypeSelectedIndex == 5)
             {
                 SetGoley208C75Options();
             }
             //(23, 12) C75 Goley
-            if (ComboBoxCodeTypeSelectedIndex == 4)
+            if (ComboBoxCodeTypeSelectedIndex == 6)
             {
                 SetGoley2312C75Options();
             }
@@ -339,11 +349,13 @@ namespace ABCoder.ViewModels
         #endregion
 
         /* 
-         * 0 -> (16, 7) 139 Quadratic Residue
-         * 1 -> (16, 11) 13 Hamming
-         * 2 -> (17, 12) 45 Hamming
-         * 3 -> (20, 8) C75 Goley
-         * 4 -> (23, 12) C75 Goley
+         * 0 -> (13, 9) 13 Hamming
+         * 1 -> (15, 11) 13 Hamming
+         * 2 -> (16, 7) 139 Quadratic Residue
+         * 3 -> (16, 11) 13 Hamming
+         * 4 -> (17, 12) 45 Hamming
+         * 5 -> (20, 8) C75 Goley
+         * 6 -> (23, 12) C75 Goley
         */
 
         private void Encode()
