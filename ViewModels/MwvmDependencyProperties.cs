@@ -194,7 +194,7 @@ namespace ABCoder.ViewModels
 
         #region Main Window Title
 
-        private string _MainWindowTitle = "ABCoder 1.4.0";
+        private string _MainWindowTitle = "ABCoder 1.6.0";
         /// <summary>Main Window Title</summary>
 
         public string MainWindowTitle
@@ -417,7 +417,7 @@ namespace ABCoder.ViewModels
 
         #region Lable Value Code Instance Name
 
-        private string _LableValueCodeInstanceName = "(16, 7) 139 Quadratic Residue";
+        private string _LableValueCodeInstanceName = "(13, 9) 13 Hamming";
         /// <summary>Lable Value Code Instance Name</summary>
         public string LableValueCodeInstanceName
         {
@@ -428,7 +428,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Code Instance Polynomial
 
-        private string _LableValueCodeInstancePolynomial = "x⁸+x⁵+x⁴+x³+1";
+        private string _LableValueCodeInstancePolynomial = "x⁴+x+1";
         /// <summary>Lable Value Code Instance Polynomial</summary>
         public string LableValueCodeInstancePolynomial
         {
@@ -439,7 +439,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Code Word Length
 
-        private int _LableValueCodeWordLength = 16;
+        private int _LableValueCodeWordLength = 13;
         /// <summary>Lable Value Code Word Length</summary>
         public int LableValueCodeWordLength
         {
@@ -450,7 +450,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Information Part Length
 
-        private int _LableValueInformationPartLength = 7;
+        private int _LableValueInformationPartLength = 9;
         /// <summary>Lable Value Information Part Length</summary>
         public int LableValueInformationPartLength
         {
@@ -461,7 +461,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Verification Part Length
 
-        private int _LableValueVerificationPartLength = 9;
+        private int _LableValueVerificationPartLength = 4;
         /// <summary>Lable Value Verification Part Length</summary>
         public int LableValueVerificationPartLength
         {
@@ -472,7 +472,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Error Detection Capability
 
-        private int _LableValueErrorDetectionCapability = 6;
+        private int _LableValueErrorDetectionCapability = 2;
         /// <summary>Lable Value Error Detection Capability</summary>
         public int LableValueErrorDetectionCapability
         {
@@ -483,7 +483,7 @@ namespace ABCoder.ViewModels
         #endregion
         #region Lable Value Error Correction Capability
 
-        private int _LableValueErrorCorrectionCapability = 2;
+        private int _LableValueErrorCorrectionCapability = 1;
         /// <summary>Lable Value Error Correction Capability</summary>
         public int LableValueErrorCorrectionCapability
         {
@@ -539,6 +539,28 @@ namespace ABCoder.ViewModels
 
         #endregion
 
+        #region Code Instance Hamming (13, 9) 13
+
+        private CodeInstance _CodeInstanceHamming13913;
+        /// <summary>Code Instance Hamming (13, 9) 13</summary>
+        public CodeInstance CodeInstanceHamming13913
+        {
+            get => _CodeInstanceHamming13913;
+            set => Set(ref _CodeInstanceHamming13913, value);
+        }
+
+        #endregion
+        #region Code Instance Hamming (15, 11) 13
+
+        private CodeInstance _CodeInstanceHamming151113;
+        /// <summary>Code Instance Hamming (15, 11) 13</summary>
+        public CodeInstance CodeInstanceHamming151113
+        {
+            get => _CodeInstanceHamming151113;
+            set => Set(ref _CodeInstanceHamming151113, value);
+        }
+
+        #endregion
         #region Code Instance (16, 7) 139 Quadratic Residue
 
         private CodeInstance _CodeInstance167139QuadraticResidue;

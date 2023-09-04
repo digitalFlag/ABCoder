@@ -360,62 +360,54 @@ namespace ABCoder.ViewModels
 
         private void Encode()
         {
-            // (16, 7) 139 Quadratic Residue
+            // (13, 9) 13 Hamming
             if (ComboBoxCodeTypeSelectedIndex == 0)
-            {
-                Encode167139QuadraticResidue();
-            }
+                EncodeHamming13913();
             // (16, 11) 13 Hamming
             if (ComboBoxCodeTypeSelectedIndex == 1)
-            {
-                EncodeHamming161113();
-            }
-            // (17, 12) 45 Hamming
+                EncodeHamming151113();
+            // (16, 7) 139 Quadratic Residue
             if (ComboBoxCodeTypeSelectedIndex == 2)
-            {
-                EncodeHamming171245();
-            }
-            // (20, 8) C75 Goley
+                Encode167139QuadraticResidue();
+            // (16, 11) 13 Hamming
             if (ComboBoxCodeTypeSelectedIndex == 3)
-            {
-                EncodeGoley208C75();
-            }
-            // (23, 12) C75 Goley
+                EncodeHamming161113();
+            // (17, 12) 45 Hamming
             if (ComboBoxCodeTypeSelectedIndex == 4)
-            {
+                EncodeHamming171245();
+            // (20, 8) C75 Goley
+            if (ComboBoxCodeTypeSelectedIndex == 5)
+                EncodeGoley208C75();
+            // (23, 12) C75 Goley
+            if (ComboBoxCodeTypeSelectedIndex == 6)
                 EncodeGoley2312C75();
-            }
 
             OnPropertyChanged();
         }
 
         private void Decode()
         {
-            // (16, 7) 139 Quadratic Residue
+            // (13, 9) 13 Hamming
             if (ComboBoxCodeTypeSelectedIndex == 0)
-            {
-                Decode167139QuadraticResidue();
-            }
-            // (16, 11) 13 Hamming
+                DecodeHamming13913();
+            // (15, 11) 13 Hamming
             if (ComboBoxCodeTypeSelectedIndex == 1)
-            {
-                DecodeHamming161113();
-            }
-            // (17, 12) 45 Hamming
+                DecodeHamming151113();
+            // (16, 7) 139 Quadratic Residue
             if (ComboBoxCodeTypeSelectedIndex == 2)
-            {
-                DecodeHamming171245();
-            }
-            // (20, 8) C75 Goley
+                Decode167139QuadraticResidue();
+            // (16, 11) 13 Hamming
             if (ComboBoxCodeTypeSelectedIndex == 3)
-            {
-                DecodeGoley208C75();
-            }
-            // (23, 12) C75 Goley
+                DecodeHamming161113();
+            // (17, 12) 45 Hamming
             if (ComboBoxCodeTypeSelectedIndex == 4)
-            {
+                DecodeHamming171245();
+            // (20, 8) C75 Goley
+            if (ComboBoxCodeTypeSelectedIndex == 5)
+                DecodeGoley208C75();
+            // (23, 12) C75 Goley
+            if (ComboBoxCodeTypeSelectedIndex == 6)
                 DecodeGoley2312C75();
-            }
 
             OnPropertyChanged();
         }
@@ -437,60 +429,52 @@ namespace ABCoder.ViewModels
                 //Encode
                 if (ComboBoxModeSelectedIndex == 0)
                 {
-                    // (16, 7) 139 Quadratic Residue
+                    // (13, 9) 13 Hamming
                     if (ComboBoxCodeTypeSelectedIndex == 0)
-                    {
-                        Check167139QuadraticResidueInformationBitsCombination(ref informationInformationBitsToolTip);
-                    }
-                    // (16, 11) 13 Hamming
+                        CheckHamming13913InformationBitsCombination(ref informationInformationBitsToolTip);
+                    // (15, 11) 13 Hamming
                     if (ComboBoxCodeTypeSelectedIndex == 1)
-                    {
-                        CheckHamming161113InformationBitsCombination(ref informationInformationBitsToolTip);
-                    }
-                    // (17, 12) 45 Hamming
+                        CheckHamming151113InformationBitsCombination(ref informationInformationBitsToolTip);
+                    // (16, 7) 139 Quadratic Residue
                     if (ComboBoxCodeTypeSelectedIndex == 2)
-                    {
-                        CheckHamming171245InformationBitsCombination(ref informationInformationBitsToolTip);
-                    }
-                    // (20, 8) C75 Goley
+                        Check167139QuadraticResidueInformationBitsCombination(ref informationInformationBitsToolTip);
+                    // (16, 11) 13 Hamming
                     if (ComboBoxCodeTypeSelectedIndex == 3)
-                    {
-                        CheckGoley208C75InformationBitsCombination(ref informationInformationBitsToolTip);
-                    }
-                    // (23, 12) C75 Goley
+                        CheckHamming161113InformationBitsCombination(ref informationInformationBitsToolTip);
+                    // (17, 12) 45 Hamming
                     if (ComboBoxCodeTypeSelectedIndex == 4)
-                    {
+                        CheckHamming171245InformationBitsCombination(ref informationInformationBitsToolTip);
+                    // (20, 8) C75 Goley
+                    if (ComboBoxCodeTypeSelectedIndex == 5)
+                        CheckGoley208C75InformationBitsCombination(ref informationInformationBitsToolTip);
+                    // (23, 12) C75 Goley
+                    if (ComboBoxCodeTypeSelectedIndex == 6)
                         CheckGoley2312C75InformationBitsCombination(ref informationInformationBitsToolTip);
-                    }
                 }
                 //Decode
                 if (ComboBoxModeSelectedIndex == 1)
                 {
-                    // (16, 7) 139 Quadratic Residue
+                    // (13, 9) 13 Hamming
                     if (ComboBoxCodeTypeSelectedIndex == 0)
-                    {
-                        Check167139QuadraticResidueCodeWord(ref informationInformationBitsToolTip);
-                    }
-                    // (16, 11) 13 Hamming
+                        CheckHamming13913CodeWord(ref informationInformationBitsToolTip);
+                    // (15, 11) 13 Hamming
                     if (ComboBoxCodeTypeSelectedIndex == 1)
-                    {
-                        CheckHamming161113CodeWord(ref informationInformationBitsToolTip);
-                    }
-                    // (17, 12) 45 Hamming
+                        CheckHamming151113CodeWord(ref informationInformationBitsToolTip);
+                    // (16, 7) 139 Quadratic Residue
                     if (ComboBoxCodeTypeSelectedIndex == 2)
-                    {
-                        CheckHamming171245CodeWord(ref informationInformationBitsToolTip);
-                    }
-                    // (20, 8) C75 Goley
+                        Check167139QuadraticResidueCodeWord(ref informationInformationBitsToolTip);
+                    // (16, 11) 13 Hamming
                     if (ComboBoxCodeTypeSelectedIndex == 3)
-                    {
-                        CheckGoley208C75CodeWord(ref informationInformationBitsToolTip);
-                    }
-                    // (23, 12) C75 Goley
+                        CheckHamming161113CodeWord(ref informationInformationBitsToolTip);
+                    // (17, 12) 45 Hamming
                     if (ComboBoxCodeTypeSelectedIndex == 4)
-                    {
+                        CheckHamming171245CodeWord(ref informationInformationBitsToolTip);
+                    // (20, 8) C75 Goley
+                    if (ComboBoxCodeTypeSelectedIndex == 5)
+                        CheckGoley208C75CodeWord(ref informationInformationBitsToolTip);
+                    // (23, 12) C75 Goley
+                    if (ComboBoxCodeTypeSelectedIndex == 6)
                         CheckGoley2312C75CodeWord(ref informationInformationBitsToolTip);
-                    }
                 }
             }
 
@@ -518,31 +502,27 @@ namespace ABCoder.ViewModels
             else
             //Decode
             {
-                // (16, 7) 139 Quadratic Residue
+                // (13, 9) 13 Hamming
                 if (ComboBoxCodeTypeSelectedIndex == 0)
-                {
-                    Check167139QuadraticResidueCodeWord(ref codeCombinationToolTip);
-                }
-                // (16, 11) 13 Hamming
+                    CheckHamming13913CodeWord(ref codeCombinationToolTip);
+                // (15, 11) 13 Hamming
                 if (ComboBoxCodeTypeSelectedIndex == 1)
-                {
-                    CheckHamming161113CodeWord(ref codeCombinationToolTip);
-                }
-                // (17, 12) 45 Hamming
+                    CheckHamming151113CodeWord(ref codeCombinationToolTip);
+                // (16, 7) 139 Quadratic Residue
                 if (ComboBoxCodeTypeSelectedIndex == 2)
-                {
-                    CheckHamming171245CodeWord(ref codeCombinationToolTip);
-                }
-                // (20, 8) C75 Goley
+                    Check167139QuadraticResidueCodeWord(ref codeCombinationToolTip);
+                // (16, 11) 13 Hamming
                 if (ComboBoxCodeTypeSelectedIndex == 3)
-                {
-                    CheckGoley208C75CodeWord(ref codeCombinationToolTip);
-                }
-                // (23, 12) C75 Goley
+                    CheckHamming161113CodeWord(ref codeCombinationToolTip);
+                // (17, 12) 45 Hamming
                 if (ComboBoxCodeTypeSelectedIndex == 4)
-                {
+                    CheckHamming171245CodeWord(ref codeCombinationToolTip);
+                // (20, 8) C75 Goley
+                if (ComboBoxCodeTypeSelectedIndex == 5)
+                    CheckGoley208C75CodeWord(ref codeCombinationToolTip);
+                // (23, 12) C75 Goley
+                if (ComboBoxCodeTypeSelectedIndex == 6)
                     CheckGoley2312C75CodeWord(ref codeCombinationToolTip);
-                }
             }
 
             if (string.IsNullOrEmpty(codeCombinationToolTip.ToString()))

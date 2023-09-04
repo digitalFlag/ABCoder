@@ -14,6 +14,8 @@
           "FontAwesome5": "2.1.11",
           "Goley_208_C75": "1.0.0",
           "Goley_2312_C75": "1.0.0",
+          "Hamming_139_13": "1.0.0",
+          "Hamming_1511_13": "1.0.0",
           "Hamming_1611_13": "1.0.0",
           "Hamming_1712_45": "1.0.0",
           "Microsoft.Xaml.Behaviors.Wpf": "1.1.39",
@@ -84,6 +86,26 @@
         },
         "runtime": {
           "Goley_2312_C75.dll": {}
+        }
+      },
+      "Hamming_139_13/1.0.0": {
+        "dependencies": {
+          "ChecksGeneral": "1.0.0",
+          "Converter": "1.0.0",
+          "OperationsGeneral": "1.0.0"
+        },
+        "runtime": {
+          "Hamming_139_13.dll": {}
+        }
+      },
+      "Hamming_1511_13/1.0.0": {
+        "dependencies": {
+          "ChecksGeneral": "1.0.0",
+          "Converter": "1.0.0",
+          "OperationsGeneral": "1.0.0"
+        },
+        "runtime": {
+          "Hamming_1511_13.dll": {}
         }
       },
       "Hamming_1611_13/1.0.0": {
@@ -159,6 +181,16 @@
       "sha512": ""
     },
     "Goley_2312_C75/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Hamming_139_13/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Hamming_1511_13/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

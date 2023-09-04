@@ -1,6 +1,8 @@
 # ABCoder
 
 The program is able to calculate code words of various block codes types, such as:
+(13, 9) 13 Hamming;
+(15, 11) 13 Hamming;
 (16, 7) 139 Quadratic Residue;
 (16, 11) 13 Hamming;
 (17, 12) 45 Hamming;
