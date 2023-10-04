@@ -13,6 +13,7 @@
           "Converter": "1.0.0",
           "FontAwesome5": "2.1.11",
           "Goley_208_C75": "1.0.0",
+          "Goley_2312_AE3": "1.0.0",
           "Goley_2312_C75": "1.0.0",
           "Hamming_139_13": "1.0.0",
           "Hamming_1511_13": "1.0.0",
@@ -77,6 +78,15 @@
         },
         "runtime": {
           "Goley_208_C75.dll": {}
+        }
+      },
+      "Goley_2312_AE3/1.0.0": {
+        "dependencies": {
+          "ChecksGeneral": "1.0.0",
+          "Converter": "1.0.0"
+        },
+        "runtime": {
+          "Goley_2312_AE3.dll": {}
         }
       },
       "Goley_2312_C75/1.0.0": {
@@ -176,6 +186,11 @@
       "sha512": ""
     },
     "Goley_208_C75/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Goley_2312_AE3/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -194,7 +194,7 @@ namespace ABCoder.ViewModels
 
         #region Main Window Title
 
-        private string _MainWindowTitle = "ABCoder 1.6.0";
+        private string _MainWindowTitle = "ABCoder 1.7.0";
         /// <summary>Main Window Title</summary>
 
         public string MainWindowTitle
@@ -605,6 +605,17 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+        #region Code Instance Goley (23, 12) AE3
+
+        private CodeInstance _CodeInstanceGoley2312AE3;
+        /// <summary>Code Instance Goley (23, 12) AE3</summary>
+        public CodeInstance CodeInstanceGoley2312AE3
+        {
+            get => _CodeInstanceGoley2312AE3;
+            set => Set(ref _CodeInstanceGoley2312AE3, value);
+        }
+
+        #endregion
         #region Code Instance Goley (23, 12) C75
 
         private CodeInstance _CodeInstanceGoley2312C75;
@@ -616,6 +627,7 @@ namespace ABCoder.ViewModels
         }
 
         #endregion
+
 
         #region Combo Box Code Type Source
 
@@ -703,6 +715,17 @@ namespace ABCoder.ViewModels
         {
             get => _ComboBoxCodeTypeGoley208C75Content;
             set => Set(ref _ComboBoxCodeTypeGoley208C75Content, value);
+        }
+
+        #endregion
+        #region Combo Box Code Type Goley (23, 12) AE3 Content
+
+        private string _ComboBoxCodeTypeGoley2312AE3Content = "(23, 12) AE3 Goley";
+        /// <summary>Combo Box Code Type Goley (23, 12) AE3 Content</summary>
+        public string ComboBoxCodeTypeGoley2312AE3Content
+        {
+            get => _ComboBoxCodeTypeGoley2312AE3Content;
+            set => Set(ref _ComboBoxCodeTypeGoley2312AE3Content, value);
         }
 
         #endregion

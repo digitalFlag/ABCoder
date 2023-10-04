@@ -38,6 +38,7 @@
     <ProjectReference Include="..\ChecksGeneral\ChecksGeneral.csproj" />
     <ProjectReference Include="..\Converter\Converter.csproj" />
     <ProjectReference Include="..\Goley_208_C75\Goley_208_C75.csproj" />
+    <ProjectReference Include="..\Goley_2312_AE3\Goley_2312_AE3.csproj" />
     <ProjectReference Include="..\Goley_2312_C75\Goley_2312_C75.csproj" />
     <ProjectReference Include="..\Hamming_139_13\Hamming_139_13.csproj" />
     <ProjectReference Include="..\Hamming_1511_13\Hamming_1511_13.csproj" />

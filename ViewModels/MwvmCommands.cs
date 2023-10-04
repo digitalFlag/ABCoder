@@ -108,8 +108,13 @@ namespace ABCoder.ViewModels
             {
                 SetGoley208C75Options();
             }
-            //(23, 12) C75 Goley
+            //(23, 12) AE3 Goley
             if (ComboBoxCodeTypeSelectedIndex == 6)
+            {
+                SetGoley2312AE3Options();
+            }
+            //(23, 12) C75 Goley
+            if (ComboBoxCodeTypeSelectedIndex == 7)
             {
                 SetGoley2312C75Options();
             }
@@ -355,7 +360,8 @@ namespace ABCoder.ViewModels
          * 3 -> (16, 11) 13 Hamming
          * 4 -> (17, 12) 45 Hamming
          * 5 -> (20, 8) C75 Goley
-         * 6 -> (23, 12) C75 Goley
+         * 6 -> (23, 12) AE3 Goley
+         * 7 -> (23, 12) C75 Goley
         */
 
         private void Encode()
@@ -378,8 +384,11 @@ namespace ABCoder.ViewModels
             // (20, 8) C75 Goley
             if (ComboBoxCodeTypeSelectedIndex == 5)
                 EncodeGoley208C75();
-            // (23, 12) C75 Goley
+            // (23, 12) AE3 Goley
             if (ComboBoxCodeTypeSelectedIndex == 6)
+                EncodeGoley2312AE3();
+            // (23, 12) C75 Goley
+            if (ComboBoxCodeTypeSelectedIndex == 7)
                 EncodeGoley2312C75();
 
             OnPropertyChanged();
@@ -405,8 +414,11 @@ namespace ABCoder.ViewModels
             // (20, 8) C75 Goley
             if (ComboBoxCodeTypeSelectedIndex == 5)
                 DecodeGoley208C75();
-            // (23, 12) C75 Goley
+            // (23, 12) AE3 Goley
             if (ComboBoxCodeTypeSelectedIndex == 6)
+                DecodeGoley2312AE3();
+            // (23, 12) C75 Goley
+            if (ComboBoxCodeTypeSelectedIndex == 7)
                 DecodeGoley2312C75();
 
             OnPropertyChanged();
@@ -447,8 +459,11 @@ namespace ABCoder.ViewModels
                     // (20, 8) C75 Goley
                     if (ComboBoxCodeTypeSelectedIndex == 5)
                         CheckGoley208C75InformationBitsCombination(ref informationInformationBitsToolTip);
-                    // (23, 12) C75 Goley
+                    // (23, 12) AE3 Goley
                     if (ComboBoxCodeTypeSelectedIndex == 6)
+                        CheckGoley2312AE3InformationBitsCombination(ref informationInformationBitsToolTip);
+                    // (23, 12) C75 Goley
+                    if (ComboBoxCodeTypeSelectedIndex == 7)
                         CheckGoley2312C75InformationBitsCombination(ref informationInformationBitsToolTip);
                 }
                 //Decode
@@ -472,8 +487,11 @@ namespace ABCoder.ViewModels
                     // (20, 8) C75 Goley
                     if (ComboBoxCodeTypeSelectedIndex == 5)
                         CheckGoley208C75CodeWord(ref informationInformationBitsToolTip);
-                    // (23, 12) C75 Goley
+                    // (23, 12) AE3 Goley
                     if (ComboBoxCodeTypeSelectedIndex == 6)
+                        CheckGoley2312AE3CodeWord(ref informationInformationBitsToolTip);
+                    // (23, 12) C75 Goley
+                    if (ComboBoxCodeTypeSelectedIndex == 7)
                         CheckGoley2312C75CodeWord(ref informationInformationBitsToolTip);
                 }
             }
@@ -520,8 +538,11 @@ namespace ABCoder.ViewModels
                 // (20, 8) C75 Goley
                 if (ComboBoxCodeTypeSelectedIndex == 5)
                     CheckGoley208C75CodeWord(ref codeCombinationToolTip);
-                // (23, 12) C75 Goley
+                // (23, 12) AE3 Goley
                 if (ComboBoxCodeTypeSelectedIndex == 6)
+                    CheckGoley2312AE3CodeWord(ref codeCombinationToolTip);
+                // (23, 12) C75 Goley
+                if (ComboBoxCodeTypeSelectedIndex == 7)
                     CheckGoley2312C75CodeWord(ref codeCombinationToolTip);
             }
 
